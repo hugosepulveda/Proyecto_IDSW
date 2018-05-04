@@ -8,7 +8,7 @@ login_manager.login_view = "login"
 
 @app.route("/")
 def main():
-	return "Proyecto IDSW v0.00002"
+	render_template(url_for("index"))
 	
 @app.route("/index")
 def pag_index():
