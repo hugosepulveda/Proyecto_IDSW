@@ -1,14 +1,13 @@
---DROP DATABASE GPI;
 CREATE DATABASE GPI;
 USE GPI;
 
 CREATE TABLE USUARIOS(
-	rut int,
+	id_usuario int,
 	nombres varchar(50),
 	apellidos varchar(50),
 	tipo varchar(50),
 	contrasena varchar(100),
-	primary key (rut)
+	primary key (id_usuario)
 );
 
 CREATE TABLE OBRAS(
@@ -55,22 +54,22 @@ CREATE TABLE PROVEEDORES(
 	primary key (id_proveedor)
 );
 
-CREATE TABLE ORDENES_COMPRA(
+CREATE TABLE ORDENES(
 	id_orden int,
 	encargado_id int,
 	proveedor_id int,
 	primary key (id_orden),
-	foreign key (encargado_id) references ENCARGADOS(encargado_id),
-	foreign key (proveedor_id) references PROVEEDORES(proveedores_id)
+	foreign key (encargado_id) references ENCARGADOS_COMPRA(usuario_id),
+	foreign key (proveedor_id) references PROVEEDORES(id_proveedor)
 );
 
 CREATE TABLE FACTURAS(
 	id_factura int,
 	orden_id int,
-	proveedor_id int
+	proveedor_id int,
 	primary key (id_factura),
-	foreign key (orden_id) references ORDENES_COMPRA(id_orden),
-	foreign key (proveedor_id) references PROVEEDORES(proveedores_id)
+	foreign key (orden_id) references ORDENES(id_orden),
+	foreign key (proveedor_id) references PROVEEDORES(id_proveedor)
 
 );
 
@@ -78,7 +77,7 @@ CREATE TABLE COTIZACIONES(
 	id_cotizacion int,
 	encargado_id int,
 	prov_id int,
-	foreign key (encargado_id) references ENCARGADOS_COMPRA(id_encargado),
+	foreign key (encargado_id) references ENCARGADOS_COMPRA(usuario_id),
 	foreign key (prov_id) references PROVEEDORES(id_proveedor)
 );
 
@@ -92,7 +91,7 @@ CREATE TABLE SOLICITUDES(
 	comentarios varchar(200),
 	estado varchar(50),
 	primary key (id_solicitud),
-	foreign key (cliente_id) references CLIENTES_INTERNOS(id_cliente),
+	foreign key (cliente_id) references CLIENTES_INTERNOS(usuario_id),
 	foreign key (orden_id) references ORDENES(id_orden)
 );
 
@@ -101,7 +100,7 @@ CREATE TABLE DESPACHOS(
 	encargado_id int,
 	solicitud_id int,
 	foreign key (solicitud_id) references SOLICITUDES(id_solicitud),
-	foreign key (encargado_compra_id) references ENCARGADOS_COMPRA(usuario_id)
+	foreign key (encargado_id) references ENCARGADOS_COMPRA(usuario_id)
 );
 
 CREATE TABLE BODEGUEROS(
@@ -110,7 +109,7 @@ CREATE TABLE BODEGUEROS(
 	encargado_id int,
 	primary key (id_bodeguero),
 	foreign key (bodega_id) references BODEGAS(id_bodega),
-	foreign key (enacargado_id) references ENCARGADOS(encargado_id)
+	foreign key (encargado_id) references ENCARGADOS_COMPRA(usuario_id)
 );
------------------------------
-INSERT INTO USUARIOS VALUES (1234, "Hugo Adolfo", "Sepulveda Arriaza", "Cliente Interno", "1234");
+
+INSERT INTO USUARIOS VALUES (1234, "Nombre", "Apellido", "Cliente Interno", "1234");
