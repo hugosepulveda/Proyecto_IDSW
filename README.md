@@ -13,7 +13,7 @@ PDFs de los entregables.
 
 ### Instrucciones para ejecutar
 
-* Por terminal, ingresar a P_IDSW y escribir: $ _source venv/bin/activate_.
+* Por terminal, ingresar a P_IDSW/proyecto y escribir: $ _source venv/bin/activate_
 * Después $ _export FLASK_APP=app.py_
 * $ _flask run_
 * La línea _Running on http://127.0.0.1:5000/_ indicará donde se podrá ver.
