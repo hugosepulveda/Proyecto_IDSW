@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
-<html>
-	<head>
-	<head>
-	<body>
-	<a href="{{ url_for('login') }}">Login</a>
-	</body>
-</html>
+{% block content %}
+    <h1>Ingresar</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.nombre_usuario.label }}<br>
+            {{ form.nombre_usuario(size=32) }}
+        </p>
+        <p>
+            {{ form.contrasena.label }}<br>
+            {{ form.contrasena(size=32) }}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
