@@ -9,19 +9,12 @@ class Usuario(Base):
 	nombres= Column(String(50))
 	apellidos = Column(String(50))
 	tipo = Column(String(50))
+	contrasena = Column(String(100))
 	
 class Obras(Base):
 	__tablename__ = "OBRAS"
 	id_obra = Column(Integer, primary_key = true)
 	ubicacion = Column(String(100))
-
-class Materiales(Base):
-	__tablename__ = "MATERIALES"
-	id_material = Column(Integer, primary_key = true)
-	marca = Column(String(50))
-	cant = Column(Integer)
-	#disponible = Column()
-	comentario = Column(String(200))
 
 class Bodegas(Base):
 	__tablename__ = "BODEGAS"
@@ -29,6 +22,15 @@ class Bodegas(Base):
 	horario = Column(DateTime) #vprobable conflicto definido en bd.sql
 	direccion = Column(String(100))
 	comuna = Column(String(100))
+
+class Materiales(Base):
+	__tablename__ = "MATERIALES"
+	id_material = Column(Integer, primary_key = true)
+	marca = Column(String(50))
+	cant = Column(Integer)
+	bodega_id = Column(Integer, ForeignKey("BODEGAS.id_bodega"))
+	disponible = Column(Boolean)
+	comentario = Column(String(200))
 
 class Clientes_internos(Base):
 	__tablename__ = "CLIENTES_INTERNOS"
@@ -49,6 +51,7 @@ class Ordenes_compra(Base):
 	__tablename__ = "ORDENES_COMPRA"
 	id_orden = Column(Integer, primary_key = true)
 	encargado_id  = Column(Integer, ForeignKey("ENCARGADOS_COMPRA.usuario_id"))
+	proveedor_id = Column(Integer, ForeignKey("PROVEEDORES.id_proveedor"))
 
 class Facturas(Base):
 	__tablename__ = "FACTURAS"
@@ -57,10 +60,24 @@ class Facturas(Base):
 	proveedor_id = Column(Iteer, ForeignKey("PROVEEDORES.id_proveedor"))
 
 class Cotizaciones(Base):
+	__tablename__ = "COTIZACIONES"
 	id_cotizacion = Column(Integer, primary_key = true)
+	encargado_id = Column(Integer, ForeignKey("ENCARGADOS_COMPRA.usuario_id"))
 	prov_id = Column(Integer, ForeignKey("PROVEEDORES.id_proveedor"))
 
+class Solicitudes(Base):
+	__tablename__ = "SOLICITUDES"
+	id_solicitud = Column(Integer, primery_key = true)
+	cliente_id = Column(Integer, ForeignKey("CLIENTES_INTERNOS.id_cliente"))
+	orden_id = Column(Integer, ForeignKey("ORDENES.id_orden"))
+	prioridad = Column(Integer)
+	material = Column(String(100))
+	cant_material = Column(Integer)
+	comentarios = Column(200)
+	estado = Column(String(50))
+	
 class Despachos(Base):
+	__tablename__ = "DESPACHOS"
 	id_despacho = Column(Integer, primary_key = true)
 	encargado_id = Column(Integer, ForeignKey("ENCARGADOS_COMPRA.usuario_id"))
 	solicitud_id = Column(Integer, ForeignKey("SOLICITUDES.id_solicitud"))
