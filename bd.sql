@@ -7,13 +7,8 @@ CREATE TABLE USUARIOS(
 	apellidos varchar(50),
 	tipo varchar(50),
 	contrasena varchar(100),
+	obra_id int,
 	primary key (id_usuario)
-);
-
-CREATE TABLE OBRAS(
-	id_obra int,
-	ubicacion varchar(100),
-	primary key (id_obra)
 );
 
 CREATE TABLE BODEGAS(
@@ -24,32 +19,56 @@ CREATE TABLE BODEGAS(
 	primary key (id_bodega)
 );
 
+CREATE TABLE RETIRO_BODEGA(
+	id_bodega int,
+	id_bodeguero int,
+	id_solicitud int,
+	fecha_retiro date,
+	cantidad int, 
+	primary key (fecha_retiro, id_bodega, id_bodeguero, id_solicitud)
+);
+
+CREATE TABLE BODEGAS_MATERIALES(
+	material_id int,
+	bodega_id int,
+	primary key (material_id, bodega_id)
+);
+
 CREATE TABLE MATERIALES(
 	id_material int,
+	material varchar(50),
 	marca varchar(50),
 	cant int,
-	bodega_id int,
-	disponible TINYINT(0),
+	disponible int,
 	comentario varchar(200),
-	primary key (id_material),
-	foreign key (bodega_id) references BODEGAS(id_bodega)
+	primary key (id_material)
 );
 
-CREATE TABLE CLIENTES_INTERNOS(
-	usuario_id int,
-	obra_id int,
-	foreign key (usuario_id) references USUARIOS(id_usuario),
-	foreign key (obra_id) references OBRAS(id_obra)
+CREATE TABLE SOLICITUDES_MATERIALES(
+	material_id int,
+	solicitud_id int,
+	primary key (material_id, solicitud_id)
 );
 
-CREATE TABLE ENCARGADOS_COMPRA(
-	usuario_id int,
-	foreign key (usuario_id) references USUARIOS(id_usuario)	
+CREATE TABLE SOLICITUDES(
+	id_solicitud int,
+	prioridad int,
+	material varchar(100),
+	cant_material int,
+	comentarios varchar(200),
+	estado varchar(50),
+	bodeguero_id int,
+	cliente_id int, 
+	encargado_id int,
+	primary key (id_solicitud),
+	foreign key (bodeguero_id) references USUARIOS(usuario_id),
+	foreign key (cliente_id) references USUARIOS(usuario_id),
+	foreign key (encargado_id) references USUARIOS(usuario_id)
 );
 
 CREATE TABLE PROVEEDORES(
 	id_proveedor int,
-	numero int,
+	telefono int,
 	mail varchar(100),
 	primary key (id_proveedor)
 );
@@ -59,57 +78,33 @@ CREATE TABLE ORDENES(
 	encargado_id int,
 	proveedor_id int,
 	primary key (id_orden),
-	foreign key (encargado_id) references ENCARGADOS_COMPRA(usuario_id),
+	foreign key (encargado_id) references USUARIOS(usuario_id),
 	foreign key (proveedor_id) references PROVEEDORES(id_proveedor)
 );
 
 CREATE TABLE FACTURAS(
 	id_factura int,
 	orden_id int,
-	proveedor_id int,
 	primary key (id_factura),
-	foreign key (orden_id) references ORDENES(id_orden),
-	foreign key (proveedor_id) references PROVEEDORES(id_proveedor)
-
+	foreign key (orden_id) references ORDENES(id_orden)
 );
 
 CREATE TABLE COTIZACIONES(
 	id_cotizacion int,
 	encargado_id int,
-	prov_id int,
-	foreign key (encargado_id) references ENCARGADOS_COMPRA(usuario_id),
-	foreign key (prov_id) references PROVEEDORES(id_proveedor)
-);
-
-CREATE TABLE SOLICITUDES(
-	id_solicitud int,
-	cliente_id int,
-	orden_id int,
-	prioridad int,
-	material varchar(100),
-	cant_material int,
-	comentarios varchar(200),
-	estado varchar(50),
-	primary key (id_solicitud),
-	foreign key (cliente_id) references CLIENTES_INTERNOS(usuario_id),
-	foreign key (orden_id) references ORDENES(id_orden)
+	proveedor_id int,
+	primary key (id_cotizacion),
+	foreign key (encargado_id) references USUARIOS(usuario_id),
+	foreign key (proveedor_id) references PROVEEDORES(id_proveedor)
 );
 
 CREATE TABLE DESPACHOS(
-	id_despacho int,
-	encargado_id int,
-	solicitud_id int,
-	foreign key (solicitud_id) references SOLICITUDES(id_solicitud),
-	foreign key (encargado_id) references ENCARGADOS_COMPRA(usuario_id)
-);
-
-CREATE TABLE BODEGUEROS(
+	id_bodega int,
 	id_bodeguero int,
-	bodega_id int,
-	encargado_id int,
-	primary key (id_bodeguero),
-	foreign key (bodega_id) references BODEGAS(id_bodega),
-	foreign key (encargado_id) references ENCARGADOS_COMPRA(usuario_id)
+	id_orden int,
+	fecha_despacho date,
+	cantidad int, 
+	primary key (fecha_despacho, id_bodega,	id_bodeguero, id_orden)
 );
 
-INSERT INTO USUARIOS VALUES (1234, "Nombre", "Apellido", "Cliente Interno", "1234");
+INSERT INTO USUARIOS VALUES (1234, "Nombre", "Apellido", "Cliente Interno", "1234", 0123);
