@@ -1,21 +1,23 @@
 # Proyecto_IDSW
 
-Por _carpetas_:
-
-## Documentación
-
-PDFs de los entregables.
-
 ## Stack:
 
 * Ruby on Rails
 * MySQL
 * Bootstrap?
 
+Por _carpetas_:
+
+## Documentación
+
+PDFs de los entregables.
+
+
 ## innombrable
 
-* **venv**:
-* ****
+* **app/controllers**: Controladores.
+* **app/views**: Vistas.
+* **app/db**: Modelo Base de datos.
 
 ### Instrucciones para ejecutar
 
@@ -26,4 +28,5 @@ PDFs de los entregables.
 #### Macos/Linux/like UNIX:
 
 * Ingresar a P_IDSW/innombrable en la terminal
+* $ bin/rails server
 * Se podrá observar en _localhost:3000/_.
