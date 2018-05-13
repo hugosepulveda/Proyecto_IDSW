@@ -18,6 +18,7 @@ PDFs de los entregables.
 * **app/controllers**: Controladores.
 * **app/views**: Vistas.
 * **app/db**: Modelo Base de datos.
+* **config/database.yml**: Configuración conexión bd mysql.
 
 ### Instrucciones para ejecutar
 
