@@ -2056,3 +2056,274 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 379ms (Views: 366.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login/login" for 127.0.0.1 at 2018-05-17 18:04:50 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sofi/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 264ms (Views: 245.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2018-05-17 18:06:41 -0400
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2018-05-17 18:06:51 -0400
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2018-05-17 18:06:53 -0400
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2018-05-17 18:06:54 -0400
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2018-05-17 18:12:21 -0400
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-17 18:12:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:23 -0400
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  Rendered usuarios/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:25 -0400
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  Rendered usuarios/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-17 18:12:36 -0400
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 52ms (Views: 37.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:39 -0400
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  Rendered usuarios/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-17 18:12:40 -0400
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:41 -0400
+Processing by UsuariosController#index as HTML
+Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:41 -0400
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  Rendered usuarios/index.html.erb within layouts/application (0.7ms)
+  Rendering usuarios/index.html.erb within layouts/application
+  Rendered usuarios/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 23:43:13 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sofi/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 476ms (Views: 417.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 23:43:23 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cliente_interno" for 127.0.0.1 at 2018-05-17 23:43:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cliente_interno"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-17 23:43:47 -0400
+Processing by ClienteInternoController#index as HTML
+  Rendering cliente_interno/index.html.erb within layouts/application
+  Rendered cliente_interno/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
+    1: <h1>Cliente interno</h1>
+    2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
+    3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
+  
+app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb___214243200221168451_70294255599340'
+Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:32:55 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sofi/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ClienteInternoController#index as HTML
+  Rendering cliente_interno/index.html.erb within layouts/application
+  Rendered cliente_interno/index.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
+    1: <h1>Cliente interno</h1>
+    2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
+    3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
+  
+app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316493505580'
+Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:33:19 -0400
+Processing by ClienteInternoController#index as HTML
+  Rendering cliente_interno/index.html.erb within layouts/application
+  Rendered cliente_interno/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
+    1: <h1>Cliente interno</h1>
+    2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
+    3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
+  
+app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316492892720'
+Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:34:27 -0400
+Processing by ClienteInternoController#index as HTML
+  Rendering cliente_interno/index.html.erb within layouts/application
+  Rendered cliente_interno/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
+    1: <h1>Cliente interno</h1>
+    2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
+    3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
+  
+app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316476071520'
+Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:35:33 -0400
+Processing by ClienteInternoController#index as HTML
+  Rendering cliente_interno/index.html.erb within layouts/application
+  Rendered cliente_interno/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
+    1: <h1>Cliente interno</h1>
+    2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
+    3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
+  
+app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316508562120'
+Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:35:37 -0400
+Processing by ClienteInternoController#index as HTML
+  Rendering cliente_interno/index.html.erb within layouts/application
+  Rendered cliente_interno/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
+    1: <h1>Cliente interno</h1>
+    2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
+    3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
+  
+app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316479399740'
+Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:36:00 -0400
+Processing by ClienteInternoController#index as HTML
+  Rendering cliente_interno/index.html.erb within layouts/application
+  Rendered cliente_interno/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cliente_interno"}):
+    1: <h1>Cliente interno</h1>
+    2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'create'} %>
+    3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'show'} %>
+  
+app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316471090420'

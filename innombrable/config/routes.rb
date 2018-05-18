@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'cliente_interno/index'
     get 'login/login'
 
     get 'welcome/index'
