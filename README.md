@@ -4,7 +4,7 @@
 
 * Ruby on Rails
 * MySQL
-* Bootstrap?
+* Foundation
 
 Por _carpetas_:
 
