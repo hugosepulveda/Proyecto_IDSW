@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bodeguero_id: 1
+  solicitud_id: 1
+  fecha_retiro: 2018-05-17 23:46:11
+  cantidad: 1
+
+two:
+  bodeguero_id: 1
+  solicitud_id: 1
+  fecha_retiro: 2018-05-17 23:46:11
+  cantidad: 1
