@@ -1,32 +1,55 @@
-.floated-label-wrapper {
-  position: relative;
+$hero-full-screen-bg: url('https://images.pexels.com/photos/378273/pexels-photo-378273.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') center center no-repeat;
+$hero-full-screen-bg-size: cover;
+$hero-full-screen-text-color: $white;
 
-  label {
-    background: $white;
-    color: $primary-color;
-    font-size: 0.75rem;
-    font-weight: 200;
-    left: 0.75rem;
-    opacity: 0;
-    padding: 0 0.25rem;
-    position: absolute;
-    top: 2rem;
-    transition: all 0.15s ease-in;
-    z-index: -1;
+.hero-full-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: $hero-full-screen-bg;
+  background-size: $hero-full-screen-bg-size;
 
-    input[type=text],
-    input[type=email],
-    input[type=password] {
-      border-radius: 4px;
-      font-size: 1.75em;
-      padding: 0.5em;
+  .middle-content-section {
+    text-align: center;
+    color: $hero-full-screen-text-color;
+  }
+
+  .top-content-section {
+    width: 100%;
+  }
+
+  .bottom-content-section {
+    padding: 1rem;
+
+    svg {
+      height: rem-calc(60);
+      width: rem-calc(60);
+      fill: $hero-full-screen-text-color;
+    }
+  }
+
+  // optional demo styles
+  .top-bar {
+    background: transparent;
+
+    .menu {
+      background: transparent;
     }
 
-    &.show {
-      opacity: 1;
-      top: -0.85rem;
-      z-index: 1;
-      transition: all 0.15s ease-in;
+    .menu-text {
+      color: $hero-full-screen-text-color;
+    }
+
+    .menu li {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu a {
+      color: $hero-full-screen-text-color;
+      font-weight: bold;
     }
   }
 }

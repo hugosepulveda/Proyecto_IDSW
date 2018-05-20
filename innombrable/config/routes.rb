@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :usuarios
     post 'usuarios/new' => 'usuarios#new'
     root 'welcome#index'
-    get 'cliente_interno/index'
-    post 'cliente_interno/new'=>'cliente_interno#new'
+
+    resources :solicitudes
+    get 'solicitudes/new' => 'solicitudes#new'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
