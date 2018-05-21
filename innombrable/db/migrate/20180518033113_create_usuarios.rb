@@ -5,8 +5,8 @@ class CreateUsuarios < ActiveRecord::Migration[5.2]
       t.string :apellidos
       t.string :tipo
       t.integer :obra_id
-      t.integer :contrasena
-
+      t.integer :rut
+      t.string :contrasena
       t.timestamps
     end
   end

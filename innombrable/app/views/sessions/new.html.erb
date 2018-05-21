@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPI</title>
+
+</head>
+<body style="background-image: url('http://gpi.cl/wp-content/uploads/2018/02/cropped-montaje1-1.jpg');">
+  <nav class="top-bar topbar-responsive contain-to-grid fixed">
+    <div class="top-bar-title">
+      <a class="topbar-responsive-logo" href="#"><strong>GPI</strong></a>
+    </div>
+    <%= form_for(:session, url: login_path) do |f| %>
+    <div id="topbar-responsive" class="topbar-responsive-links">
+      <div class="top-bar-right">
+        <ul class="menu simple vertical medium-horizontal">
+          <li>
+            <%= f.label :rut %>
+            <%= f.text_field :rut, class: 'form-control' %>
+          </li>
+          <li>
+          <%= f.label :contrasena %>
+            <%= f.password_field :contrasena, class: 'form-control' %>
+          </li>
+          <li>
+            <%= f.submit "Log in", class: "btn btn-primary" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+  </nav>
+
+</body>
+</html>

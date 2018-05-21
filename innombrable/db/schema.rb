@@ -34,7 +34,8 @@ ActiveRecord::Schema.define(version: 2018_05_18_034610) do
     t.string "apellidos"
     t.string "tipo"
     t.integer "obra_id"
-    t.integer "contrasena"
+    t.integer "rut"
+    t.string "contrasena"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
