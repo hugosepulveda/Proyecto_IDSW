@@ -1,0 +1,10 @@
+[default]
+name=Default
+runtime=host
+config-opts=
+run-opts=
+prefix=/home/hugo/.cache/gnome-builder/install/controllers/host
+app-id=
+postbuild=
+prebuild=
+default=true
