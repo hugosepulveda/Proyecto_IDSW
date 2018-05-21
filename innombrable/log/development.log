@@ -2949,3 +2949,82 @@ Processing by LoginController#login as HTML
   Rendering login/login.html.erb within layouts/application
   Rendered login/login.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-21 16:26:37 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 757ms (Views: 731.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 16:26:45 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0V6qbHsIWalM43KsFBz8ndRSjvn7H4pKRRd1WhAdvjvrkbp2Hag4rRRdxjL5LbKgMLBWO8lu24pRqFzar20sOw==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 52ms (ActiveRecord: 30.0ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-05-21 16:26:45 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 46.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-21 18:14:38 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (92.8ms)
+Completed 200 OK in 645ms (Views: 607.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 18:14:44 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rqtDiEwkQSJr1iQrFomR7IWz68ArK3o0g+Z3WtnCOheUZFOSKoQgJjNokLX7uN/RYVEzAhlaK/SXWV7aZrKoFw==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 124ms (ActiveRecord: 28.9ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-05-21 18:14:44 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 150ms (Views: 117.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 18:14:49 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rqtDiEwkQSJr1iQrFomR7IWz68ArK3o0g+Z3WtnCOheUZFOSKoQgJjNokLX7uN/RYVEzAhlaK/SXWV7aZrKoFw==", "session"=>{"rut"=>"1234567", "contrasena"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-05-21 18:14:49 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (5.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 148ms (Views: 133.4ms | ActiveRecord: 5.8ms)
+
+
