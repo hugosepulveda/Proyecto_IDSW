@@ -7,14 +7,14 @@
 default: &default
   adapter: mysql2
   host: localhost
-  port: 8888
-  socket: /Applications/MAMP/tmp/mysql/mysql.sock
-  database: GPI
+  port: 3306
+  socket: /var/run/mysqld/mysqld.sock
+  database: gpi
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   username: root
-  password: "root"
+  password: "password"
 
 development:
   <<: *default

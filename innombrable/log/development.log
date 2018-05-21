@@ -6,9 +6,9 @@ Completed 200 OK in 168ms (Views: 104.4ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/index" for 127.0.0.1 at 2018-05-12 17:23:15 -0300
-  
+
 ActionController::RoutingError (No route matches [GET] "/index"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -37,9 +37,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/pages/index" for 127.0.0.1 at 2018-05-12 17:23:34 -0300
-  
+
 ActionController::RoutingError (uninitialized constant PagesController):
-  
+
 bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
 bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
 bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
@@ -105,9 +105,9 @@ Completed 200 OK in 3052ms (Views: 3034.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/articles/new" for 127.0.0.1 at 2018-05-12 17:37:39 -0300
-  
+
 ActionController::RoutingError (No route matches [GET] "/articles/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -140,14 +140,14 @@ Processing by UsuariosController#new as HTML
 Completed 406 Not Acceptable in 259ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (UsuariosController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
 actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
 actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
@@ -223,9 +223,9 @@ Completed 200 OK in 685ms (Views: 667.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login" for 127.0.0.1 at 2018-05-12 17:40:04 -0300
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -332,20 +332,20 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for nil:NilClass):
     1: <p>
     2:   <strong>Nombres:</strong>
     3:   <%= @usuario.nombres %>
     4: </p>
-    5:  
+    5:
     6: <p>
-  
+
 app/views/usuarios/show.html.erb:3:in `_app_views_usuarios_show_html_erb__4064686186142458151_70197128194760'
 Started GET "/usuariosnew" for 127.0.0.1 at 2018-05-12 18:02:54 -0300
-  
+
 ActionController::RoutingError (No route matches [GET] "/usuariosnew"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -381,9 +381,9 @@ Completed 200 OK in 154ms (Views: 150.1ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 18:03:08 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -421,9 +421,9 @@ Completed 200 OK in 648ms (Views: 623.6ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 18:05:38 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -454,9 +454,9 @@ puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-12 18:09:10 -0300
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/controllers/usuarios_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/usuarios_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-12 18:10:02 -0300
 Processing by UsuariosController#new as HTML
@@ -482,9 +482,9 @@ Completed 200 OK in 80ms (Views: 72.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/usuarios/" for 127.0.0.1 at 2018-05-12 18:10:30 -0300
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for UsuariosController):
-  
+
 actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
 actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
 actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
@@ -543,9 +543,9 @@ Completed 200 OK in 148ms (Views: 143.2ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 18:10:48 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -590,9 +590,9 @@ Completed 200 OK in 766ms (Views: 708.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/usuarios" for 127.0.0.1 at 2018-05-12 18:17:04 -0300
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for UsuariosController):
-  
+
 actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
 actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
 actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
@@ -651,9 +651,9 @@ Completed 200 OK in 123ms (Views: 119.2ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 18:18:57 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -707,15 +707,15 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for nil:NilClass):
     1: <p>
     2:   <strong>Nombres:</strong>
     3:   <%= @usuario.nombres %>
     4: </p>
-    5:  
+    5:
     6: <p>
-  
+
 app/views/usuarios/index.html.erb:3:in `_app_views_usuarios_index_html_erb__1512327550456028164_70318306315600'
 Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-12 18:57:49 -0300
 Processing by UsuariosController#new as HTML
@@ -725,9 +725,9 @@ Completed 200 OK in 247ms (Views: 242.1ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 18:57:56 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -785,9 +785,9 @@ Completed 200 OK in 514ms (Views: 464.5ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 19:02:59 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -825,9 +825,9 @@ Completed 200 OK in 889ms (Views: 866.4ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 19:04:02 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -865,9 +865,9 @@ Completed 200 OK in 1182ms (Views: 1094.6ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 19:04:43 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -932,15 +932,15 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for nil:NilClass):
     1: <p>
     2:   <strong>Nombres:</strong>
     3:   <%= @usuario.nombres %>
     4: </p>
-    5:  
+    5:
     6: <p>
-  
+
 app/views/usuarios/index.html.erb:3:in `_app_views_usuarios_index_html_erb__1372400736756802962_70152845067120'
 Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-12 19:14:32 -0300
 Processing by UsuariosController#new as HTML
@@ -950,9 +950,9 @@ Completed 200 OK in 86ms (Views: 82.0ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 19:14:57 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -996,15 +996,15 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for nil:NilClass):
     1: <p>
     2:   <strong>Nombres:</strong>
     3:   <%= @usuario.nombres %>
     4: </p>
-    5:  
+    5:
     6: <p>
-  
+
 app/views/usuarios/index.html.erb:3:in `_app_views_usuarios_index_html_erb___1417051448338409540_70341587733420'
 Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-12 19:28:46 -0300
 Processing by UsuariosController#new as HTML
@@ -1014,9 +1014,9 @@ Completed 200 OK in 202ms (Views: 108.2ms | ActiveRecord: 0.7ms)
 
 
 Started POST "/usuarios/new" for 127.0.0.1 at 2018-05-12 19:29:04 -0300
-  
+
 ActionController::RoutingError (No route matches [POST] "/usuarios/new"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -1075,15 +1075,15 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for nil:NilClass):
     1: <p>
     2:   <strong>Nombres:</strong>
     3:   <%= @usuario.nombres %>
     4: </p>
-    5:  
+    5:
     6: <p>
-  
+
 app/views/usuarios/index.html.erb:3:in `_app_views_usuarios_index_html_erb__510020913499153406_70276063904520'
 Started GET "/" for 127.0.0.1 at 2018-05-12 19:36:15 -0300
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -1133,15 +1133,15 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for nil:NilClass):
     1: <p>
     2:   <strong>Nombres:</strong>
     3:   <%= @usuario.nombres %>
     4: </p>
-    5:  
+    5:
     6: <p>
-  
+
 app/views/usuarios/index.html.erb:3:in `_app_views_usuarios_index_html_erb__1855329934234354689_70271788579120'
 Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-12 19:40:56 -0300
 Processing by UsuariosController#new as HTML
@@ -1174,12 +1174,12 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"index", :controller=>"usuarios#new"}):
     1: <h1>Index Usuarios</h1>
     2: <%= link_to 'Crear Usuario', controller: 'usuarios#new' %>
     3: <%= link_to 'Modificar/eliminar Usuario', controller: 'usuarios#new' %>
-  
+
 app/views/usuarios/index.html.erb:2:in `_app_views_usuarios_index_html_erb___4049345722183388237_70365066942680'
 Started GET "/usuarios" for 127.0.0.1 at 2018-05-12 22:32:00 -0300
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -1190,12 +1190,12 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 449ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"index", :controller=>"usuarios/new"}):
     1: <h1>Index Usuarios</h1>
     2: <%= link_to 'Crear Usuario', controller: 'usuarios/new' %>
     3: <%= link_to 'Modificar/eliminar Usuario', controller: 'usuarios/new' %>
-  
+
 app/views/usuarios/index.html.erb:2:in `_app_views_usuarios_index_html_erb__469792987549767707_70095292396860'
 Started GET "/usuarios" for 127.0.0.1 at 2018-05-12 22:35:13 -0300
   [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -1206,12 +1206,12 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 381ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"index", :controller=>"new_usuario_path"}):
     1: <h1>Index Usuarios</h1>
     2: <%= link_to 'Crear Usuario', controller: 'new_usuario_path' %>
     3: <%= link_to 'Modificar/eliminar Usuario', controller: 'usuarios/new' %>
-  
+
 app/views/usuarios/index.html.erb:2:in `_app_views_usuarios_index_html_erb___3562616336872835158_70363241890200'
 Started GET "/usuarios" for 127.0.0.1 at 2018-05-12 22:51:50 -0300
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -1222,12 +1222,12 @@ Processing by UsuariosController#index as HTML
 Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"index", :controller=>"new"}):
     1: <h1>Index Usuarios</h1>
     2: <%= link_to 'Crear Usuario', controller: 'new' %>
     3: <%= link_to 'Modificar/eliminar Usuario', controller: 'new' %>
-  
+
 app/views/usuarios/index.html.erb:2:in `_app_views_usuarios_index_html_erb__2783894225595085334_70285428823840'
 Started GET "/" for 127.0.0.1 at 2018-05-12 22:59:52 -0300
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -1470,9 +1470,9 @@ Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login" for 127.0.0.1 at 2018-05-16 21:18:47 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -1501,9 +1501,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/login" for 127.0.0.1 at 2018-05-16 21:18:47 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -1808,9 +1808,9 @@ Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login" for 127.0.0.1 at 2018-05-17 01:33:19 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -1839,9 +1839,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/login" for 127.0.0.1 at 2018-05-17 01:33:19 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -1890,16 +1890,16 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Undefined variable: "$white".):
-     6: 
+     6:
      7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-     8: 
+     8:
      9:     <%= stylesheet_link_tag    "application" %>
     10:     <%= javascript_include_tag "vendor/modernizr" %>
     11:     <%= csrf_meta_tags %>
     12:   </head>
-  
+
 app/assets/stylesheets/welcome.scss:5
 app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3780822742337428999_70262179731540'
 Started GET "/" for 127.0.0.1 at 2018-05-17 02:14:06 -0400
@@ -1909,16 +1909,16 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Undefined variable: "$primary-color".):
-     6: 
+     6:
      7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-     8: 
+     8:
      9:     <%= stylesheet_link_tag    "application" %>
     10:     <%= javascript_include_tag "vendor/modernizr" %>
     11:     <%= csrf_meta_tags %>
     12:   </head>
-  
+
 app/assets/stylesheets/welcome.scss:6
 app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3780822742337428999_70262148798320'
 Started GET "/" for 127.0.0.1 at 2018-05-17 02:14:20 -0400
@@ -2056,6 +2056,411 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 379ms (Views: 366.8ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2018-05-17 23:17:47 -0400
+
+Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+
+mysql2 (0.5.1) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.1) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-17 23:18:47 -0400
+  [1m[35m (82.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 1288ms (Views: 1232.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (56.5ms)[0m  [1m[35mCREATE DATABASE `GPI` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `GPI` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (528.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (424.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (42.4ms)[0m  [1m[34mSELECT GET_LOCK('5840673760519090185', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (29.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsuarios (20180518033113)
+  [1m[35m (504.5ms)[0m  [1m[35mCREATE TABLE `usuarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombres` varchar(255), `apellidos` varchar(255), `tipo` varchar(255), `obra_id` int, `contrasena` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180518033113_create_usuarios.rb:3
+  [1m[35m (36.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (26.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180518033113')[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateBodegas (20180518034202)
+  [1m[35m (239.6ms)[0m  [1m[35mCREATE TABLE `bodegas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `horario` datetime, `direccion` varchar(255), `comuna` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180518034202_create_bodegas.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180518034202')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateRetiroBodegas (20180518034610)
+  [1m[35m (149.2ms)[0m  [1m[35mCREATE TABLE `retiro_bodegas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `bodeguero_id` int, `solicitud_id` int, `fecha_retiro` datetime, `cantidad` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180518034610_create_retiro_bodegas.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180518034610')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (21.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (10.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-05-18 04:09:14', '2018-05-18 04:09:14')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('5840673760519090185')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE DATABASE `GPI` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `GPI` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ db/schema.rb:15
+  [1m[35m (68.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `bodegas` CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (168.6ms)[0m  [1m[35mCREATE TABLE `bodegas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `horario` datetime, `direccion` varchar(255), `comuna` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:15
+  [1m[35m (70.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `retiro_bodegas` CASCADE[0m
+  ↳ db/schema.rb:23
+  [1m[35m (279.6ms)[0m  [1m[35mCREATE TABLE `retiro_bodegas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `bodeguero_id` int, `solicitud_id` int, `fecha_retiro` datetime, `cantidad` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:23
+  [1m[35m (182.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `usuarios` CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (519.1ms)[0m  [1m[35mCREATE TABLE `usuarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombres` varchar(255), `apellidos` varchar(255), `tipo` varchar(255), `obra_id` int, `contrasena` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ db/schema.rb:15
+  [1m[35m (150.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `bodegas` CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (682.2ms)[0m  [1m[35mCREATE TABLE `bodegas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `horario` datetime, `direccion` varchar(255), `comuna` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:15
+  [1m[35m (4.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `retiro_bodegas` CASCADE[0m
+  ↳ db/schema.rb:23
+  [1m[35m (117.0ms)[0m  [1m[35mCREATE TABLE `retiro_bodegas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `bodeguero_id` int, `solicitud_id` int, `fecha_retiro` datetime, `cantidad` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:23
+  [1m[35m (4.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `usuarios` CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (119.8ms)[0m  [1m[35mCREATE TABLE `usuarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombres` varchar(255), `apellidos` varchar(255), `tipo` varchar(255), `obra_id` int, `contrasena` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (16.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (42.7ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'test', `updated_at` = '2018-05-18 04:13:35' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `contrasena`, `created_at`, `updated_at`) VALUES ('Hugo Adolfo', 'Sepúlveda Arriaza', 'cliente interno', 1234567, '2018-05-18 04:13:35', '2018-05-18 04:13:35')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `contrasena`, `created_at`, `updated_at`) VALUES ('Hugo Adolfo', 'Sepúlveda Arriaza', 'cliente interno', 1234567, '2018-05-18 04:14:11', '2018-05-18 04:14:11')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+Started GET "/" for 127.0.0.1 at 2018-05-18 00:21:45 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 869ms (Views: 814.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 00:25:32 -0400
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-05-18 00:27:58 -0400
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login/login" for 127.0.0.1 at 2018-05-18 00:28:07 -0400
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 463ms (Views: 453.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 00:28:12 -0400
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 00:30:49 -0400
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-05-18 00:35:01 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-18 00:35:08 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 469ms (Views: 464.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2018-05-18 00:35:18 -0400
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 00:37:28 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+=======
 Started GET "/login/login" for 127.0.0.1 at 2018-05-17 18:04:50 -0400
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/sofi/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
@@ -2101,9 +2506,10 @@ Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login" for 127.0.0.1 at 2018-05-17 18:12:22 -0400
-  
+>>>>>>> e013793179be07048be780f5dc97b0d6a5c71520
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -2131,76 +2537,167 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:23 -0400
-Processing by UsuariosController#index as HTML
-  Rendering usuarios/index.html.erb within layouts/application
-  Rendered usuarios/index.html.erb within layouts/application (1.2ms)
-Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 00:48:26 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 630ms (Views: 584.0ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:25 -0400
-Processing by UsuariosController#index as HTML
-  Rendering usuarios/index.html.erb within layouts/application
-  Rendered usuarios/index.html.erb within layouts/application (1.2ms)
-Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+Started GET "/?email+input=&password+input=" for 127.0.0.1 at 2018-05-18 00:48:34 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"email input"=>"", "password input"=>"[FILTERED]"}
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 65ms (Views: 59.6ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-17 18:12:36 -0400
-Processing by UsuariosController#new as HTML
-  Rendering usuarios/new.html.erb within layouts/application
-  Rendered usuarios/new.html.erb within layouts/application (4.4ms)
-Completed 200 OK in 52ms (Views: 37.5ms | ActiveRecord: 1.1ms)
+Started GET "/?email+input=&password+input=" for 127.0.0.1 at 2018-05-18 00:50:35 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"email input"=>"", "password input"=>"[FILTERED]"}
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 270ms (Views: 239.2ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:39 -0400
-Processing by UsuariosController#index as HTML
-  Rendering usuarios/index.html.erb within layouts/application
-  Rendered usuarios/index.html.erb within layouts/application (1.2ms)
-Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 00:55:35 -0400
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 1878ms (Views: 1842.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/usuarios/new" for 127.0.0.1 at 2018-05-17 18:12:40 -0400
-Processing by UsuariosController#new as HTML
-  Rendering usuarios/new.html.erb within layouts/application
-  Rendered usuarios/new.html.erb within layouts/application (1.9ms)
-Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 00:55:47 -0400
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 52.7ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:41 -0400
-Processing by UsuariosController#index as HTML
-Started GET "/usuarios" for 127.0.0.1 at 2018-05-17 18:12:41 -0400
-Processing by UsuariosController#index as HTML
-  Rendering usuarios/index.html.erb within layouts/application
-  Rendered usuarios/index.html.erb within layouts/application (0.7ms)
-  Rendering usuarios/index.html.erb within layouts/application
-  Rendered usuarios/index.html.erb within layouts/application (0.7ms)
-Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 00:58:41 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 940ms (Views: 889.7ms | ActiveRecord: 0.0ms)
 
 
-Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 11:36:18 -0400
+
+Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+
+mysql2 (0.5.1) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.1) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-18 11:37:53 -0400
+  [1m[35m (87.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (24.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 1070ms (Views: 996.1ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2018-05-17 23:43:13 -0400
-  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/sofi/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-Processing by WelcomeController#index as HTML
-  Rendering welcome/index.html.erb within layouts/application
-  Rendered welcome/index.html.erb within layouts/application (3.1ms)
-Completed 200 OK in 476ms (Views: 417.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 11:45:46 -0400
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 669ms (Views: 602.8ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2018-05-17 23:43:23 -0400
-Processing by WelcomeController#index as HTML
-  Rendering welcome/index.html.erb within layouts/application
-  Rendered welcome/index.html.erb within layouts/application (0.3ms)
-Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 11:47:26 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as HTML
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 362ms (Views: 340.2ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/cliente_interno" for 127.0.0.1 at 2018-05-17 23:43:30 -0400
-  
-ActionController::RoutingError (No route matches [GET] "/cliente_interno"):
-  
-actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+Started GET "/" for 127.0.0.1 at 2018-05-21 11:45:30 -0400
+
+Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+
+mysql2 (0.5.1) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.1) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
@@ -2234,12 +2731,12 @@ Processing by ClienteInternoController#index as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
     1: <h1>Cliente interno</h1>
     2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
     3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
-  
+
 app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb___214243200221168451_70294255599340'
 Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:32:55 -0400
   [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -2250,12 +2747,12 @@ Processing by ClienteInternoController#index as HTML
 Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
     1: <h1>Cliente interno</h1>
     2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
     3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
-  
+
 app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316493505580'
 Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:33:19 -0400
 Processing by ClienteInternoController#index as HTML
@@ -2264,12 +2761,12 @@ Processing by ClienteInternoController#index as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
     1: <h1>Cliente interno</h1>
     2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
     3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
-  
+
 app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316492892720'
 Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:34:27 -0400
 Processing by ClienteInternoController#index as HTML
@@ -2278,12 +2775,12 @@ Processing by ClienteInternoController#index as HTML
 Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
     1: <h1>Cliente interno</h1>
     2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
     3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
-  
+
 app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316476071520'
 Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:35:33 -0400
 Processing by ClienteInternoController#index as HTML
@@ -2292,12 +2789,12 @@ Processing by ClienteInternoController#index as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
     1: <h1>Cliente interno</h1>
     2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
     3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
-  
+
 app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316508562120'
 Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:35:37 -0400
 Processing by ClienteInternoController#index as HTML
@@ -2306,12 +2803,12 @@ Processing by ClienteInternoController#index as HTML
 Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"new", :controller=>"cliente_interno"}):
     1: <h1>Cliente interno</h1>
     2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'new'} %>
     3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'new'} %>
-  
+
 app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316479399740'
 Started GET "/cliente_interno/index" for 127.0.0.1 at 2018-05-18 12:36:00 -0400
 Processing by ClienteInternoController#index as HTML
@@ -2320,12 +2817,12 @@ Processing by ClienteInternoController#index as HTML
 Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cliente_interno"}):
     1: <h1>Cliente interno</h1>
     2: <%= link_to 'Realizar nueva solicitd.', {controller: 'cliente_interno', :action => 'create'} %>
     3: <%= link_to 'Ver solicitudes.', {controller: 'cliente_interno', :action =>  'show'} %>
-  
+
 app/views/cliente_interno/index.html.erb:2:in `_app_views_cliente_interno_index_html_erb__4479385447539855301_70316471090420'
 Started GET "/" for 127.0.0.1 at 2018-05-19 03:06:04 -0400
   [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -2379,9 +2876,9 @@ Processing by UsuariosController#show as HTML
 Completed 404 Not Found in 8ms (ActiveRecord: 1.5ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Usuario with 'id'=show):
-  
+
 app/controllers/usuarios_controller.rb:18:in `show'
 Started GET "/usuarios/show" for 127.0.0.1 at 2018-05-19 03:06:29 -0400
 Processing by UsuariosController#show as HTML
@@ -2391,9 +2888,9 @@ Processing by UsuariosController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Usuario with 'id'=show):
-  
+
 app/controllers/usuarios_controller.rb:18:in `show'
 Started GET "/usuarios" for 127.0.0.1 at 2018-05-19 03:06:30 -0400
 Processing by UsuariosController#index as HTML
@@ -2417,9 +2914,9 @@ Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login" for 127.0.0.1 at 2018-05-19 03:06:33 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -2452,5 +2949,3 @@ Processing by LoginController#login as HTML
   Rendering login/login.html.erb within layouts/application
   Rendered login/login.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.0ms)
-
-

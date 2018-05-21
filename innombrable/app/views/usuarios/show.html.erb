@@ -1,9 +1,11 @@
-<p>
-  <strong>Nombres:</strong>
-  <%= @usuario.nombres %>
-</p>
- 
-<p>
-  <strong>Apellidos:</strong>
-  <%= @usuario.apellidos %>
-</p>
+<% provide(:title, @usuario.nombres) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @usuario.nombres %>
+        <%= @usuario.apellidos %>
+      </h1>
+    </section>
+  </aside>
+</div>
