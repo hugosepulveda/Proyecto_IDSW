@@ -1,6 +1,12 @@
 class UsuariosController < ApplicationController
 	def show
 		@usuario = Usuario.find(params[:id])
+		
+		if @usuario.tipo == "cliente interno"
+		    render "clientes_internos/index"
+		elsif @usuario.tipo == "bodeguero"
+		    render "bodeguero/index"
+		end
 	end
 
 	def new
@@ -13,8 +19,10 @@ class UsuariosController < ApplicationController
 
     	if @usuario.save
       		log_in @usuario
-      		flash[:success] = "jaja"
-      		redirect_to @usuario
+      		if usuario.tipo == "cliente interno"
+      			#render 'cliente-interno'
+      			redirect_to @usuario
+      		end
     	else
       		render 'new'
     	end

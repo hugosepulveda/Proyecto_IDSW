@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   	if usuario && usuario.contrasena == params[:session][:contrasena]
         log_in usuario
         redirect_to usuario
-
+        
   	else
   	  flash.now[:danger] = 'Combinación rut/contraseña inválida.'
   	  render 'new'
