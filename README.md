@@ -12,7 +12,6 @@ Por _carpetas_:
 
 PDFs de los entregables.
 
-
 ## innombrable
 
 * **app/controllers**: Controladores.
@@ -31,3 +30,11 @@ PDFs de los entregables.
 * Ingresar a P_IDSW/innombrable en la terminal
 * $ bin/rails server
 * Se podrá observar en _localhost:3000/_.
+
+### Creación de la Base de datos:
+
+* Entrar a carpeta _innombrable_.
+* En caso de tener la bd ya creada, ejecutar en la terminal: $ rails db:drop
+* $ rails db:create
+* $ rails db:migrate
+* $ rails db:seed
