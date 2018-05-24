@@ -5,7 +5,7 @@ class UsuariosController < ApplicationController
 		if @usuario.tipo == "cliente interno"
 		    render "clientes_internos/index"
 		elsif @usuario.tipo == "bodeguero"
-		    render "bodeguero/index"
+		    render "bodegueros/index"
 		end
 	end
 

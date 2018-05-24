@@ -1,2 +1,22 @@
-<h1>ClientesInternos#new</h1>
-<p>Find me in app/views/clientes_internos/new.html.erb</p>
+<h1>Ver Solicitudes</h1>
+
+<table style="width:90%">
+  <tr>
+    <th>Material</th>
+    <th>Cantidad</th>
+    <th>Bodeguero</th>
+    <th>Encargado</th>
+    <th>Prioridad</th>
+    <th>Estado</th>
+  </tr>
+  <% @solicitudes.each do |s| %>
+  <tr>
+    <td><%= s.material %></td>
+    <td><%= s.cant_material %></td>
+    <td><%= s.bodeguero %></td>
+    <td><%= s.encargado %></td>
+    <td><%= s.prioridad %></td>
+    <td><%= s.estado %></td>
+  </tr>
+  <% end %>
+</table> 
