@@ -1,1 +1,13 @@
-<h1>Crear</h1>
+<%= form_for(:clientes_internos) do |s| %>
+<%= s.label :Material %>
+<%= s.text_field :material, class: 'form-control' %>
+
+<%= s.label :Cantidad %>
+<%= s.text_field :cantidad, class: 'form-control' %>
+
+<%= s.label :Prioridad %>
+<%= s.text_field :prioridad, class: 'form-control' %>
+
+<%= s.submit "Crear solicitud", class: "btn btn-primary" %>
+
+<% end %>

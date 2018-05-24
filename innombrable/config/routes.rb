@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   resources :usuarios
-  post 'clientes_internos', to: 'clientes_internos#crear_solicitudes'
-  get 'clientes_internos', to: 'clientes_internos#ver_solicitudes'
+  resources :clientes_internos
+  get ':id/clientes-internos/crear_solicitudes', to: 'clientes_internos#crear_solicitudes'
+  post ':id/clientes-internos/crear_solicitudes', to: 'clientes_internos#crear_solicitudes'
+  get ':id/clientes_internos/ver_solicitudes', to: 'clientes_internos#ver_solicitudes'
   
     #post 'usuarios/new' => 'usuarios#new'
     #root 'login#login'
