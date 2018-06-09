@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'bodegueros_central/index'
   get 'ordenes/create'
   get 'bodegas/show'
   get 'bodegueros/new'
