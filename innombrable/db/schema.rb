@@ -10,12 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_24_185136) do
+ActiveRecord::Schema.define(version: 2018_06_09_025126) do
 
   create_table "bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "horario"
-    t.string "direccion"
+    t.integer "numero"
+    t.string "calle"
     t.string "comuna"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bodegueros", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "usuario_id"
+    t.integer "bodega_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "clientes_internos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "usuario_id"
+    t.integer "obra_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "encargados_compras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "usuario_id"
+    t.integer "solicitude_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "obras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nombre"
+    t.string "numero"
+    t.string "calle"
+    t.string "comuna"
+    t.string "tipo"
+    t.string "cliente"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ordenes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,10 +69,10 @@ ActiveRecord::Schema.define(version: 2018_05_24_185136) do
 
   create_table "solicitudes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "material"
-    t.integer "cant_material"
+    t.integer "cantidad"
     t.integer "prioridad"
     t.integer "usuario_id"
-    t.integer "estado"
+    t.string "estado"
     t.integer "encargado_id"
     t.integer "bodeguero_id"
     t.datetime "created_at", null: false
@@ -45,7 +83,6 @@ ActiveRecord::Schema.define(version: 2018_05_24_185136) do
     t.string "nombres"
     t.string "apellidos"
     t.string "tipo"
-    t.integer "obra_id"
     t.integer "rut"
     t.string "contrasena"
     t.datetime "created_at", null: false

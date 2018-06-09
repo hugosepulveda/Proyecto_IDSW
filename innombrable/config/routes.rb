@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ordenes/create'
+  get 'bodegas/show'
   get 'bodegueros/new'
   get 'clientes_internos/new'
   get 'sessions/new'
@@ -8,10 +10,12 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   resources :usuarios
   resources :clientes_internos
+  resources :bodegueros
+  resources :solicitudes
   get ':id/clientes-internos/crear_solicitudes', to: 'clientes_internos#crear_solicitudes'
   post ':id/clientes-internos/crear_solicitudes', to: 'clientes_internos#crear_solicitudes'
   get ':id/clientes_internos/ver_solicitudes', to: 'clientes_internos#ver_solicitudes'
-  
+
     #post 'usuarios/new' => 'usuarios#new'
     #root 'login#login'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

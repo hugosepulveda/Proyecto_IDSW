@@ -1,0 +1,2 @@
+class Bodeguero < ApplicationRecord
+end

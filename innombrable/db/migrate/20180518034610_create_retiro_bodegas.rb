@@ -5,7 +5,6 @@ class CreateRetiroBodegas < ActiveRecord::Migration[5.2]
       t.integer :solicitud_id
       t.datetime :fecha_retiro
       t.integer :cantidad
-
       t.timestamps
     end
   end

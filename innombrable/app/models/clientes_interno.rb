@@ -1,0 +1,2 @@
+class ClientesInterno < ApplicationRecord
+end

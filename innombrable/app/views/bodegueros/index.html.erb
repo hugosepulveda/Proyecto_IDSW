@@ -1,2 +1,4 @@
-<h1>Bodegueros#new</h1>
-<p>Find me in app/views/bodegueros/new.html.erb</p>
+<% provide(:title, "Bienvenido" + " " + current_user.nombres) %>
+<%= link_to "Ver/modificar solicitudes",  controller: "solicitudes", action: "show" %><br>
+<%= link_to "Modificar inventario",  controller: "bodegas", action: "show" %><br>
+<%= link_to "Crear orden de compra",  controller: "ordenes", action: "create" %>

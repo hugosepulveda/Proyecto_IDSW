@@ -2,10 +2,15 @@ class UsuariosController < ApplicationController
 	def show
 		@usuario = Usuario.find(params[:id])
 		
-		if @usuario.tipo == "cliente interno"
-		    render "clientes_internos/index"
-		elsif @usuario.tipo == "bodeguero"
-		    render "bodegueros/index"
+		case @usuario.tipo
+			when "cliente interno"
+		    	render "clientes_internos/index"
+		 	when "bodeguero"
+		    	render "bodegueros/index"
+		  when "bodeguero central"
+					render "bodegueros_central/index"
+		  when "encargado compra"
+					render "encargados_compras/index"
 		end
 	end
 
