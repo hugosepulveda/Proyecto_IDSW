@@ -1,16 +1,16 @@
 class UsuariosController < ApplicationController
 	def show
 		@usuario = Usuario.find(params[:id])
-		
 		case @usuario.tipo
 			when "cliente interno"
-		    	render "clientes_internos/index"
-		 	when "bodeguero"
-		    	render "bodegueros/index"
-		  when "bodeguero central"
+					render "clientes_internos/index"
+			when "bodeguero"
+					render "bodegueros/index"
+			when "bodeguero central"
 					render "bodegueros_central/index"
-		  when "encargado compra"
+			when "encargado compra"
 					render "encargados_compras/index"
+					#render :controller => "controller", :action => "action"
 		end
 	end
 
@@ -20,7 +20,7 @@ class UsuariosController < ApplicationController
 
 	def create
 
-    	@user = Usuario.new(usuario_params)
+    	@usuario = Usuario.new(usuario_params)
 
     	if @usuario.save
       		log_in @usuario

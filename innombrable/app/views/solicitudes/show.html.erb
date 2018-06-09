@@ -1,1 +1,21 @@
-<title="ahahah">
+<h1>Ver Solicitudes</h1>
+<table style="width:90%">
+  <tr>
+    <th>Material</th>
+    <th>Cantidad</th>
+    <th>Bodeguero</th>
+    <th>Encargado</th>
+    <th>Prioridad</th>
+    <th>Estado</th>
+  </tr>
+  <% @solicitudes.each do |s| %>
+  <tr>
+    <td><%= s.material %></td>
+    <td><%= s.cantidad %></td>
+    <td><%= s.bodeguero_id %></td>
+    <td><%= s.encargado_id %></td>
+    <td><%= s.prioridad %></td>
+    <td><%= s.estado %></td>
+  </tr>
+  <% end %>
+</table>

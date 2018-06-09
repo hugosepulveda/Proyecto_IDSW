@@ -23,11 +23,15 @@ Solicitude.create(material: "material 2", cantidad: 3, usuario_id: 1)
 #BODEGAS#############
 Bodega.create(numero: 742, calle: "Avenida siempreviva", comuna: "Springfield")
 
+#MATERIALES##########
+Materiale.create(nombre: "material 1", cantidad: 100, disponible: true, bodega_id: 1, tipo: "Carga pesada", comentario: "Difícil transporte")
+Materiale.create(nombre: "material 3", cantidad: 0, disponible: false, bodega_id: 1, tipo: "Aceite inflamable", comentario: "Precaución: inflamabilidad")
+
 #BODEGUEROS##########
 Bodeguero.create(usuario_id: 2, bodega_id: 1)
 
 #OBRAS##############
-Obra.create(nombre: "ENDESA 1", numero: "111", calle: "calle genérica", comuna: "Comuna genérica", tipo: "Electricidad", cliente: "ENDESA")
+Obra.create(nombre: "ENDESA 1", numero: "111", calle: "calle genérica", comuna: "Comuna genérica", tipo: "Electricidad", cliente: "ENDESA", bodega_id: 1)
 
 #CLIENTES_INTERNO###
 ClientesInterno.create(usuario_id: 1, obra_id: 1)

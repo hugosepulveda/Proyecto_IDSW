@@ -7,6 +7,7 @@ class CreateObras < ActiveRecord::Migration[5.2]
       t.string :comuna
       t.string :tipo
       t.string :cliente
+      t.integer :bodega_id
       t.timestamps
     end
   end

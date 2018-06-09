@@ -12696,3 +12696,997 @@ Processing by UsuariosController#show as HTML
 Completed 200 OK in 104ms (Views: 100.5ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-09 12:09:35 -0400
+  [1m[35m (76.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 1039ms (Views: 983.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 12:09:41 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wRouENbBWCXlKUvHkA0DteL5MnEvso8H3tke77cKweX71T4KsGE5Ib2X/1l9PE2IBhvqsx3D3sfKZjdvCHpT5Q==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to 
+Completed 500 Internal Server Error in 642ms (ActiveRecord: 86.0ms)
+
+
+  
+NoMethodError (undefined method `usuario_url' for #<SessionsController:0x007fc2b3a31b78>):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/" for 127.0.0.1 at 2018-06-09 12:48:45 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 749ms (Views: 699.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 12:48:48 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p52oadGFs97zSfMYSj0yizF9C68eD/IUkp3fS0oKE9mdUrhztyXS2qv3R4anDHy21Z/TbSx+o9SGIvbL9XqB2Q==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (25.9ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 9.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"crear_solicitudes", :controller=>"clientes_internos"}):
+    1: <%= link_to "Crear solicitudes",  controller: "clientes_internos", action: "crear_solicitudes" %><br>
+    2: <%= link_to "ver solicitudes",  controller: "clientes_internos", action: "ver_solicitudes" %>
+  
+app/views/clientes_internos/index.html.erb:1:in `_app_views_clientes_internos_index_html_erb__227374637229149869_70247807392560'
+app/controllers/sessions_controller.rb:13:in `create'
+Started GET "/" for 127.0.0.1 at 2018-06-09 12:50:20 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 555ms (Views: 534.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 12:50:23 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gPd/MzncoGjVTx/452xImI4TQha7Kh0wuQ4qoxH+cbq6OG8pX3zBbI3xq2YKXQalavGa1IlbTPCtsQMjro7jug==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (2.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 7.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"crear_solicitudes", :controller=>"sessions"}):
+    1: <%= link_to "Crear solicitudes",  action: "crear_solicitudes" %><br>
+    2: <%= link_to "ver solicitudes",  controller: "clientes_internos", action: "ver_solicitudes" %>
+  
+app/views/clientes_internos/index.html.erb:1:in `_app_views_clientes_internos_index_html_erb___2476384569145728424_70326176371560'
+app/controllers/sessions_controller.rb:13:in `create'
+Started GET "/" for 127.0.0.1 at 2018-06-09 12:51:20 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 384ms (Views: 362.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 12:51:23 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sF7CLnvrcepUKTPzDJlP4oSiqgHt3LmN5xCTVdWyru+KkdI0HUsQ7gyXh23hqAHfYEByw9+t6E3zr7rVasI87w==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 7.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"crear_solicitudes", :controller=>"clientes_internos"}):
+    1: <%= link_to "Crear solicitudes",  controller: "clientes_internos", action: "crear_solicitudes" %><br>
+    2: <%= link_to "ver solicitudes",  controller: "clientes_internos", action: "ver_solicitudes" %>
+  
+app/views/clientes_internos/index.html.erb:1:in `_app_views_clientes_internos_index_html_erb__4454093138740110574_70179943171740'
+app/controllers/sessions_controller.rb:13:in `create'
+Started GET "/" for 127.0.0.1 at 2018-06-09 12:52:04 -0400
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 510ms (Views: 464.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 12:52:07 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WYNfoUypcplTQUbifXSUn/Qhag6Pl4KcoRK4zwZGu+ZjTE+7KgkTnQv/8nyQRdqiEMOyzL3m01y1rZFPuTYp5g==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000clientes_internos/index
+Completed 302 Found in 40ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 12:52:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 12:52:27 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XuyRhuRQhpXIBnAHzLtSF7A9urjVLMLQUhQNibB7rYRkI4GcgvDnkZC4xJkhihwqVN9ieuddkxBGqyQJDws/hA==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000clientes_internos/index
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 12:52:46 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 446ms (Views: 413.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 12:52:49 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzaVtCdkd7gDJXJeb9Ao3xujmgZ9IFSbHvVRZPPI2ucB+YWuQcQWvFubxsCC4Wbi/0FCxE9RBVsKSnjkTLhI5w==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (8.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000clientes_internos/index
+Completed 302 Found in 53ms (ActiveRecord: 23.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 12:54:09 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 661ms (Views: 608.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 12:54:12 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VakMReCC9fXfw4RXSb3QJDpkK6oudEUE4X01h/Yh9U9vZhxfhiKU8Yd9MMmkjJ4Z3obzaBwFFMT1whwHSVFnTw==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 116ms (ActiveRecord: 18.7ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 12:54:12 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (65.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 194ms (Views: 125.6ms | ActiveRecord: 65.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 16:01:54 -0400
+  [1m[35m (20.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (149.8ms)
+Completed 200 OK in 1757ms (Views: 1723.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 16:02:06 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fLPM6WliTDiUj/EzwuYBCwS3COja9gGrRjWh7nBKUa1GfNzzD8ItPMwxRa0v10824FXQKuiHUGtSiohuzzrDrQ==", "session"=>{"rut"=>"1111111", "contrasena"=>"1111111"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (18.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1111111 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/3
+Completed 302 Found in 185ms (ActiveRecord: 91.8ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:06 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (2.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 86ms (Views: 76.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/solicitudes/3" for 127.0.0.1 at 2018-06-09 16:02:12 -0400
+Processing by SolicitudesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering solicitudes/show.html.erb within layouts/application
+  Rendered solicitudes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:16 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 64ms (Views: 59.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/bodegas/show" for 127.0.0.1 at 2018-06-09 16:02:17 -0400
+Processing by BodegasController#show as HTML
+  Rendering bodegas/show.html.erb within layouts/application
+  Rendered bodegas/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:20 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (4.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (5.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (10.4ms)
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:20 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (2.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (5.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 300ms (Views: 287.9ms | ActiveRecord: 9.8ms)
+
+
+Completed 200 OK in 291ms (Views: 280.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/solicitudes/3" for 127.0.0.1 at 2018-06-09 16:02:21 -0400
+Processing by SolicitudesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering solicitudes/show.html.erb within layouts/application
+  Rendered solicitudes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:23 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:23 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:23 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (5.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  [1m[36mUsuario Load (21.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  [1m[36mUsuario Load (23.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  Rendering bodegueros/index.html.erb within layouts/application
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUsuario Load (41.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (43.2ms)
+  [1m[36mUsuario Load (45.1ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 325ms (Views: 258.0ms | ActiveRecord: 64.5ms)
+
+
+Completed 200 OK in 333ms (Views: 308.8ms | ActiveRecord: 22.7ms)
+
+
+Completed 200 OK in 339ms (Views: 286.9ms | ActiveRecord: 50.7ms)
+
+
+Started GET "/ordenes/create" for 127.0.0.1 at 2018-06-09 16:02:25 -0400
+Processing by OrdenesController#create as HTML
+  Rendering ordenes/create.html.erb within layouts/application
+  Rendered ordenes/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:27 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:27 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:27 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:02:27 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (30.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (42.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (29.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  [1m[36mUsuario Load (28.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  [1m[36mUsuario Load (25.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  Rendering bodegueros/index.html.erb within layouts/application
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (39.3ms)
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (11.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering bodegueros/index.html.erb within layouts/application
+  Rendered bodegueros/index.html.erb within layouts/application (13.7ms)
+  [1m[36mUsuario Load (65.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (70.3ms)
+  [1m[36mUsuario Load (120.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (124.7ms)
+Completed 200 OK in 225ms (Views: 126.9ms | ActiveRecord: 94.7ms)
+
+
+Completed 200 OK in 376ms (Views: 334.0ms | ActiveRecord: 39.9ms)
+
+
+Completed 200 OK in 430ms (Views: 355.3ms | ActiveRecord: 67.7ms)
+
+
+Completed 200 OK in 497ms (Views: 344.5ms | ActiveRecord: 150.2ms)
+
+
+Started GET "/solicitudes/3" for 127.0.0.1 at 2018-06-09 16:03:57 -0400
+Processing by SolicitudesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering solicitudes/show.html.erb within layouts/application
+  Rendered solicitudes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:04:05 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:04:05 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:04:05 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:04:05 -0400
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-06-09 16:04:05 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by UsuariosController#show as HTML
+Processing by UsuariosController#show as HTML
+Processing by UsuariosController#show as HTML
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  Parameters: {"id"=>"3"}
+  Parameters: {"id"=>"3"}
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (42.4ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  [1m[36mUsuario Load (1.1ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  [1m[36mUsuario Load (1.4ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  ↳ app/controllers/usuarios_controller.rb:3
+  ↳ app/controllers/usuarios_controller.rb:3
+  [1m[36mUsuario Load (4.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  ↳ app/controllers/usuarios_controller.rb:3
+  [1m[36mUsuario Load (15.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering bodegueros/index.html.erb within layouts/application
+  Rendered bodegueros/index.html.erb within layouts/application (30.8ms)
+  [1m[36mUsuario Load (83.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (3.4ms)
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering bodegueros/index.html.erb within layouts/application
+  Rendered bodegueros/index.html.erb within layouts/application (107.0ms)
+  Rendered bodegueros/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUsuario Load (44.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (207.3ms)
+Completed 200 OK in 515ms (Views: 428.0ms | ActiveRecord: 43.3ms)
+
+
+Completed 200 OK in 602ms (Views: 551.0ms | ActiveRecord: 45.9ms)
+
+
+Completed 200 OK in 706ms (Views: 632.5ms | ActiveRecord: 5.8ms)
+
+
+Completed 200 OK in 704ms (Views: 662.8ms | ActiveRecord: 16.6ms)
+
+
+Completed 200 OK in 720ms (Views: 593.7ms | ActiveRecord: 84.3ms)
+
+
+Started GET "/ordenes/create" for 127.0.0.1 at 2018-06-09 16:04:11 -0400
+Processing by OrdenesController#create as HTML
+  Rendering ordenes/create.html.erb within layouts/application
+  Rendered ordenes/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 17:22:47 -0400
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.0) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.0) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (712.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `GPI`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE DATABASE `GPI` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `GPI` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (236.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (287.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (20.6ms)[0m  [1m[34mSELECT GET_LOCK('5840673760519090185', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsuarios (20180518033113)
+  [1m[35m (168.8ms)[0m  [1m[35mCREATE TABLE `usuarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombres` varchar(255), `apellidos` varchar(255), `tipo` varchar(255), `rut` int, `contrasena` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180518033113_create_usuarios.rb:3
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (26.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180518033113')[0m
+  ↳ bin/rails:4
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateBodegas (20180518034202)
+  [1m[35m (134.4ms)[0m  [1m[35mCREATE TABLE `bodegas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `horario` datetime, `numero` int, `calle` varchar(255), `comuna` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180518034202_create_bodegas.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180518034202')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateRetiroBodegas (20180518034610)
+  [1m[35m (118.4ms)[0m  [1m[35mCREATE TABLE `retiro_bodegas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `bodeguero_id` int, `solicitud_id` int, `fecha_retiro` datetime, `cantidad` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180518034610_create_retiro_bodegas.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180518034610')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateSolicitudes (20180524185136)
+  [1m[35m (139.1ms)[0m  [1m[35mCREATE TABLE `solicitudes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `material` varchar(255), `cantidad` int, `prioridad` int, `usuario_id` int, `estado` varchar(255), `encargado_id` int, `bodeguero_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180524185136_create_solicitudes.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180524185136')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateObras (20180603190615)
+  [1m[35m (272.7ms)[0m  [1m[35mCREATE TABLE `obras` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `numero` varchar(255), `calle` varchar(255), `comuna` varchar(255), `tipo` varchar(255), `cliente` varchar(255), `bodega_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180603190615_create_obras.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180603190615')[0m
+  ↳ bin/rails:4
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateClientesInternos (20180603190855)
+  [1m[35m (191.2ms)[0m  [1m[35mCREATE TABLE `clientes_internos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `usuario_id` int, `obra_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180603190855_create_clientes_internos.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180603190855')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateBodegueros (20180603190912)
+  [1m[35m (115.5ms)[0m  [1m[35mCREATE TABLE `bodegueros` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `usuario_id` int, `bodega_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180603190912_create_bodegueros.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180603190912')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateEncargadosCompras (20180603191001)
+  [1m[35m (162.8ms)[0m  [1m[35mCREATE TABLE `encargados_compras` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `usuario_id` int, `solicitude_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180603191001_create_encargados_compras.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180603191001')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateOrdenes (20180609025126)
+  [1m[35m (118.8ms)[0m  [1m[35mCREATE TABLE `ordenes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `encargado_id` int, `proveedor_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180609025126_create_ordenes.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180609025126')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateMateriales (20180609202354)
+  [1m[35m (43.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('5840673760519090185')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5840673760519090185', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateMateriales (20180609202354)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5840673760519090185')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5840673760519090185', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateMateriales (20180609202354)
+  [1m[35m (109.1ms)[0m  [1m[35mCREATE TABLE `materiales` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `cantidad` int, `disponible` tinyint(1), `bodega_id` int, `tipo` varchar(255), `comentario` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180609202354_create_materiales.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180609202354')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (13.8ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-06-09 21:24:12', '2018-06-09 21:24:12')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5840673760519090185')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `rut`, `contrasena`, `created_at`, `updated_at`) VALUES ('nombre 1', 'apellido 1', 'cliente interno', 1234567, '1234567', '2018-06-09 21:24:20', '2018-06-09 21:24:20')[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `rut`, `contrasena`, `created_at`, `updated_at`) VALUES ('nombre 2', 'apellido 2', 'bodeguero', 7654321, '7654321', '2018-06-09 21:24:20', '2018-06-09 21:24:20')[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `rut`, `contrasena`, `created_at`, `updated_at`) VALUES ('nombre 3', 'apellido 3', 'bodeguero central', 1111111, '1111111', '2018-06-09 21:24:20', '2018-06-09 21:24:20')[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `rut`, `contrasena`, `created_at`, `updated_at`) VALUES ('nombre 4', 'apellido 4', 'encargado compra', 2222222, '2222222', '2018-06-09 21:24:20', '2018-06-09 21:24:20')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSolicitude Create (0.4ms)[0m  [1m[32mINSERT INTO `solicitudes` (`material`, `cantidad`, `usuario_id`, `created_at`, `updated_at`) VALUES ('material 1', 2, 1, '2018-06-09 21:24:20', '2018-06-09 21:24:20')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSolicitude Create (0.5ms)[0m  [1m[32mINSERT INTO `solicitudes` (`material`, `cantidad`, `usuario_id`, `created_at`, `updated_at`) VALUES ('material 2', 3, 1, '2018-06-09 21:24:20', '2018-06-09 21:24:20')[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mBodega Create (0.4ms)[0m  [1m[32mINSERT INTO `bodegas` (`numero`, `calle`, `comuna`, `created_at`, `updated_at`) VALUES (742, 'Avenida siempreviva', 'Springfield', '2018-06-09 21:24:20', '2018-06-09 21:24:20')[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (6.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsuario Create (0.6ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `rut`, `contrasena`, `created_at`, `updated_at`) VALUES ('nombre 1', 'apellido 1', 'cliente interno', 1234567, '1234567', '2018-06-09 21:25:22', '2018-06-09 21:25:22')[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `rut`, `contrasena`, `created_at`, `updated_at`) VALUES ('nombre 2', 'apellido 2', 'bodeguero', 7654321, '7654321', '2018-06-09 21:25:22', '2018-06-09 21:25:22')[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (352.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUsuario Create (1.2ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `rut`, `contrasena`, `created_at`, `updated_at`) VALUES ('nombre 3', 'apellido 3', 'bodeguero central', 1111111, '1111111', '2018-06-09 21:25:23', '2018-06-09 21:25:23')[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUsuario Create (0.7ms)[0m  [1m[32mINSERT INTO `usuarios` (`nombres`, `apellidos`, `tipo`, `rut`, `contrasena`, `created_at`, `updated_at`) VALUES ('nombre 4', 'apellido 4', 'encargado compra', 2222222, '2222222', '2018-06-09 21:25:23', '2018-06-09 21:25:23')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (54.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSolicitude Create (24.8ms)[0m  [1m[32mINSERT INTO `solicitudes` (`material`, `cantidad`, `usuario_id`, `created_at`, `updated_at`) VALUES ('material 1', 2, 1, '2018-06-09 21:25:23', '2018-06-09 21:25:23')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (152.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSolicitude Create (0.7ms)[0m  [1m[32mINSERT INTO `solicitudes` (`material`, `cantidad`, `usuario_id`, `created_at`, `updated_at`) VALUES ('material 2', 3, 1, '2018-06-09 21:25:23', '2018-06-09 21:25:23')[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (65.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mBodega Create (1.1ms)[0m  [1m[32mINSERT INTO `bodegas` (`numero`, `calle`, `comuna`, `created_at`, `updated_at`) VALUES (742, 'Avenida siempreviva', 'Springfield', '2018-06-09 21:25:24', '2018-06-09 21:25:24')[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (287.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mMateriale Create (0.7ms)[0m  [1m[32mINSERT INTO `materiales` (`nombre`, `cantidad`, `disponible`, `bodega_id`, `tipo`, `comentario`, `created_at`, `updated_at`) VALUES ('material 1', 100, TRUE, 1, 'Carga pesada', 'Difícil transporte', '2018-06-09 21:25:24', '2018-06-09 21:25:24')[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mMateriale Create (0.6ms)[0m  [1m[32mINSERT INTO `materiales` (`nombre`, `cantidad`, `disponible`, `bodega_id`, `tipo`, `comentario`, `created_at`, `updated_at`) VALUES ('material 3', 0, FALSE, 1, 'Aceite inflamable', 'Precaución: inflamabilidad', '2018-06-09 21:25:24', '2018-06-09 21:25:24')[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mBodeguero Create (1.9ms)[0m  [1m[32mINSERT INTO `bodegueros` (`usuario_id`, `bodega_id`, `created_at`, `updated_at`) VALUES (2, 1, '2018-06-09 21:25:24', '2018-06-09 21:25:24')[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mObra Create (0.7ms)[0m  [1m[32mINSERT INTO `obras` (`nombre`, `numero`, `calle`, `comuna`, `tipo`, `cliente`, `bodega_id`, `created_at`, `updated_at`) VALUES ('ENDESA 1', '111', 'calle genérica', 'Comuna genérica', 'Electricidad', 'ENDESA', 1, '2018-06-09 21:25:24', '2018-06-09 21:25:24')[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mClientesInterno Create (1.0ms)[0m  [1m[32mINSERT INTO `clientes_internos` (`usuario_id`, `obra_id`, `created_at`, `updated_at`) VALUES (1, 1, '2018-06-09 21:25:25', '2018-06-09 21:25:25')[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+Started GET "/" for 127.0.0.1 at 2018-06-09 17:25:51 -0400
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 1412ms (Views: 1292.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 17:26:13 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0OP3TRPyC3rlfHr21ks4fwTtATTp1qJ28D97hAb/f8DqLOdXdVJqfr3Czmg7enZC4A/Z9tun87bkgFIEuY/twA==", "session"=>{"rut"=>"7654321", "contrasena"=>"765321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 264ms (Views: 105.6ms | ActiveRecord: 41.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 17:26:21 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"68S2wS7X3+IpG6rlNFnIUNoKMVVyPwWQvyylgGfJ8jfRC6bbSHe+5nGlHnvZaIZtPujpl0BOVFCrk4wA2LlgNw==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-09 17:26:21 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 146ms (Views: 132.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/solicitudes/2" for 127.0.0.1 at 2018-06-09 17:26:26 -0400
+Processing by SolicitudesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 14.6ms)
+
+
+  
+NameError (uninitialized constant SolicitudesController::Obras):
+  
+app/controllers/solicitudes_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2018-06-09 17:27:06 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 445ms (Views: 418.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 17:27:12 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hl9WYqOroDuFOByWUwSgCpjpmZUZMHB7jQ2C+Uz68EkkkEZ4xQvBP92GqAi+Ne43fAtBVytBIbuZsqt584piSQ==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 48ms (ActiveRecord: 25.9ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-09 17:27:12 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (6.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 102ms (Views: 91.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/solicitudes/2" for 127.0.0.1 at 2018-06-09 17:27:15 -0400
+Processing by SolicitudesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mBodeguero Load (2.1ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 11[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 3.5ms)
+
+
+  
+  [1m[36mCACHE Bodeguero Load (0.0ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 11[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `bodega_id' for #<Bodeguero::ActiveRecord_Relation:0x007fabb9910f20>):
+  
+app/controllers/solicitudes_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2018-06-09 17:29:58 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 584ms (Views: 567.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 17:30:01 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YisZgJokT54hxBBTLs6uUIR6yorbYp0OX0IVVsJrnQ5Y5Ama/IQumnl6pM3D/+BtYJgSSOkTzM5L/TzWfRsPDg==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 403ms (ActiveRecord: 100.2ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 17:30:02 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 172ms (Views: 161.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 17:30:11 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YisZgJokT54hxBBTLs6uUIR6yorbYp0OX0IVVsJrnQ5Y5Ama/IQumnl6pM3D/+BtYJgSSOkTzM5L/TzWfRsPDg==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-09 17:30:12 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (1.4ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (7.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 121ms (Views: 109.9ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/bodegas/show" for 127.0.0.1 at 2018-06-09 17:30:14 -0400
+Processing by BodegasController#show as HTML
+  Rendering bodegas/show.html.erb within layouts/application
+  Rendered bodegas/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 229ms (Views: 181.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-09 17:30:16 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (1.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (3.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 157ms (Views: 147.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/solicitudes/2" for 127.0.0.1 at 2018-06-09 17:30:17 -0400
+Processing by SolicitudesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (1.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mBodeguero Load (0.8ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 11[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 7.9ms)
+
+
+  
+  [1m[36mCACHE Bodeguero Load (0.0ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 11[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `bodega_id' for #<Bodeguero::ActiveRecord_Relation:0x007fc9c46f1978>):
+  
+app/controllers/solicitudes_controller.rb:5:in `show'
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-09 17:30:28 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (3.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (4.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 250ms (Views: 231.1ms | ActiveRecord: 8.3ms)
+
+

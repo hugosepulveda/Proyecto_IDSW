@@ -1,0 +1,2 @@
+class BodeguerosCentralesController < ApplicationController
+end
