@@ -13690,3 +13690,326 @@ Processing by UsuariosController#show as HTML
 Completed 200 OK in 250ms (Views: 231.1ms | ActiveRecord: 8.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-09 21:32:52 -0400
+  [1m[35m (60.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/sessions/new.html.erb:43: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:43: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-06-09 21:36:25 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 1029ms (Views: 1004.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 21:36:30 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lHjqWDg9TaB4ssJA5YadsLuraYpTetW39enh19B8/W2ut/pCXp0spCAMdt4It9ONX0mxSGELhHfhVshXbwxvbQ==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (42.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 185ms (ActiveRecord: 83.7ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 21:36:30 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (3.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 322ms (Views: 305.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/1/clientes_internos/ver_solicitudes" for 127.0.0.1 at 2018-06-09 21:36:34 -0400
+Processing by ClientesInternosController#ver_solicitudes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering clientes_internos/ver_solicitudes.html.erb within layouts/application
+  [1m[36mSolicitude Load (0.8ms)[0m  [1m[34mSELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`usuario_id` = 1[0m
+  ↳ app/views/clientes_internos/ver_solicitudes.html.erb:12
+  Rendered clientes_internos/ver_solicitudes.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 195ms (Views: 129.2ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 21:36:41 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 177ms (Views: 174.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/1/clientes-internos/crear_solicitudes" for 127.0.0.1 at 2018-06-09 21:36:42 -0400
+Processing by ClientesInternosController#crear_solicitudes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering clientes_internos/crear_solicitudes.html.erb within layouts/application
+  Rendered clientes_internos/crear_solicitudes.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 105ms (Views: 98.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 21:36:46 -0400
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 21:36:46 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (3.4ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUsuario Load (31.3ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 131ms (Views: 125.9ms | ActiveRecord: 3.4ms)
+
+
+Completed 200 OK in 242ms (Views: 209.0ms | ActiveRecord: 31.3ms)
+
+
+Started GET "/1/clientes_internos/ver_solicitudes" for 127.0.0.1 at 2018-06-09 21:36:48 -0400
+Processing by ClientesInternosController#ver_solicitudes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (1.3ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering clientes_internos/ver_solicitudes.html.erb within layouts/application
+  [1m[36mSolicitude Load (9.5ms)[0m  [1m[34mSELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`usuario_id` = 1[0m
+  ↳ app/views/clientes_internos/ver_solicitudes.html.erb:12
+  Rendered clientes_internos/ver_solicitudes.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 134ms (Views: 121.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 21:41:35 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 21:41:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEG2N1Vr8WHrWgWe0NCN8+CgOV1+FjuAPdKpfgIyslEGjqYtM8uQZbPksQA94cPOBELhn0xnakApbYD+vUIgUQ==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 21:41:40 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 240ms (Views: 235.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 21:48:14 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (26.4ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "logo-GPI.png" is not present in the asset pipeline.):
+    1: <!DOCTYPE html>
+    2: <html lang="en">
+    3:   <%= favicon_link_tag 'logo-GPI.png' %>
+    4:   <head>
+    5:     <meta charset="utf-8" />
+    6:     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+app/views/layouts/application.html.erb:3:in `_app_views_layouts_application_html_erb__1226180354162392217_70276017435000'
+Started GET "/" for 127.0.0.1 at 2018-06-09 21:49:58 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (72.6ms)
+Completed 500 Internal Server Error in 424ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "logo-GPI.png" is not present in the asset pipeline.):
+    1: <!DOCTYPE html>
+    2: <html lang="en">
+    3:   <%= favicon_link_tag 'logo-GPI.png' %>
+    4:   <head>
+    5:     <meta charset="utf-8" />
+    6:     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+app/views/layouts/application.html.erb:3:in `_app_views_layouts_application_html_erb___3628323518348112292_70340022362120'
+Started GET "/" for 127.0.0.1 at 2018-06-09 21:56:42 -0400
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 463ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "logo-GPI.ico" is not present in the asset pipeline.):
+    1: <!DOCTYPE html>
+    2: <html lang="en">
+    3:   <%= favicon_link_tag 'logo-GPI.ico' %>
+    4:   <head>
+    5:     <meta charset="utf-8" />
+    6:     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+app/views/layouts/application.html.erb:3:in `_app_views_layouts_application_html_erb__2401088438854901944_70122653603420'
+Started GET "/" for 127.0.0.1 at 2018-06-09 21:58:48 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "logo-GPI.ico" is not present in the asset pipeline.):
+    1: <!DOCTYPE html>
+    2: <html lang="en">
+    3:   <%= favicon_link_tag 'logo-GPI.ico' %>
+    4:   <head>
+    5:     <meta charset="utf-8" />
+    6:     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+app/views/layouts/application.html.erb:3:in `_app_views_layouts_application_html_erb__2401088438854901944_70122698440660'
+Started GET "/" for 127.0.0.1 at 2018-06-09 22:01:24 -0400
+  [1m[35m (7.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (44.3ms)
+Completed 500 Internal Server Error in 414ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "images/logo-GPI.ico" is not present in the asset pipeline.):
+    1: <!DOCTYPE html>
+    2: <html lang="en">
+    3:   <%= favicon_link_tag 'images/logo-GPI.ico' %>
+    4:   <head>
+    5:     <meta charset="utf-8" />
+    6:     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+app/views/layouts/application.html.erb:3:in `_app_views_layouts_application_html_erb___3164772957404374077_70095973414180'
+Started GET "/" for 127.0.0.1 at 2018-06-09 22:06:22 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (186.8ms)
+Completed 200 OK in 1721ms (Views: 1649.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 22:06:57 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (38.5ms)
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "GPI-logo.ico" is not present in the asset pipeline.):
+    2: <html lang="en">
+    3:   <head>
+    4: 
+    5:     <%= favicon_link_tag 'GPI-logo.ico' %>
+    6: 
+    7:     <meta charset="utf-8" />
+    8:     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1425118336492440366_70215430271600'
+Started GET "/" for 127.0.0.1 at 2018-06-09 22:08:18 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 837ms (Views: 812.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-09 22:08:22 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Te0BK/+tKMvoNBRj3j1j+6CBWXqqX6SCEMyfkauPIId3IhExmQ1Jz7CKoP0zDC3GRGOBuJgu9UIEc7YRFP+yhw==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 121ms (ActiveRecord: 42.1ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 22:08:22 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (1.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 240ms (Views: 236.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/1/clientes-internos/crear_solicitudes" for 127.0.0.1 at 2018-06-09 22:08:25 -0400
+Processing by ClientesInternosController#crear_solicitudes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering clientes_internos/crear_solicitudes.html.erb within layouts/application
+  Rendered clientes_internos/crear_solicitudes.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 137ms (Views: 133.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-09 22:08:26 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (23.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 150ms (Views: 118.7ms | ActiveRecord: 23.9ms)
+
+
