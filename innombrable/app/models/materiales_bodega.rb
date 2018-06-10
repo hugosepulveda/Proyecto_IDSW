@@ -1,0 +1,2 @@
+class MaterialesBodega < ApplicationRecord
+end

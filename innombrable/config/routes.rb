@@ -7,12 +7,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
-  resources :usuarios
-  resources :clientes_internos
-  resources :bodegueros
-  resources :bodegueros_centrales
-  resources :encargados_compras
-  resources :solicitudes
+  resources :usuarios, :clientes_internos, :bodegueros, :bodegueros_centrales, :encargados_compras, :solicitudes
 
   get 'clientes_internos/new'
 
@@ -24,7 +19,7 @@ Rails.application.routes.draw do
   get 'ordenes/create'
   get 'bodegas/show'
   get 'bodegueros/new'
-  
+
   root 'sessions#new'
   #post 'usuarios/new' => 'usuarios#new'
 

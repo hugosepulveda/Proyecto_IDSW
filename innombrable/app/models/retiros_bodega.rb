@@ -1,0 +1,2 @@
+class RetirosBodega < ApplicationRecord
+end
