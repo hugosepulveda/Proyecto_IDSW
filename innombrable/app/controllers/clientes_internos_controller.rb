@@ -28,10 +28,10 @@ class ClientesInternosController < ApplicationController
     @solicitude = Solicitude.new(usuario_id: current_user.id, material: @formu[:material], cantidad: @formu[:cantidad], prioridad: @formu[:prioridad], estado: "En revisión")
 
     if @solicitude.save
-      render ":id/crear_solicitudes"
+      render "index"
     else
-      render ":id/crear_solicitudes"
+      render "index"
     end
   end
-  
+
 end

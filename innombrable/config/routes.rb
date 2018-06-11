@@ -7,13 +7,17 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
-  resources :usuarios, :clientes_internos, :bodegueros, :bodegueros_centrales, :encargados_compras, :solicitudes
+  resources :usuarios do
+    resources :clientes_internos, :bodegueros, :bodegueros_centrales, :encargados_compras, :solicitudes
+  end
 
   get 'clientes_internos/new'
 
-  get ':id/clientes-internos/crear_solicitudes', to: 'clientes_internos#crear_solicitudes'
-  post ':id/clientes-internos/crear_solicitudes', to: 'clientes_internos#crear_solicitudes'
-  get ':id/clientes_internos/ver_solicitudes', to: 'clientes_internos#ver_solicitudes'
+  get 'clientes-internos/crear_solicitudes', to: 'clientes_internos#crear_solicitudes'
+  post 'clientes-internos/crear_solicitudes', to: 'clientes_internos#crear_solicitudes'
+  get 'clientes-internos/ver_solicitudes', to: 'clientes_internos#ver_solicitudes'
+
+  post 'clientes_internos/create', to: 'clientes_internos#create'
 
   get 'bodegueros_central/index'
   get 'ordenes/create'
