@@ -4,7 +4,7 @@ class CreateRetirosBodegas < ActiveRecord::Migration[5.2]
       t.datetime :fecha
       t.integer :cantidad
       t.integer :solicitud_id
-      t.inetegr :bodeguero_id
+      t.integer :bodeguero_id
       t.timestamps
     end
   end

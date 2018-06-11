@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_09_202354) do
+ActiveRecord::Schema.define(version: 2018_06_10_233116) do
 
   create_table "bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "horario"
@@ -53,6 +53,13 @@ ActiveRecord::Schema.define(version: 2018_06_09_202354) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "materiales_bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "material_id"
+    t.integer "bodega_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "obras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nombre"
     t.string "numero"
@@ -77,6 +84,15 @@ ActiveRecord::Schema.define(version: 2018_06_09_202354) do
     t.integer "solicitud_id"
     t.datetime "fecha_retiro"
     t.integer "cantidad"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "retiros_bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "fecha"
+    t.integer "cantidad"
+    t.integer "solicitud_id"
+    t.integer "bodeguero_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
