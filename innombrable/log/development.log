@@ -15232,3 +15232,380 @@ Processing by ClientesInternosController#ver_solicitudes as HTML
 Completed 200 OK in 156ms (Views: 145.3ms | ActiveRecord: 7.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-11 18:02:03 -0400
+  [1m[35m (31.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 715ms (Views: 651.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-11 18:02:12 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4UF1u7wc6HkLqrDel/ovUlfevbEPNW+9ldq5fk6EwMvbjmWh2ryJfVMUBEB6y2Fvszxlcz1EPn2BZZD+8fRSyw==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 50ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-11 18:02:12 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 78ms (Views: 74.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/clientes-internos/crear_solicitudes" for 127.0.0.1 at 2018-06-11 18:02:16 -0400
+Processing by ClientesInternosController#crear_solicitudes as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering clientes_internos/crear_solicitudes.html.erb within layouts/application
+  Rendered clientes_internos/crear_solicitudes.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/clientes_internos/create" for 127.0.0.1 at 2018-06-11 18:02:39 -0400
+Processing by ClientesInternosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XlgsczxpJZJQeC5ZTmeap8gLfwFfWC+H+is5AmIxaA/YMy33WJLv4encMZasM7JfNdR7aiU6MY/NRsGnhZmepA==", "solicitude"=>{"material"=>"lalilulelo", "cantidad"=>"900", "prioridad"=>"1"}, "commit"=>"Crear solicitud"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clientes_internos_controller.rb:30
+  [1m[36mSolicitude Create (57.3ms)[0m  [1m[32mINSERT INTO `solicitudes` (`material`, `cantidad`, `prioridad`, `usuario_id`, `estado`, `created_at`, `updated_at`) VALUES ('lalilulelo', 900, 1, 1, 'En revisión', '2018-06-11 22:02:39', '2018-06-11 22:02:39')[0m
+  ↳ app/controllers/clientes_internos_controller.rb:30
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clientes_internos_controller.rb:30
+  Rendering clientes_internos/index.html.erb within layouts/application
+  Rendered clientes_internos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 241ms (Views: 67.8ms | ActiveRecord: 110.1ms)
+
+
+Started GET "/clientes-internos/ver_solicitudes" for 127.0.0.1 at 2018-06-11 18:02:41 -0400
+Processing by ClientesInternosController#ver_solicitudes as HTML
+  [1m[36mUsuario Load (5.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering clientes_internos/ver_solicitudes.html.erb within layouts/application
+  [1m[36mSolicitude Load (0.6ms)[0m  [1m[34mSELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`usuario_id` = 1[0m
+  ↳ app/views/clientes_internos/ver_solicitudes.html.erb:12
+  Rendered clientes_internos/ver_solicitudes.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 77ms (Views: 69.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/clientes_internos/create" for 127.0.0.1 at 2018-06-11 18:02:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/clientes_internos/create"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/clientes-internos/ver_solicitudes" for 127.0.0.1 at 2018-06-11 18:02:59 -0400
+Processing by ClientesInternosController#ver_solicitudes as HTML
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendering clientes_internos/ver_solicitudes.html.erb within layouts/application
+  [1m[36mSolicitude Load (0.7ms)[0m  [1m[34mSELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`usuario_id` = 1[0m
+  ↳ app/views/clientes_internos/ver_solicitudes.html.erb:12
+  Rendered clientes_internos/ver_solicitudes.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 148ms (Views: 144.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-11 18:03:20 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 71ms (Views: 66.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-11 18:03:25 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"znhmyJexk+EI6IYXszMbyDykIKWhtPoQfni4hS/jZ2D0t3bS8RHy5VBWMoleAlX12Eb4Z5PFq9Bqx5EFkJP1YA==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-11 18:03:25 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"solicitudes", :id=>"2"}):
+    2: 
+    3: <h1>Perfil Bodeguero<h1>
+    4: 
+    5: <%= link_to "Ver/modificar solicitudes",  controller: "solicitudes", action: "show" %><br>
+    6: <%= link_to "Ver/Modificar inventario",  controller: "bodegas", action: "show" %><br>
+    7: <%= link_to "Crear orden de compra",  controller: "ordenes", action: "create" %>
+  
+app/views/bodegueros/index.html.erb:5:in `_app_views_bodegueros_index_html_erb___2182791556414145583_70150771798980'
+app/controllers/usuarios_controller.rb:8:in `show'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-11 18:03:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-11 18:03:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-11 18:38:59 -0400
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 1112ms (Views: 1092.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-11 18:39:07 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x4UoHBES/Tj7rsF4AgFZadqIztbQ0kRq0SsMtFo3fZD9SjgGd7KcPKMQdebvMBdUPmoWFOKjFarFlCU05UfvkA==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 64ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-11 18:39:07 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (3.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 86ms (Views: 75.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/bodegueros/mod_solicitudes" for 127.0.0.1 at 2018-06-11 18:39:10 -0400
+  
+AbstractController::ActionNotFound (The action 'mod_solicitudes' could not be found for BodeguerosController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-11 18:43:36 -0400
+  [1m[35m (23.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (96.8ms)
+Completed 200 OK in 1555ms (Views: 1334.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-11 18:43:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gWJs719AhH+Gg0WWKGePLMab9iCJx9wCdLqHte6G7F27rXz1OeDle9498QjFVsERInku4ru2jcJgBa41UfZ+XQ==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 105ms (ActiveRecord: 24.5ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-11 18:43:46 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (4.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 78ms (Views: 68.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/bodegueros/mod_inventario" for 127.0.0.1 at 2018-06-11 18:43:49 -0400
+Processing by BodeguerosController#mod_inventario as HTML
+  Rendering bodegueros/mod_inventario.html.erb within layouts/application
+  Rendered bodegueros/mod_inventario.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 148ms (Views: 125.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-11 18:43:51 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 138ms (Views: 134.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/ordenes/create" for 127.0.0.1 at 2018-06-11 18:44:10 -0400
+Processing by OrdenesController#create as HTML
+  Rendering ordenes/create.html.erb within layouts/application
+  Rendered ordenes/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-11 18:44:12 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-11 18:44:12 -0400
+  [1m[36mUsuario Load (5.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (24.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (42.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (46.9ms)
+  [1m[36mUsuario Load (31.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (90.6ms)
+Completed 200 OK in 292ms (Views: 232.6ms | ActiveRecord: 56.6ms)
+
+
+Completed 200 OK in 376ms (Views: 325.6ms | ActiveRecord: 48.4ms)
+
+

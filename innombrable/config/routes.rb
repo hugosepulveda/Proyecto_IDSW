@@ -24,6 +24,15 @@ Rails.application.routes.draw do
   get 'bodegas/show'
   get 'bodegueros/new'
 
+  get 'bodegueros/mod_solicitudes', to: 'bodegueros#mod_solicitudes'
+  post 'bodegueros/mod_solicitudes', to: 'bodegueros#mod_solicitudes'
+
+  get 'bodegueros/mod_inventario', to: 'bodegueros#mod_inventario'
+  post 'bodegueros/mod_inventario', to: 'bodegueros#mod_inventario'
+
+  get 'ordenes/create', to: 'ordenes#create'
+  post 'ordenes/create', to: 'ordenes#create'
+  
   root 'sessions#new'
   #post 'usuarios/new' => 'usuarios#new'
 
