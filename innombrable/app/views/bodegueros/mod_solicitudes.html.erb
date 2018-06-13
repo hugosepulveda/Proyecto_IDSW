@@ -1,2 +1,22 @@
-<h1>Bodegueros#new</h1>
-<p>Find me in app/views/bodegueros/new.html.erb</p>
+<h1>Ver/Modificar soliticitudes</h1>
+<table style="width:90%">
+  <tr>
+    <th>Material</th>
+    <th>Cantidad</th>
+    <th>Encargado</th>
+    <th>Prioridad</th>
+    <th>Estado</th>
+    <th>Modificar</th>
+  </tr>
+  <% @solicitudes.each do |s| %>
+  <tr>
+    <td><%= s.material %></td>
+    <td><%= s.cantidad %></td>
+    <td><%= s.encargado_id %></td>
+    <td><%= s.prioridad %></td>
+    <td><%= s.estado %></td>
+    <td><%= s.submit %></td>
+  </tr>
+  <% end %>
+</table>
+

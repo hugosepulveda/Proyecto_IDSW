@@ -1,2 +1,21 @@
-<h1>Bodegueros#new</h1>
-<p>Find me in app/views/bodegueros/new.html.erb</p>
+<h1>Ver/modificar inventario</h1>
+
+<table style="width:90%">
+  <tr>
+    <th>Material</th>
+    <th>Cantidad</th>
+    <th>Disponibilidad</th>
+    <th>Tipo</th>
+    <th>Comentarios</th>
+    <th>Modificar</th>
+  </tr>
+  <% @materiales.each do |s| %>
+  <tr>
+    <td><%= s.nombre %></td>
+    <td><%= s.cantidad %></td>
+    <td><%= s.disponible %></td>
+    <td><%= s.tipo %></td>
+    <td><%= s.comentario %></td>
+  </tr>
+  <% end %>
+</table>

@@ -15609,3 +15609,466 @@ Completed 200 OK in 292ms (Views: 232.6ms | ActiveRecord: 56.6ms)
 Completed 200 OK in 376ms (Views: 325.6ms | ActiveRecord: 48.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-13 15:41:56 -0400
+  [1m[35m (142.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (254.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 2037ms (Views: 1881.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-13 15:42:18 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MBIVOhRigT3KSsF2g8HJxboPCD1lygNgsQ3mDnQtat2TMqBQE8MlA5B1To20CoaHDIB4xvfJCwKBg2sJVXp45w==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (37.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 279ms (ActiveRecord: 110.3ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 15:42:18 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (9.4ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (9.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 322ms (Views: 272.6ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/bodegueros/mod_solicitudes" for 127.0.0.1 at 2018-06-13 15:42:21 -0400
+Processing by BodeguerosController#mod_solicitudes as HTML
+  Rendering bodegueros/mod_solicitudes.html.erb within layouts/application
+  Rendered bodegueros/mod_solicitudes.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 265ms (Views: 255.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 15:42:37 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (4.1ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 257ms (Views: 250.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/bodegueros/mod_inventario" for 127.0.0.1 at 2018-06-13 15:42:39 -0400
+Processing by BodeguerosController#mod_inventario as HTML
+  Rendering bodegueros/mod_inventario.html.erb within layouts/application
+  Rendered bodegueros/mod_inventario.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 166ms (Views: 143.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 15:42:51 -0400
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 15:42:51 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (26.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  [1m[36mUsuario Load (149.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (42.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (47.0ms)
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (28.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 407ms (Views: 210.4ms | ActiveRecord: 192.5ms)
+
+
+Completed 200 OK in 375ms (Views: 304.6ms | ActiveRecord: 54.2ms)
+
+
+Started GET "/ordenes/create" for 127.0.0.1 at 2018-06-13 15:42:55 -0400
+Processing by OrdenesController#create as HTML
+  Rendering ordenes/create.html.erb within layouts/application
+  Rendered ordenes/create.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 360ms (Views: 315.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 15:42:57 -0400
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 15:42:57 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (2.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  [1m[36mUsuario Load (66.3ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (16.9ms)
+  [1m[36mUsuario Load (75.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (170.3ms)
+Completed 200 OK in 582ms (Views: 438.0ms | ActiveRecord: 142.2ms)
+
+
+Completed 200 OK in 621ms (Views: 615.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 16:56:41 -0400
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 962ms (Views: 837.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-13 16:56:57 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VmxNnUmNuJF97DjWGpL/emQLIK7LbVem34pxVH5+kPn1TPj3TiwcryfTty0tWbA40oRQVVluX8TvBPxTXymCww==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 237ms (ActiveRecord: 105.6ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 16:56:57 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 165ms (Views: 154.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/bodegueros/mod_inventario" for 127.0.0.1 at 2018-06-13 16:57:14 -0400
+Processing by BodeguerosController#mod_inventario as HTML
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mBodeguero Load (0.9ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/bodegueros_controller.rb:13
+Completed 404 Not Found in 192ms (ActiveRecord: 95.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bodeguero with 'id'={:usuario_id=>2}):
+  
+app/controllers/bodegueros_controller.rb:13:in `mod_inventario'
+Started GET "/" for 127.0.0.1 at 2018-06-13 16:59:53 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 691ms (Views: 666.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-13 17:00:06 -0400
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MjSaju0zZx4+3sShsKlvBeU4JnYG1cyLPxnHdOid0BuRFC/k6pLDIGThS1qHYiBHU7dWjZTWxOkPl0pzycrCIQ==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 153ms (ActiveRecord: 38.4ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 17:00:06 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 131ms (Views: 126.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/bodegueros/mod_inventario" for 127.0.0.1 at 2018-06-13 17:00:14 -0400
+Processing by BodeguerosController#mod_inventario as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mBodeguero Load (0.5ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bodegueros_controller.rb:13
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 19.6ms)
+
+
+  
+NameError (uninitialized constant BodeguerosController::Material):
+  
+app/controllers/bodegueros_controller.rb:15:in `mod_inventario'
+Started GET "/" for 127.0.0.1 at 2018-06-13 17:01:12 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (122.2ms)
+Completed 200 OK in 1051ms (Views: 988.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-13 17:01:33 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iHQiTr2CyJj5dHKlwW8MKWmS9FrRfNGnHuEaAoqYOTMrVJckuiNspqNL/V72pENr3x2EoUN/2cUub5cFq88rCQ==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.3ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 254ms (ActiveRecord: 117.7ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 17:01:34 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (1.1ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 330ms (Views: 324.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/bodegueros/mod_inventario" for 127.0.0.1 at 2018-06-13 17:01:43 -0400
+Processing by BodeguerosController#mod_inventario as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mBodeguero Load (0.8ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bodegueros_controller.rb:13
+  [1m[36mBodega Load (21.4ms)[0m  [1m[34mSELECT  `bodegas`.* FROM `bodegas` WHERE `bodegas`.`bodeguero_id` = 1 LIMIT 11[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 507ms (ActiveRecord: 46.6ms)
+
+
+  
+  [1m[36mBodega Load (3.7ms)[0m  [1m[34mSELECT  `bodegas`.* FROM `bodegas` WHERE `bodegas`.`bodeguero_id` = 1 LIMIT 11[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `id' for #<Bodega::ActiveRecord_Relation:0x007fe5a45a11f8>
+Did you mean?  ids):
+  
+app/controllers/bodegueros_controller.rb:15:in `mod_inventario'
+Started GET "/" for 127.0.0.1 at 2018-06-13 17:06:05 -0400
+  [1m[35m (24.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 928ms (Views: 796.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-13 17:06:25 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AOVNuxAQToOuvnQjw4ZB+6OydnfFX4ZDSY41yndORYajxfjRF7HqvfSB+9j0TQ65FT0GjFdcjiF5ALjNVhlXvA==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 307ms (ActiveRecord: 34.5ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 17:06:25 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 198ms (Views: 194.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bodegueros/mod_inventario" for 127.0.0.1 at 2018-06-13 17:06:28 -0400
+Processing by BodeguerosController#mod_inventario as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mBodeguero Load (11.6ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bodegueros_controller.rb:13
+  [1m[35m (27.7ms)[0m  [1m[34mSELECT `bodegas`.`id` FROM `bodegas` WHERE `bodegas`.`bodeguero_id` = 1[0m
+  ↳ app/controllers/bodegueros_controller.rb:15
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 59.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'bodegas.bodeguero_id' in 'where clause': SELECT `bodegas`.`id` FROM `bodegas` WHERE `bodegas`.`bodeguero_id` = 1):
+  
+app/controllers/bodegueros_controller.rb:15:in `mod_inventario'
+Started GET "/bodegueros/mod_inventariolocalhost:3000" for 127.0.0.1 at 2018-06-13 18:39:56 -0400
+  [1m[35m (5.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/bodegueros/mod_inventariolocalhost:3000"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:39:59 -0400
+  [1m[35m (110.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:39:59 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (38.4ms)
+  Rendered sessions/new.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 2559ms (Views: 2492.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2595ms (Views: 2545.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-13 18:40:24 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7SevpzCNt5JNvXPE62NhmSEq7T2KSFmxmyTZ5EbyGzBOBxrNNywTrBeC/D/cqC7bl6WdxhhLUdOrqlTjZ6UJCg==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (1.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 141ms (ActiveRecord: 66.8ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 18:40:24 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 85ms (Views: 82.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bodegueros/mod_inventario" for 127.0.0.1 at 2018-06-13 18:40:25 -0400
+Processing by BodeguerosController#mod_inventario as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mBodeguero Load (0.7ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bodegueros_controller.rb:13
+  Rendering bodegueros/mod_inventario.html.erb within layouts/application
+  [1m[36mMateriale Load (0.8ms)[0m  [1m[34mSELECT `materiales`.* FROM `materiales` WHERE `materiales`.`bodega_id` = 1[0m
+  ↳ app/views/bodegueros/mod_inventario.html.erb:10
+  Rendered bodegueros/mod_inventario.html.erb within layouts/application (60.9ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 38.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `material' for #<Materiale:0x007ff0dfc3f2a8>):
+     9:   </tr>
+    10:   <% @materiales.each do |s| %>
+    11:   <tr>
+    12:     <td><%= s.material %></td>
+    13:     <td><%= s.cantidad %></td>
+    14:     <td><%= s.bodeguero_id %></td>
+    15:     <td><%= s.encargado_id %></td>
+  
+app/views/bodegueros/mod_inventario.html.erb:12:in `block in _app_views_bodegueros_mod_inventario_html_erb__3752688548462886521_70336262877920'
+app/views/bodegueros/mod_inventario.html.erb:10:in `_app_views_bodegueros_mod_inventario_html_erb__3752688548462886521_70336262877920'
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:44:35 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:44:36 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (181.3ms)
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2351ms (Views: 2293.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2619ms (Views: 2598.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-13 18:44:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFjYlGYUKN05JwfmhXey5A4GN6XY0mEMuIcjPAaivwHHeG3+YbWM42MYiB2yvP2muIlHXkrRaW6ICa47J/WtOw==", "session"=>{"rut"=>"7654321", "contrasena"=>"7654321"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 7654321 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 24ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-13 18:44:47 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering bodegueros/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered bodegueros/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 172ms (Views: 167.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/bodegueros/mod_inventario" for 127.0.0.1 at 2018-06-13 18:44:56 -0400
+Processing by BodeguerosController#mod_inventario as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mBodeguero Load (0.7ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`usuario_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bodegueros_controller.rb:13
+  Rendering bodegueros/mod_inventario.html.erb within layouts/application
+  [1m[36mMateriale Load (0.7ms)[0m  [1m[34mSELECT `materiales`.* FROM `materiales` WHERE `materiales`.`bodega_id` = 1[0m
+  ↳ app/views/bodegueros/mod_inventario.html.erb:12
+  Rendered bodegueros/mod_inventario.html.erb within layouts/application (121.7ms)
+Completed 200 OK in 551ms (Views: 298.8ms | ActiveRecord: 12.3ms)
+
+
