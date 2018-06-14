@@ -1,5 +1,4 @@
 <% provide(:title, "Bienvenido" + " " + current_user.nombres + " " + current_user.apellidos) %>
 
-<%= link_to "Ver/modificar solicitudes",  controller: "solicitudes", action: "show" %><br>
 <%= link_to "Modificar inventario",  controller: "bodegas", action: "show" %><br>
 <%= link_to "Crear orden de compra",  controller: "ordenes", action: "create" %>

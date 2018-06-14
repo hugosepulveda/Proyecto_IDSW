@@ -1,2 +1,16 @@
-<h1>Ordenes#create</h1>
-<p>Find me in app/views/ordenes/create.html.erb</p>
+<h1>Órdenes</h1>
+
+<%= form_for(:ordene) do |s| %>
+
+<%= s.label :Material %>
+<%= s.text_field :material, class: 'form-control' %>
+
+<%= s.label :Cantidad %>
+<%= s.number_field :cantidad, class: 'form-control' %>
+
+<%= s.label :Prioridad %>
+<%= s.number_field :prioridad, class: 'form-control' %>
+
+<%= s.submit "Crear orden", class: "btn btn-primary" %>
+
+<% end %>

@@ -7,7 +7,7 @@ class UsuariosController < ApplicationController
 			when "bodeguero"
 					render "bodegueros/index"
 			when "bodeguero central"
-					render "bodegueros_central/index"
+					render "bodegueros_centrales/index"
 			when "encargado compra"
 					render "encargados_compras/index"
 					#render :controller => "controller", :action => "action"
