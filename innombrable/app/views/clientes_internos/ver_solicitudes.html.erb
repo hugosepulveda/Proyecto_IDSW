@@ -2,21 +2,21 @@
 
 <table style="width:90%">
   <tr>
-    <th>Material</th>
-    <th>Cantidad</th>
-    <th>Bodeguero</th>
-    <th>Encargado</th>
-    <th>Prioridad</th>
-    <th>Estado</th>
+    <th style="text-align:center;">Material</th>
+    <th style="text-align:center;">Cantidad</th>
+    <th style="text-align:center;" >Bodeguero</th>
+    <th style="text-align:center;" >Encargado</th>
+    <th style="text-align:center;">Prioridad</th>
+    <th style="text-align:center;">Estado</th>
   </tr>
   <% @solicitudes.each do |s| %>
   <tr>
-    <td><%= s.material %></td>
-    <td><%= s.cantidad %></td>
-    <td><%= s.bodeguero_id %></td>
-    <td><%= s.encargado_id %></td>
-    <td><%= s.prioridad %></td>
-    <td><%= s.estado %></td>
+    <td style="text-align:center;"><%= s.material %></td>
+    <td style="text-align:center;"><%= s.cantidad %></td>
+    <td style="text-align:center;"><%= s.bodeguero_id %></td>
+    <td style="text-align:center;"><%= s.encargado_id %></td>
+    <td style="text-align:center;"><%= s.prioridad %></td>
+    <td style="text-align:center;"><%= s.estado %></td>
   </tr>
   <% end %>
 </table>

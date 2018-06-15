@@ -2,8 +2,8 @@
 <table style="width:90%">
   <tr>
     <th>Material</th>
-    <th>Cantidad</th>
     <th>Encargado</th>
+    <th>Cantidad</th>
     <th>Prioridad</th>
     <th>Estado</th>
     <th>Modificar</th>
@@ -11,12 +11,11 @@
   <% @solicitudes.each do |s| %>
   <tr>
     <td><%= s.material %></td>
-    <td><%= s.cantidad %></td>
     <td><%= s.encargado_id %></td>
+    <td><%= s.cantidad %></td>
     <td><%= s.prioridad %></td>
     <td><%= s.estado %></td>
-    <td><%= s.submit %></td>
+    <td><%= s.submit "Modificar" class: "button" %></td>
   </tr>
   <% end %>
 </table>
-
