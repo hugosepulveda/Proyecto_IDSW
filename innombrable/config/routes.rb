@@ -32,6 +32,9 @@ Rails.application.routes.draw do
 
   get 'ordenes/create', to: 'ordenes#create'
   post 'ordenes/create', to: 'ordenes#create'
+
+  get 'bodegueros/aprobar_sol', to: 'bodegueros#aprobar_sol'
+  post 'bodegueros/aprobar_sol', to: 'bodegueros#aprobar_sol'
   
   root 'sessions#new'
   #post 'usuarios/new' => 'usuarios#new'
