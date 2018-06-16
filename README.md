@@ -25,10 +25,10 @@ PDFs de los entregables.
 
 * Por terminal, ingresar a P_IDSW/innombrable y escribir: $ ruby bin/rails server
 
-#### Macos/Linux/like UNIX:
+#### Macos/Linux/UNIX-like:
 
 * Ingresar a P_IDSW/innombrable en la terminal
-* $ bin/rails server
+* correr el servidor: $ _rails s_
 * Se podrá observar en _localhost:3000/_.
 
 ### Creación de la Base de datos:
