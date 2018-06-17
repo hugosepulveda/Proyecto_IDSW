@@ -30,8 +30,5 @@ Materiale.create(nombre: "material 3", cantidad: 0, disponible: false, bodega_id
 #BODEGUEROS##########
 Bodeguero.create(usuario_id: 2, bodega_id: 1)
 
-#OBRAS##############
-Obra.create(nombre: "ENDESA 1", numero: "111", calle: "calle genérica", comuna: "Comuna genérica", tipo: "Electricidad", cliente: "ENDESA", bodega_id: 1)
-
 #CLIENTES_INTERNO###
-ClientesInterno.create(usuario_id: 1, obra_id: 1)
+ClientesInterno.create(usuario_id: 1, bodega_id: 1)
