@@ -4,7 +4,7 @@ class CreateSolicitudes < ActiveRecord::Migration[5.2]
       t.string :material
       t.integer :cantidad
       t.integer :prioridad
-      t.integer :usuario_id
+      t.integer :cliente_id
       t.string :estado
       t.integer :encargado_id
       t.integer :bodeguero_id

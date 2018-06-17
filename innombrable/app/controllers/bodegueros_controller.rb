@@ -7,6 +7,8 @@ class BodeguerosController < ApplicationController
 
   def mod_solicitudes
     @bodeguero = Bodeguero.find_by(usuario_id: current_user.id)
+    @clientes = ClientesInterno.where(bodega_id: @bodeguero.bodega_id)
+    @solicitudes = Solicitude.where(cliente_id: @clientes.ids)
   end
 
   def mod_inventario
@@ -14,6 +16,9 @@ class BodeguerosController < ApplicationController
     #@bodega = Bodega.where(bodeguero_id: @bodeguero.id)
     @materiales = Materiale.where(bodega_id: @bodeguero.bodega_id)
   end
+
   def aprobar_sol
+
   end
+
 end

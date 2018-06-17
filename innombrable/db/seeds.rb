@@ -15,11 +15,6 @@ Usuario.create(nombres:"nombre 3", apellidos:"apellido 3", tipo:"bodeguero centr
 
 Usuario.create(nombres:"nombre 4", apellidos:"apellido 4", tipo:"encargado compra", contrasena: 2222222, rut: 2222222)
 
-#SOLICITUDES#########
-Solicitude.create(material: "material 1", cantidad: 2, usuario_id: 1)
-
-Solicitude.create(material: "material 2", cantidad: 3, usuario_id: 1)
-
 #BODEGAS#############
 Bodega.create(numero: 742, calle: "Avenida siempreviva", comuna: "Springfield")
 
@@ -32,3 +27,9 @@ Bodeguero.create(usuario_id: 2, bodega_id: 1)
 
 #CLIENTES_INTERNO###
 ClientesInterno.create(usuario_id: 1, bodega_id: 1)
+
+#SOLICITUDES#########
+
+Solicitude.create(material: "material 1", cantidad: 2, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión")
+
+Solicitude.create(material: "material 2", cantidad: 3, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión")

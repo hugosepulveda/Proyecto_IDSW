@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_10_233116) do
+ActiveRecord::Schema.define(version: 2018_06_17_190742) do
 
   create_table "bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "horario"
@@ -31,6 +31,12 @@ ActiveRecord::Schema.define(version: 2018_06_10_233116) do
   create_table "clientes_internos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "usuario_id"
     t.integer "bodega_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cotizaciones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "proveedor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -67,6 +73,14 @@ ActiveRecord::Schema.define(version: 2018_06_10_233116) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "proveedores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "telefono"
+    t.string "email"
+    t.string "tipo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "retiros_bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "fecha"
     t.integer "cantidad"
@@ -80,7 +94,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_233116) do
     t.string "material"
     t.integer "cantidad"
     t.integer "prioridad"
-    t.integer "usuario_id"
+    t.integer "cliente_id"
     t.string "estado"
     t.integer "encargado_id"
     t.integer "bodeguero_id"

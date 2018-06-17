@@ -1,0 +1,2 @@
+class Proveedore < ApplicationRecord
+end

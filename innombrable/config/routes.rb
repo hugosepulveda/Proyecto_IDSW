@@ -35,7 +35,16 @@ Rails.application.routes.draw do
 
   get 'bodegueros/aprobar_sol', to: 'bodegueros#aprobar_sol'
   post 'bodegueros/aprobar_sol', to: 'bodegueros#aprobar_sol'
-  
+
+  get 'bodegueros_centrales/mod_solicitudes', to: 'bodegueros_centrales#mod_solicitudes'
+  post 'bodegueros_centrales/mod_solicitudes', to: 'bodegueros_centrales#mod_solicitudes'
+
+  get 'bodegueros_centrales/mod_inventarios', to: 'bodegueros_centrales#mod_inventarios'
+  post 'bodegueros_centrales/mod_inventarios', to: 'bodegueros_centrales#mod_inventarios'
+
+  get 'cotizaciones/create', to: 'cotizaciones#create'
+  post 'cotizaciones/create', to: 'cotizaciones#create'
+
   root 'sessions#new'
   #post 'usuarios/new' => 'usuarios#new'
 
