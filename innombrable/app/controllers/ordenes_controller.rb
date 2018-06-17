@@ -1,10 +1,8 @@
 class OrdenesController < ApplicationController
   def create
     @bodeguero = Bodeguero.find_by(usuario_id: current_user.id)
-    @obra = Obra.where(bodega_id: @bodeguero.bodega_id)
-    @cliente = ClientesInterno.where(obra_id: @obra.ids)
-    @solicitudes = Solicitude.where(usuario_id: @cliente.ids)
-    #@orden = Orden.create()
+    @clientes = ClientesInterno.where(bodega_id: @bodeguero.bodega_id)
+    @solicitudes = Solicitude.where(usuario_id: @clientes.ids)
   end
 
   def show

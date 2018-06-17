@@ -1,2 +1,0 @@
-class Obra < ApplicationRecord
-end

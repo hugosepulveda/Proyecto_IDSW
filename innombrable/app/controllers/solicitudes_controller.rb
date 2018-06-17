@@ -1,10 +1,9 @@
 class SolicitudesController < ApplicationController
   def show
     if current_user.tipo == "bodeguero"
-        @bodeguero = Bodeguero.where(usuario_id: current_user.id)
-        @obras = Obra.where(bodega_id: @bodeguero.bodega_id)
-        @clientes = ClientesInterno.where(obra_id: obras.id)
-        @solicitudes = Solicitude.where(cliente_id: @clientes.id)
+        @bodeguero = Bodeguero.find_by(usuario_id: current_user.id)
+        @clientes = ClientesInterno.where(bodega_id: @bodeguero.bodega_id)
+        @solicitudes = Solicitude.where(usuario_id: @clientes.ids)
         render "show"
     else
         render "sessions/new"

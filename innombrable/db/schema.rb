@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_233116) do
 
   create_table "clientes_internos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "usuario_id"
-    t.integer "obra_id"
+    t.integer "bodega_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,18 +55,6 @@ ActiveRecord::Schema.define(version: 2018_06_10_233116) do
 
   create_table "materiales_bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "material_id"
-    t.integer "bodega_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "obras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nombre"
-    t.string "numero"
-    t.string "calle"
-    t.string "comuna"
-    t.string "tipo"
-    t.string "cliente"
     t.integer "bodega_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -105,6 +93,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_233116) do
     t.string "apellidos"
     t.string "tipo"
     t.integer "rut"
+    t.string "email"
     t.string "contrasena"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
