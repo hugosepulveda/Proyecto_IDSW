@@ -16,8 +16,8 @@ class ClientesInternosController < ApplicationController
 
   def ver_solicitudes
     if current_user.tipo == "cliente interno"
-        @solicitudes = Solicitude.where(usuario_id: current_user.id)
         @cliente = ClientesInterno.find_by(usuario_id: current_user.id)
+        @solicitudes = Solicitude.where(cliente_id: @cliente.id)
         @bodeguero = Bodeguero.find_by(bodega_id: @cliente.bodega_id)
         @usuario_bo = Usuario.find(@bodeguero.usuario_id)
         render "ver_solicitudes"

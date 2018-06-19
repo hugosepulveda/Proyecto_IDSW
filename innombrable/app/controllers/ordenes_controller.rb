@@ -7,6 +7,7 @@ class OrdenesController < ApplicationController
 
   def show
   end
-  def enviar_orden
+  def enviar
+    @ordenes = Ordene.all
   end
 end

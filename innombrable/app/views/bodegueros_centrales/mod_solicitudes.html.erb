@@ -1,2 +1,20 @@
-<%= link_to "Ver/modificar/aprobar solicitudes",  controller: "bodegueros_centrales", action: "mod_solicitudes" %><br>
-<%= link_to "ver/modificar inventarios",  controller: "bodegueros_centrales", action: "mod_inventarios" %><br>
+<table style="width:90%">
+  <tr>
+    <th>Material</th>
+    <th>Encargado</th>
+    <th>Cantidad</th>
+    <th>Prioridad</th>
+    <th>Estado</th>
+    <th>Modificar</th>
+    <th>Aprobar</th>
+  </tr>
+  <% @solicitudes.each do |s| %>
+  <tr>
+    <td><%= s.material %></td>
+    <td><%= s.encargado_id %></td>
+    <td><%= s.cantidad %></td>
+    <td><%= s.prioridad %></td>
+    <td><%= s.estado %></td>
+  </tr>
+  <% end %>
+</table>

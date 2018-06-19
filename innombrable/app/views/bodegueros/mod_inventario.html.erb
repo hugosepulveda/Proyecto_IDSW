@@ -14,7 +14,11 @@
     <td><%= s.nombre %></td>
     <td><%= s.cantidad %></td>
     <td><%= s.tipo %></td>
-    <td><%= s.disponible %></td>
+    <% if s.disponible == true%>
+    <td bgcolor="4D65E2">Sí</td>
+    <% else %>
+    <td bgcolor="FF5C60">No</td>
+    <% end %>
     <td><%= s.comentario %></td>
   </tr>
   <% end %>

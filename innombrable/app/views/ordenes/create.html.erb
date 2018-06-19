@@ -2,7 +2,7 @@
 
 <%= form_for(:ordene) do |s| %>
 
-<%= s.label :Material %>
+<%= s.label :"Materiales solicitados" %>
 <%= s.text_field :material, class: 'form-control' %>
 
 <%= s.label :Cantidad %>
@@ -11,6 +11,6 @@
 <%= s.label :Prioridad %>
 <%= s.number_field :prioridad, class: 'form-control' %>
 
-<%= s.submit "Crear orden", class: "btn btn-primary" %>
+<%= s.submit "Crear orden", class: "button" %>
 
 <% end %>

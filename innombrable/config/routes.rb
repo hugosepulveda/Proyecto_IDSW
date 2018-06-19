@@ -33,6 +33,9 @@ Rails.application.routes.draw do
   get 'ordenes/create', to: 'ordenes#create'
   post 'ordenes/create', to: 'ordenes#create'
 
+  get 'ordenes/enviar', to: 'ordenes#enviar'
+  post 'ordenes/enviar', to: 'ordenes#enviar'
+
   get 'bodegueros/aprobar_sol', to: 'bodegueros#aprobar_sol'
   post 'bodegueros/aprobar_sol', to: 'bodegueros#aprobar_sol'
 
