@@ -48,6 +48,9 @@ Rails.application.routes.draw do
   get 'cotizaciones/create', to: 'cotizaciones#create'
   post 'cotizaciones/create', to: 'cotizaciones#create'
 
+  get 'archivos/descarga_planilla', to: 'archivos#descarga_planilla'
+  post 'archivos/descarga_planilla', to: 'archivos#descarga_planilla'
+  
   root 'sessions#new'
   #post 'usuarios/new' => 'usuarios#new'
 
