@@ -14,8 +14,7 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
 
   create_table "bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "horario"
-    t.integer "numero"
-    t.string "calle"
+    t.string "direccion"
     t.string "comuna"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,6 +80,15 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "retiro_bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "bodeguero_id"
+    t.integer "solicitud_id"
+    t.datetime "fecha_retiro"
+    t.integer "cantidad"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "retiros_bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "fecha"
     t.integer "cantidad"
@@ -92,10 +100,10 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
 
   create_table "solicitudes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "material"
-    t.integer "cantidad"
+    t.integer "cant_material"
     t.integer "prioridad"
-    t.integer "cliente_id"
-    t.string "estado"
+    t.integer "usuario_id"
+    t.integer "estado"
     t.integer "encargado_id"
     t.integer "bodeguero_id"
     t.datetime "created_at", null: false
@@ -106,8 +114,8 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
     t.string "nombres"
     t.string "apellidos"
     t.string "tipo"
+    t.integer "obra_id"
     t.integer "rut"
-    t.string "email"
     t.string "contrasena"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

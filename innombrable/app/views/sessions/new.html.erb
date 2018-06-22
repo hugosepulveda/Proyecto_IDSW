@@ -15,13 +15,15 @@
     <%= form_for(:session, url: login_path) do |f| %>
       <div class="login-box-form-section">
 
-            <%= f.label :rut %>
-            <%= f.text_field :rut, class: 'form-control login-box-input' %>
+          <h2> GPI </h2>
+          <h3> Ingeniería en movimiento </h3>
 
-          <%= f.label :contrasena %>
-            <%= f.password_field :contrasena, class: 'form-control login-box-input' %>
+            <%= f.text_field :rut, class: 'form-control login-box-input', placeholder: 'Rut' %>
 
-            <%= f.submit "Log in", class: "button" %>
+            <%= f.password_field :contrasena, class: 'form-control login-box-input', placeholder: 'Contraseña' %>
+
+            <%= f.submit "Iniciar Sesión", class: "button button-rounded-hover" %>
+
 
     <% end %>
   </div>

@@ -1,8 +1,93 @@
+body {
+    background: url('fondo.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+}
+
+h2{
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #1779ba;
+}
+
+h3{
+  font-weight: 200;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #1779ba;
+}
+
+
+.button-rounded-hover {
+  border: 0;
+  width: 100%;
+  border-radius: 5000px;
+  padding: 1rem 2rem;
+  margin-top: 5rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.button-rounded-hover:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 5rem;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: #fefefe;
+  transition: all 0.3s;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.button-rounded-hover:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 5px solid #115b8d;
+  content: '';
+  border-radius: inherit;
+}
+
+.button-rounded-hover:hover,
+.button-rounded-hover:focus {
+  background-color: #115b8d;
+}
+
+.button-rounded-hover:hover:before,
+.button-rounded-hover:focus:before {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 0.25;
+}
+
+
+input{
+   text-align:center;
+}
+
 .login-box {
   box-shadow: 0 2px 4px rgba(10, 10, 10, 0.4);
   background: #fefefe;
   border-radius: 0;
   overflow: hidden;
+
 }
 
 .login-box .or {
@@ -37,7 +122,18 @@
 
 .login-box-form-section,
 .login-box-social-section-inner {
-  padding: 2.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 500px;
+  position: fixed;
+  border: 2px solid #1779ba;
+  border-radius: 8px;
+  margin: 150px 470px;
+  background-color: #ffffff;
+  opacity: 0.8;
+
 }
 
 .login-box-social-section {
@@ -86,134 +182,4 @@
   border-radius: 0;
   text-transform: uppercase;
   margin-bottom: 0;
-}
-
-[data-whatinput='mouse'] .login-box-submit-button {
-  outline: 0;
-}
-
-.login-box-submit-button:hover, .login-box-submit-button:focus {
-  background-color: #126195;
-  color: #fefefe;
-}
-
-.login-box-submit-button:hover,
-.login-box-submit-button:focus {
-  box-shadow: 0 2px 4px rgba(10, 10, 10, 0.4);
-}
-
-.login-box-submit-button:active {
-  box-shadow: 0 1px 2px rgba(10, 10, 10, 0.4);
-}
-
-.login-box-social-button-facebook {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
-  -webkit-appearance: none;
-  border: 1px solid transparent;
-  border-radius: 0;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-size: 0.9rem;
-  line-height: 1;
-  text-align: center;
-  cursor: pointer;
-  background-color: #3b5998;
-  color: #fefefe;
-  display: block;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
-  font-weight: 500;
-  margin-bottom: 1.25rem;
-  text-transform: uppercase;
-}
-
-[data-whatinput='mouse'] .login-box-social-button-facebook {
-  outline: 0;
-}
-
-.login-box-social-button-facebook:hover, .login-box-social-button-facebook:focus {
-  background-color: #2f477a;
-  color: #fefefe;
-}
-
-.login-box-social-button-twitter {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
-  -webkit-appearance: none;
-  border: 1px solid transparent;
-  border-radius: 0;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-size: 0.9rem;
-  line-height: 1;
-  text-align: center;
-  cursor: pointer;
-  background-color: #55acee;
-  color: #fefefe;
-  display: block;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
-  font-weight: 500;
-  margin-bottom: 1.25rem;
-  text-transform: uppercase;
-}
-
-[data-whatinput='mouse'] .login-box-social-button-twitter {
-  outline: 0;
-}
-
-.login-box-social-button-twitter:hover, .login-box-social-button-twitter:focus {
-  background-color: #1a8fe8;
-  color: #fefefe;
-}
-
-.login-box-social-button-google {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
-  -webkit-appearance: none;
-  border: 1px solid transparent;
-  border-radius: 0;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-size: 0.9rem;
-  line-height: 1;
-  text-align: center;
-  cursor: pointer;
-  background-color: #dd4b39;
-  color: #fefefe;
-  display: block;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
-  font-weight: 500;
-  margin-bottom: 1.25rem;
-  text-transform: uppercase;
-}
-
-[data-whatinput='mouse'] .login-box-social-button-google {
-  outline: 0;
-}
-
-.login-box-social-button-google:hover, .login-box-social-button-google:focus {
-  background-color: #be3221;
-  color: #fefefe;
-}
-
-[class*="login-box-social-button-"]:hover,
-[class*="login-box-social-button-"]:focus {
-  box-shadow: 0 2px 4px rgba(10, 10, 10, 0.4);
-}
-
-.login-box-social-headline {
-  display: block;
-  margin-bottom: 2.5rem;
-  font-size: 1.875rem;
-  color: #fefefe;
-  text-align: center;
 }
