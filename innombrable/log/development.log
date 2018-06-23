@@ -355,9 +355,9 @@ Completed 200 OK in 1013ms (Views: 922.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-17 12:15:20 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -386,9 +386,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-17 12:15:20 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -469,7 +469,7 @@ Processing by ClientesInternosController#ver_solicitudes as HTML
 Completed 500 Internal Server Error in 155ms (ActiveRecord: 27.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for #<Solicitude:0x007fc8c668a060>):
     13:   <tr>
     14:     <td style="text-align:center;"><%= s.material %></td>
@@ -478,7 +478,7 @@ ActionView::Template::Error (undefined method `nombres' for #<Solicitude:0x007fc
     17:     <td style="text-align:center;"><%= s.encargado_id %></td>
     18:     <td style="text-align:center;"><%= s.prioridad %></td>
     19:     <td style="text-align:center;"><%= s.estado %></td>
-  
+
 app/views/clientes_internos/ver_solicitudes.html.erb:16:in `block in _app_views_clientes_internos_ver_solicitudes_html_erb___1317426344354137461_70250158621300'
 app/views/clientes_internos/ver_solicitudes.html.erb:12:in `each'
 app/views/clientes_internos/ver_solicitudes.html.erb:12:in `_app_views_clientes_internos_ver_solicitudes_html_erb___1317426344354137461_70250158621300'
@@ -532,7 +532,7 @@ Processing by ClientesInternosController#ver_solicitudes as HTML
 Completed 500 Internal Server Error in 300ms (ActiveRecord: 31.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for #<Solicitude:0x007f9520b19c40>):
     13:   <tr>
     14:     <td style="text-align:center;"><%= s.material %></td>
@@ -541,7 +541,7 @@ ActionView::Template::Error (undefined method `nombres' for #<Solicitude:0x007f9
     17:     <td style="text-align:center;"><%= s.encargado_id %></td>
     18:     <td style="text-align:center;"><%= s.prioridad %></td>
     19:     <td style="text-align:center;"><%= s.estado %></td>
-  
+
 app/views/clientes_internos/ver_solicitudes.html.erb:16:in `block in _app_views_clientes_internos_ver_solicitudes_html_erb__1287930566732657459_70139219252060'
 app/views/clientes_internos/ver_solicitudes.html.erb:12:in `each'
 app/views/clientes_internos/ver_solicitudes.html.erb:12:in `_app_views_clientes_internos_ver_solicitudes_html_erb__1287930566732657459_70139219252060'
@@ -1161,7 +1161,7 @@ Processing by BodeguerosController#mod_solicitudes as HTML
 Completed 500 Internal Server Error in 112ms (ActiveRecord: 1.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
      9:     <th>Modificar</th>
     10:     <th>Aprobar</th>
@@ -1170,7 +1170,7 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
     13:   <tr>
     14:     <td><%= s.material %></td>
     15:     <td><%= s.encargado_id %></td>
-  
+
 app/views/bodegueros/mod_solicitudes.html.erb:12:in `_app_views_bodegueros_mod_solicitudes_html_erb__1775154409942420181_70346494512500'
 Started GET "/" for 127.0.0.1 at 2018-06-17 14:09:56 -0400
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
@@ -1223,9 +1223,9 @@ Processing by BodeguerosController#mod_solicitudes as HTML
 Completed 500 Internal Server Error in 24ms (ActiveRecord: 15.1ms)
 
 
-  
+
 NoMethodError (undefined method `bodega_id' for nil:NilClass):
-  
+
 app/controllers/bodegueros_controller.rb:10:in `mod_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-17 14:14:15 -0400
 Processing by SessionsController#new as HTML
@@ -1266,12 +1266,12 @@ Processing by BodeguerosController#mod_solicitudes as HTML
 Completed 500 Internal Server Error in 126ms (ActiveRecord: 17.2ms)
 
 
-  
+
   [1m[36mCACHE ClientesInterno Load (0.1ms)[0m  [1m[34mSELECT  `clientes_internos`.* FROM `clientes_internos` WHERE `clientes_internos`.`bodega_id` = 1 LIMIT 11[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
 NoMethodError (undefined method `id' for #<ClientesInterno::ActiveRecord_Relation:0x007fb6cff83cb0>
 Did you mean?  ids):
-  
+
 app/controllers/bodegueros_controller.rb:11:in `mod_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-17 14:15:00 -0400
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
@@ -1384,7 +1384,7 @@ Processing by BodeguerosController#mod_solicitudes as HTML
 Completed 500 Internal Server Error in 214ms (ActiveRecord: 123.6ms)
 
 
-  
+
 ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.cliente_id' in 'where clause': SELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`cliente_id` = 1):
      9:     <th>Modificar</th>
     10:     <th>Aprobar</th>
@@ -1393,7 +1393,7 @@ ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.cliente_
     13:   <tr>
     14:     <td><%= s.material %></td>
     15:     <td><%= s.encargado_id %></td>
-  
+
 app/views/bodegueros/mod_solicitudes.html.erb:12:in `_app_views_bodegueros_mod_solicitudes_html_erb___4420910118580272147_70185212124600'
   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ bin/rails:4
@@ -1662,7 +1662,7 @@ Processing by BodeguerosController#mod_solicitudes as HTML
 Completed 500 Internal Server Error in 210ms (ActiveRecord: 37.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `submit' for #<Solicitude:0x007f9708f9b108>):
     16:     <td><%= s.cantidad %></td>
     17:     <td><%= s.prioridad %></td>
@@ -1671,7 +1671,7 @@ ActionView::Template::Error (undefined method `submit' for #<Solicitude:0x007f97
     20:   </tr>
     21:   <% end %>
     22: </table>
-  
+
 app/views/bodegueros/mod_solicitudes.html.erb:19:in `block in _app_views_bodegueros_mod_solicitudes_html_erb__3956368047519406809_70143330009760'
 app/views/bodegueros/mod_solicitudes.html.erb:12:in `_app_views_bodegueros_mod_solicitudes_html_erb__3956368047519406809_70143330009760'
 Started GET "/" for 127.0.0.1 at 2018-06-17 14:17:44 -0400
@@ -1816,9 +1816,9 @@ Completed 200 OK in 389ms (Views: 289.4ms | ActiveRecord: 72.2ms)
 
 
 Started GET "/" for 127.0.0.1 at 2018-06-17 14:52:45 -0400
-  
+
 Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
-  
+
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `connect'
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `initialize'
 activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
@@ -1865,9 +1865,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-17 14:52:51 -0400
-  
+
 Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
-  
+
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `connect'
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `initialize'
 activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
@@ -1914,9 +1914,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-17 14:52:52 -0400
-  
+
 Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
-  
+
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `connect'
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `initialize'
 activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
@@ -2011,9 +2011,9 @@ Completed 200 OK in 78ms (Views: 66.4ms | ActiveRecord: 4.5ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-17 14:54:07 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -2143,7 +2143,7 @@ Started GET "/" for 127.0.0.1 at 2018-06-17 15:06:52 -0400
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
   [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -2151,7 +2151,7 @@ Migrations are pending. To resolve this issue, run:
         bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.2.0) lib/active_record/migration.rb:579:in `check_pending!'
 activerecord (5.2.0) lib/active_record/migration.rb:556:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
@@ -2459,11 +2459,11 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"mod_solicitudes", :controller=>"bodegueros_centrales", :id=>"3"}):
     1: <%= link_to "Ver/modificar/aprobar solicitudes",  controller: "bodegueros_centrales", action: "mod_solicitudes" %><br>
     2: <%= link_to "ver/modificar inventarios",  controller: "bodegueros_centrales", action: "mod_inventarios" %><br>
-  
+
 app/views/bodegueros_centrales/index.html.erb:1:in `_app_views_bodegueros_centrales_index_html_erb___1966704027394282136_70137407918320'
 app/controllers/usuarios_controller.rb:10:in `show'
 Started GET "/usuarios" for 127.0.0.1 at 2018-06-17 15:12:09 -0400
@@ -2471,9 +2471,9 @@ Started GET "/usuarios" for 127.0.0.1 at 2018-06-17 15:12:09 -0400
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
   [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for UsuariosController):
-  
+
 actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
 actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
 actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
@@ -2603,11 +2603,11 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"mod_solicitudes", :controller=>"bodegueros_centrales", :id=>"3"}):
     1: <%= link_to "Ver/modificar/aprobar solicitudes",  controller: "bodegueros_centrales", action: "mod_solicitudes" %><br>
     2: <%= link_to "ver/modificar inventarios",  controller: "bodegueros_centrales", action: "mod_inventarios" %><br>
-  
+
 app/views/bodegueros_centrales/index.html.erb:1:in `_app_views_bodegueros_centrales_index_html_erb___3416559048247839534_70351154813700'
 app/controllers/usuarios_controller.rb:10:in `show'
 Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-17 15:19:46 -0400
@@ -2668,14 +2668,14 @@ Processing by BodeguerosCentralesController#mod_solicitudes as HTML
 Completed 406 Not Acceptable in 469ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (BodeguerosCentralesController#mod_solicitudes is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
 actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
 actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
@@ -2797,9 +2797,9 @@ Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/bodegueros_centrales/mod_inventarios" for 127.0.0.1 at 2018-06-17 15:23:51 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/bodegueros_centrales/mod_inventarios"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -2835,9 +2835,9 @@ Completed 200 OK in 409ms (Views: 405.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/bodegueros_centrales/mod_inventarios" for 127.0.0.1 at 2018-06-17 15:23:53 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/bodegueros_centrales/mod_inventarios"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -2919,9 +2919,9 @@ Completed 200 OK in 56ms (Views: 49.9ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/bodegueros_centrales/mod_inventarios" for 127.0.0.1 at 2018-06-17 15:26:10 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/bodegueros_centrales/mod_inventarios"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -3003,9 +3003,9 @@ Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-17 15:30:53 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -3108,13 +3108,13 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.1ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cotizaciones", :id=>"4"}):
     2: <h1 align="center">Encargado Compras</h1>
-    3: 
+    3:
     4: <%= link_to "Crear orden de compra",  controller: "ordenes", action: "create" %><br>
     5: <%= link_to "Enviar cotización",  controller: "cotizaciones", action: "create" %>
-  
+
 app/views/encargados_compras/index.html.erb:5:in `_app_views_encargados_compras_index_html_erb__2622746008495073627_70193757852360'
 app/controllers/usuarios_controller.rb:12:in `show'
 Started GET "/" for 127.0.0.1 at 2018-06-17 15:34:48 -0400
@@ -3158,13 +3158,13 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cotizaciones", :id=>"4"}):
     2: <h1 align="center">Encargado Compras</h1>
-    3: 
+    3:
     4: <%= link_to "Crear orden de compra",  controller: "ordenes", action: "create" %><br>
     5: <%= link_to "Enviar cotización",  controller: "cotizaciones", action: "create" %>
-  
+
 app/views/encargados_compras/index.html.erb:5:in `_app_views_encargados_compras_index_html_erb___1375339249467800453_70313984918520'
 app/controllers/usuarios_controller.rb:12:in `show'
 Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-17 15:35:59 -0400
@@ -3215,13 +3215,13 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.0ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cotizaciones", :id=>"4"}):
     2: <h1 align="center">Encargado Compras</h1>
-    3: 
+    3:
     4: <%= link_to "Crear orden de compra",  controller: "ordenes", action: "create" %><br>
     5: <%= link_to "Enviar cotización",  controller: "cotizaciones", action: "create" %>
-  
+
 app/views/encargados_compras/index.html.erb:5:in `_app_views_encargados_compras_index_html_erb__2590256980311843717_70188874734940'
 app/controllers/usuarios_controller.rb:12:in `show'
 Started GET "/usuarios/2" for 127.0.0.1 at 2018-06-17 15:37:01 -0400
@@ -3279,9 +3279,9 @@ Processing by OrdenesController#create as HTML
 Completed 500 Internal Server Error in 45ms (ActiveRecord: 13.5ms)
 
 
-  
+
 NoMethodError (undefined method `bodega_id' for nil:NilClass):
-  
+
 app/controllers/ordenes_controller.rb:4:in `create'
 Started GET "/ordenes/create" for 127.0.0.1 at 2018-06-17 15:42:56 -0400
 Processing by OrdenesController#create as HTML
@@ -3292,9 +3292,9 @@ Processing by OrdenesController#create as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.7ms)
 
 
-  
+
 NoMethodError (undefined method `bodega_id' for nil:NilClass):
-  
+
 app/controllers/ordenes_controller.rb:4:in `create'
 Started GET "/" for 127.0.0.1 at 2018-06-17 15:47:37 -0400
   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
@@ -3337,9 +3337,9 @@ Processing by OrdenesController#create as HTML
 Completed 404 Not Found in 51ms (ActiveRecord: 39.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Solicitude with 'id'=all):
-  
+
 app/controllers/ordenes_controller.rb:5:in `create'
 Started GET "/" for 127.0.0.1 at 2018-06-17 15:48:37 -0400
   [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
@@ -3425,7 +3425,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 908ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( sessions.css )` to `config/initializers/assets.rb` and restart your server):
     3: <html class="no-js" lang="en">
@@ -3434,8 +3434,8 @@ Add `Rails.application.config.assets.precompile += %w( sessions.css )` to `confi
     6: <%= stylesheet_link_tag 'sessions' %>
     7: <meta name="viewport" content="width=device-width, initial-scale=1.0">
     8: <% provide(:title, "Sistema GPI") %>
-    9: 
-  
+    9:
+
 app/views/sessions/new.html.erb:6:in `_app_views_sessions_new_html_erb___684407597450382823_70251783285860'
 Started GET "/" for 127.0.0.1 at 2018-06-17 21:47:38 -0400
   [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
@@ -3499,9 +3499,9 @@ Completed 200 OK in 764ms (Views: 707.3ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 11:42:43 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -3532,9 +3532,9 @@ puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 11:42:43 -0400
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -3604,9 +3604,9 @@ Completed 200 OK in 972ms (Views: 863.9ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 18:58:25 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -3635,9 +3635,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 18:58:25 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -3720,7 +3720,7 @@ Processing by ClientesInternosController#ver_solicitudes as HTML
 Completed 500 Internal Server Error in 213ms (ActiveRecord: 87.9ms)
 
 
-  
+
 ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.usuario_id' in 'where clause': SELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`usuario_id` = 1):
      9:     <th style="text-align:center;">Prioridad</th>
     10:     <th style="text-align:center;">Estado</th>
@@ -3729,7 +3729,7 @@ ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.usuario_
     13:   <tr>
     14:     <td style="text-align:center;"><%= s.material %></td>
     15:     <td style="text-align:center;"><%= s.cantidad %></td>
-  
+
 app/views/clientes_internos/ver_solicitudes.html.erb:12:in `_app_views_clientes_internos_ver_solicitudes_html_erb___2135162465133972011_70357596527600'
 app/controllers/clientes_internos_controller.rb:23:in `ver_solicitudes'
 Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-18 18:58:52 -0400
@@ -3759,7 +3759,7 @@ Processing by ClientesInternosController#ver_solicitudes as HTML
 Completed 500 Internal Server Error in 39ms (ActiveRecord: 6.7ms)
 
 
-  
+
 ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.usuario_id' in 'where clause': SELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`usuario_id` = 1):
      9:     <th style="text-align:center;">Prioridad</th>
     10:     <th style="text-align:center;">Estado</th>
@@ -3768,7 +3768,7 @@ ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.usuario_
     13:   <tr>
     14:     <td style="text-align:center;"><%= s.material %></td>
     15:     <td style="text-align:center;"><%= s.cantidad %></td>
-  
+
 app/views/clientes_internos/ver_solicitudes.html.erb:12:in `_app_views_clientes_internos_ver_solicitudes_html_erb___2135162465133972011_70357598629100'
 app/controllers/clientes_internos_controller.rb:23:in `ver_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-18 19:03:24 -0400
@@ -3802,9 +3802,9 @@ Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:03:40 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -3849,7 +3849,7 @@ Processing by ClientesInternosController#ver_solicitudes as HTML
 Completed 500 Internal Server Error in 214ms (ActiveRecord: 64.7ms)
 
 
-  
+
 ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.usuario_id' in 'where clause': SELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`usuario_id` = 1):
      9:     <th style="text-align:center;">Prioridad</th>
     10:     <th style="text-align:center;">Estado</th>
@@ -3858,7 +3858,7 @@ ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.usuario_
     13:   <tr>
     14:     <td style="text-align:center;"><%= s.material %></td>
     15:     <td style="text-align:center;"><%= s.cantidad %></td>
-  
+
 app/views/clientes_internos/ver_solicitudes.html.erb:12:in `_app_views_clientes_internos_ver_solicitudes_html_erb___579845818953800706_70119551534720'
 app/controllers/clientes_internos_controller.rb:23:in `ver_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-18 19:14:29 -0400
@@ -3901,9 +3901,9 @@ Completed 200 OK in 194ms (Views: 171.8ms | ActiveRecord: 2.0ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:14:42 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -3950,7 +3950,7 @@ Processing by ClientesInternosController#ver_solicitudes as HTML
 Completed 500 Internal Server Error in 345ms (ActiveRecord: 247.7ms)
 
 
-  
+
 ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.usuario_id' in 'where clause': SELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`usuario_id` = 1):
      9:     <th style="text-align:center;">Prioridad</th>
     10:     <th style="text-align:center;">Estado</th>
@@ -3959,7 +3959,7 @@ ActionView::Template::Error (Mysql2::Error: Unknown column 'solicitudes.usuario_
     13:   <tr>
     14:     <td style="text-align:center;"><%= s.material %></td>
     15:     <td style="text-align:center;"><%= s.cantidad %></td>
-  
+
 app/views/clientes_internos/ver_solicitudes.html.erb:12:in `_app_views_clientes_internos_ver_solicitudes_html_erb__4490881735772418805_70245553601600'
 app/controllers/clientes_internos_controller.rb:23:in `ver_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-18 19:15:17 -0400
@@ -4002,9 +4002,9 @@ Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:15:28 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4126,15 +4126,15 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 112ms (ActiveRecord: 36.0ms)
 
 
-  
+
 ActionView::Template::Error (can't add a new key into hash during iteration):
     14:   <body>
-    15: 
+    15:
     16:     <%= yield %>
     17:     <%= javascript_include_tag "application" %>
     18:   </body>
     19: </html>
-  
+
 app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___3668572092378889446_70351882446820'
 app/controllers/usuarios_controller.rb:6:in `show'
 Completed 200 OK in 144ms (Views: 139.3ms | ActiveRecord: 1.3ms)
@@ -4196,9 +4196,9 @@ Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:23:54 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4248,9 +4248,9 @@ Completed 200 OK in 131ms (Views: 127.2ms | ActiveRecord: 2.3ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:24:08 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4353,9 +4353,9 @@ Completed 200 OK in 124ms (Views: 120.0ms | ActiveRecord: 1.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:31:14 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4396,7 +4396,7 @@ Processing by BodeguerosController#mod_solicitudes as HTML
 Completed 500 Internal Server Error in 79ms (ActiveRecord: 14.8ms)
 
 
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:18: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
 .append=( if s.estado == true);@output_buffer.safe_append='
                               ^
@@ -4404,10 +4404,10 @@ SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros
 e;@output_buffer.append=( else );@output_buffer.safe_append=
                               ^
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;     end 
+'.freeze;     end
                  ^
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;   end 
+'.freeze;   end
                ^
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
           ensure
@@ -4415,7 +4415,7 @@ e;@output_buffer.append=( else );@output_buffer.safe_append=
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
           end
              ^):
-  
+
 app/views/bodegueros/mod_solicitudes.html.erb:18: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
 app/views/bodegueros/mod_solicitudes.html.erb:20: syntax error, unexpected keyword_else
 app/views/bodegueros/mod_solicitudes.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
@@ -4464,9 +4464,9 @@ Completed 200 OK in 181ms (Views: 148.9ms | ActiveRecord: 18.2ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:32:13 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4509,7 +4509,7 @@ Processing by BodeguerosController#mod_solicitudes as HTML
 Completed 500 Internal Server Error in 48ms (ActiveRecord: 10.4ms)
 
 
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:18: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
 append=( if s.estado == true );@output_buffer.safe_append='
                               ^
@@ -4517,10 +4517,10 @@ append=( if s.estado == true );@output_buffer.safe_append='
 e;@output_buffer.append=( else );@output_buffer.safe_append=
                               ^
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;     end 
+'.freeze;     end
                  ^
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;   end 
+'.freeze;   end
                ^
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
           ensure
@@ -4528,7 +4528,7 @@ e;@output_buffer.append=( else );@output_buffer.safe_append=
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/bodegueros/mod_solicitudes.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
           end
              ^):
-  
+
 app/views/bodegueros/mod_solicitudes.html.erb:18: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
 append=( if s.estado == true );@output_buffer.safe_append='
 app/views/bodegueros/mod_solicitudes.html.erb:20: syntax error, unexpected keyword_else
@@ -4571,9 +4571,9 @@ Completed 200 OK in 152ms (Views: 138.8ms | ActiveRecord: 6.5ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:33:52 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4702,9 +4702,9 @@ Completed 200 OK in 83ms (Views: 75.9ms | ActiveRecord: 4.8ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:42:08 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4840,9 +4840,9 @@ Completed 200 OK in 69ms (Views: 65.6ms | ActiveRecord: 1.9ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:46:38 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4903,9 +4903,9 @@ Completed 200 OK in 568ms (Views: 479.2ms | ActiveRecord: 14.4ms)
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:47:39 -0400
   [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -4964,9 +4964,9 @@ Completed 200 OK in 137ms (Views: 133.4ms | ActiveRecord: 1.4ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:47:48 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5055,9 +5055,9 @@ Completed 200 OK in 150ms (Views: 141.5ms | ActiveRecord: 3.4ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:50:07 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5148,9 +5148,9 @@ Completed 200 OK in 85ms (Views: 68.0ms | ActiveRecord: 2.0ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:52:45 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5226,9 +5226,9 @@ Completed 200 OK in 216ms (Views: 211.6ms | ActiveRecord: 1.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:54:14 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5306,9 +5306,9 @@ Completed 200 OK in 80ms (Views: 73.8ms | ActiveRecord: 1.2ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 19:56:25 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5468,9 +5468,9 @@ Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 1.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 20:03:21 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5614,13 +5614,13 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 61ms (ActiveRecord: 1.5ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"enviar", :controller=>"ordenes", :id=>"4"}):
     2: <h1 align="center">Encargado Compras</h1>
-    3: 
+    3:
     4: <%= link_to "Crear cotización/orden de compra",  controller: "ordenes", action: "create" %><br>
     5: <%= link_to "Enviar cotización/orden de compra",  controller: "ordenes", action: "enviar" %>
-  
+
 app/views/encargados_compras/index.html.erb:5:in `_app_views_encargados_compras_index_html_erb__2892559007858347256_70123062165840'
 app/controllers/usuarios_controller.rb:12:in `show'
 Started GET "/" for 127.0.0.1 at 2018-06-18 21:06:49 -0400
@@ -5785,13 +5785,13 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 193ms (ActiveRecord: 36.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nombres' for nil:NilClass):
     1: <% provide(:title, "Bienvenido" + " " + current_user.nombres + " " + current_user.apellidos) %>
     2: <h1 align="center">Encargado Compras</h1>
-    3: 
+    3:
     4: <%= link_to "Crear cotización/orden de compra",  controller: "ordenes", action: "create" %><br>
-  
+
 app/views/encargados_compras/index.html.erb:1:in `_app_views_encargados_compras_index_html_erb__1101141643528878516_70352037577240'
 app/controllers/usuarios_controller.rb:12:in `show'
 Started GET "/" for 127.0.0.1 at 2018-06-18 22:30:59 -0400
@@ -5827,9 +5827,9 @@ Completed 200 OK in 137ms (Views: 133.7ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:31:20 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5866,13 +5866,13 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"descargar", :controller=>"clientes_internos"}):
     20:     </div>
     21: </div>
-    22: 
+    22:
     23: <%= button_to "Descargar planilla", :action => :descargar %>
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23:in `_app_views_clientes_internos_crear_solicitudes_html_erb__4298433694779188184_70200000591720'
 app/controllers/clientes_internos_controller.rb:11:in `crear_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-18 22:33:32 -0400
@@ -5908,9 +5908,9 @@ Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:33:39 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5948,9 +5948,9 @@ Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 1.1ms)
 
 
 Started POST "/clientes_internos/descargar" for 127.0.0.1 at 2018-06-18 22:33:43 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/clientes_internos/descargar"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -5979,9 +5979,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:33:45 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6042,9 +6042,9 @@ Completed 200 OK in 205ms (Views: 202.1ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:39:03 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6082,9 +6082,9 @@ Completed 200 OK in 112ms (Views: 110.0ms | ActiveRecord: 0.6ms)
 
 
 Started POST "/clientes-internos/planillaSolicutud.xlsx" for 127.0.0.1 at 2018-06-18 22:39:08 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/clientes-internos/planillaSolicutud.xlsx"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6113,9 +6113,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:39:09 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6176,9 +6176,9 @@ Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:40:19 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6216,9 +6216,9 @@ Completed 200 OK in 136ms (Views: 134.0ms | ActiveRecord: 0.5ms)
 
 
 Started POST "/clientes-internos/planillaSolicitud.xlsx" for 127.0.0.1 at 2018-06-18 22:40:22 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/clientes-internos/planillaSolicitud.xlsx"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6247,9 +6247,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:40:23 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6312,9 +6312,9 @@ Completed 200 OK in 650ms (Views: 641.5ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:41:35 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6352,9 +6352,9 @@ Completed 200 OK in 466ms (Views: 438.8ms | ActiveRecord: 20.1ms)
 
 
 Started POST "/clientes-internos/public/planillaSolicitud.xlsx" for 127.0.0.1 at 2018-06-18 22:41:45 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/clientes-internos/public/planillaSolicitud.xlsx"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6383,9 +6383,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:41:46 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6448,9 +6448,9 @@ Completed 200 OK in 120ms (Views: 113.9ms | ActiveRecord: 1.6ms)
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:45:42 -0400
   [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6488,9 +6488,9 @@ Completed 200 OK in 88ms (Views: 78.1ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/clientes-internos/public/planillaSolicitud.xlsx" for 127.0.0.1 at 2018-06-18 22:45:45 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/clientes-internos/public/planillaSolicitud.xlsx"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6553,9 +6553,9 @@ Completed 200 OK in 118ms (Views: 115.2ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:49:36 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6592,11 +6592,11 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms)
 
 
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
 , action: :descargar, method :get, class: "button" );
                               ^):
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
 app/controllers/clientes_internos_controller.rb:11:in `crear_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-18 22:50:16 -0400
@@ -6632,9 +6632,9 @@ Completed 200 OK in 92ms (Views: 80.9ms | ActiveRecord: 2.5ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:50:22 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6673,15 +6673,15 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 501ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `get' for #<#<Class:0x007f9f48974980>:0x007f9f47129380>
 Did you mean?  gets
                gem):
     20:     </div>
     21: </div>
-    22: 
+    22:
     23: <%= button_to "Descargar planilla", action: :descargar, method: get, class: "button" %>
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23:in `_app_views_clientes_internos_crear_solicitudes_html_erb__1080829605325551445_70161050901000'
 app/controllers/clientes_internos_controller.rb:11:in `crear_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-18 22:52:44 -0400
@@ -6717,9 +6717,9 @@ Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:52:51 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6758,15 +6758,15 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 483ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `get' for #<#<Class:0x007f8ebbbed8a8>:0x007f8ebaaa3980>
 Did you mean?  gets
                gem):
     20:     </div>
     21: </div>
-    22: 
+    22:
     23: <%= button_to "Descargar planilla", :action => :descargar, method: get, class: "button" %>
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23:in `_app_views_clientes_internos_crear_solicitudes_html_erb___748092191563399741_70125496894500'
 app/controllers/clientes_internos_controller.rb:11:in `crear_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-18 22:53:43 -0400
@@ -6802,9 +6802,9 @@ Completed 200 OK in 400ms (Views: 396.4ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:53:52 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6844,9 +6844,9 @@ Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 0.7ms)
 
 
 Started POST "/clientes-internos/descargar?class=button" for 127.0.0.1 at 2018-06-18 22:53:56 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/clientes-internos/descargar"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6875,9 +6875,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 22:53:57 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6938,9 +6938,9 @@ Completed 200 OK in 111ms (Views: 108.9ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:04:26 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -6980,9 +6980,9 @@ Completed 200 OK in 180ms (Views: 177.3ms | ActiveRecord: 0.6ms)
 
 
 Started POST "/clientes-internos/descargar?class=button" for 127.0.0.1 at 2018-06-18 23:04:28 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/clientes-internos/descargar"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7045,9 +7045,9 @@ Completed 200 OK in 188ms (Views: 179.6ms | ActiveRecord: 5.5ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:07:35 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7084,11 +7084,11 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
 
 
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected keyword_class, expecting ')'
 /planillaSolicitud.xlsx" class: "button" );
                               ^):
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected keyword_class, expecting ')'
 app/controllers/clientes_internos_controller.rb:11:in `crear_solicitudes'
 Started GET "/" for 127.0.0.1 at 2018-06-18 23:08:15 -0400
@@ -7124,9 +7124,9 @@ Completed 200 OK in 211ms (Views: 165.0ms | ActiveRecord: 29.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:08:23 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7166,9 +7166,9 @@ Completed 200 OK in 76ms (Views: 72.7ms | ActiveRecord: 0.7ms)
 
 
 Started POST "/planillaSolicitud.xlsx" for 127.0.0.1 at 2018-06-18 23:08:26 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/planillaSolicitud.xlsx"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7197,9 +7197,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:08:27 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7258,9 +7258,9 @@ Completed 200 OK in 190ms (Views: 184.6ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:16:33 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7341,9 +7341,9 @@ Completed 200 OK in 193ms (Views: 185.9ms | ActiveRecord: 1.1ms)
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:17:57 -0400
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7469,9 +7469,9 @@ Completed 200 OK in 171ms (Views: 166.8ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:22:14 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7522,9 +7522,9 @@ Started GET "/c" for 127.0.0.1 at 2018-06-18 23:23:07 -0400
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
   [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/c"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7555,9 +7555,9 @@ puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:23:09 -0400
   [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7612,9 +7612,9 @@ Completed 200 OK in 172ms (Views: 167.5ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:23:22 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7651,7 +7651,7 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms)
 
 
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected '='
 o "Descargar planilla", class="button", :controller => "arch
                               ^
@@ -7661,7 +7661,7 @@ gar planilla", class="button", :controller => "archivos", :a
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ',', expecting ')'
 n", :controller => "archivos", :action => "descarga_planilla
                               ^):
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected '='
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ',', expecting ')'
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ',', expecting ')'
@@ -7699,9 +7699,9 @@ Completed 200 OK in 86ms (Views: 76.2ms | ActiveRecord: 1.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:26:14 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7787,9 +7787,9 @@ Completed 200 OK in 121ms (Views: 102.8ms | ActiveRecord: 15.2ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:27:20 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7861,9 +7861,9 @@ Completed 200 OK in 164ms (Views: 147.6ms | ActiveRecord: 2.0ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:28:51 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -7902,14 +7902,14 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms)
 
 
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ','
 planilla", class: 'button' do, controller: 'archivos', actio
                               ^
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ',', expecting keyword_end
 n' do, controller: 'archivos', action: 'descarga_planilla' )
                               ^):
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ','
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ',', expecting keyword_end
 app/controllers/clientes_internos_controller.rb:11:in `crear_solicitudes'
@@ -7957,9 +7957,9 @@ Completed 200 OK in 93ms (Views: 89.8ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:29:54 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8035,9 +8035,9 @@ Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:31:48 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8076,11 +8076,11 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms)
 
 
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected keyword_class, expecting ')'
 ion: 'descarga_planilla' class: "button" );
                               ^):
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected keyword_class, expecting ')'
 app/controllers/clientes_internos_controller.rb:11:in `crear_solicitudes'
 Started GET "/clientes-internos/crear_solicitudes" for 127.0.0.1 at 2018-06-18 23:32:03 -0400
@@ -8093,9 +8093,9 @@ Completed 200 OK in 105ms (Views: 83.6ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:32:04 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8178,9 +8178,9 @@ Completed 200 OK in 150ms (Views: 147.9ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:33:20 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8308,9 +8308,9 @@ Completed 200 OK in 128ms (Views: 121.9ms | ActiveRecord: 2.0ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:36:21 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8395,9 +8395,9 @@ Completed 200 OK in 134ms (Views: 128.9ms | ActiveRecord: 2.5ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:37:10 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8514,9 +8514,9 @@ Completed 200 OK in 356ms (Views: 347.1ms | ActiveRecord: 1.6ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:38:32 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8592,9 +8592,9 @@ Completed 200 OK in 369ms (Views: 364.1ms | ActiveRecord: 1.4ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:40:02 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8633,7 +8633,7 @@ Processing by ClientesInternosController#crear_solicitudes as HTML
 Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.1ms)
 
 
-  
+
 SyntaxError (/Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ')', expecting =>
 action: 'descarga_planilla' }) );
                               ^
@@ -8643,7 +8643,7 @@ action: 'descarga_planilla' }) );
 /Users/hugo/Proyecto_IDSW/h/P_IDSW/innombrable/app/views/clientes_internos/crear_solicitudes.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
           end
              ^):
-  
+
 app/views/clientes_internos/crear_solicitudes.html.erb:23: syntax error, unexpected ')', expecting =>
 app/views/clientes_internos/crear_solicitudes.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
 app/views/clientes_internos/crear_solicitudes.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
@@ -8681,9 +8681,9 @@ Completed 200 OK in 149ms (Views: 120.4ms | ActiveRecord: 3.9ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:41:38 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -8773,9 +8773,9 @@ Completed 200 OK in 109ms (Views: 100.2ms | ActiveRecord: 1.4ms)
 
 
 Started GET "/favicon.ico" for 127.0.0.1 at 2018-06-18 23:42:21 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9208,9 +9208,9 @@ Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 127.0.0.1 at 2018-06-21 13:53:02 -0400
-  
+
 Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
-  
+
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `connect'
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `initialize'
 activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
@@ -9396,9 +9396,9 @@ Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 127.0.0.1 at 2018-06-21 14:55:44 -0400
-  
+
 Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
-  
+
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `connect'
 mysql2 (0.5.1) lib/mysql2/client.rb:90:in `initialize'
 activerecord (5.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
@@ -9537,9 +9537,9 @@ Completed 200 OK in 92ms (Views: 89.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/img/fondo.jpg" for 127.0.0.1 at 2018-06-21 16:01:38 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/img/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9568,9 +9568,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/img/fondo.jpg" for 127.0.0.1 at 2018-06-21 16:01:38 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/img/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9606,9 +9606,9 @@ Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/img/fondo.jpg" for 127.0.0.1 at 2018-06-21 16:01:40 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/img/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9637,9 +9637,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/img/fondo.jpg" for 127.0.0.1 at 2018-06-21 16:01:40 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/img/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9676,9 +9676,9 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 103ms (Views: 100.0ms | ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/imagenes/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9711,9 +9711,9 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/imagenes/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9754,9 +9754,9 @@ Completed 200 OK in 89ms (Views: 86.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/imagenes/fondo.jpg" for 127.0.0.1 at 2018-06-21 16:15:12 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/imagenes/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9785,9 +9785,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/imagenes/fondo.jpg" for 127.0.0.1 at 2018-06-21 16:15:13 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/imagenes/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9823,9 +9823,9 @@ Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/imagenes/fondo.jpg" for 127.0.0.1 at 2018-06-21 16:15:16 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/imagenes/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9854,9 +9854,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/imagenes/fondo.jpg" for 127.0.0.1 at 2018-06-21 16:15:16 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/imagenes/fondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -9994,10 +9994,10 @@ Started GET "/usuarios/" for 127.0.0.1 at 2018-06-21 19:26:29 -0400
   ↳ /Users/sofi/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
   [1m[35m (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ /Users/sofi/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
-  
+
 Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-21 19:26:30 -0400
 AbstractController::ActionNotFound (The action 'index' could not be found for UsuariosController):
-  
+
 actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
 actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
 actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
@@ -10655,7 +10655,7 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
 
 
-  
+
 SyntaxError (/Users/sofi/P_IDSW/innombrable/app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_class, expecting ')'
 submit "Iniciar Sesión" class:'button-hover');@output_buffe
                               ^
@@ -10663,7 +10663,7 @@ submit "Iniciar Sesión" class:'button-hover');@output_buffe
 Sesión" class:'button-hover');@output_buffer.safe_append='
                               ^
 /Users/sofi/P_IDSW/innombrable/app/views/sessions/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;     end 
+'.freeze;     end
                  ^
 /Users/sofi/P_IDSW/innombrable/app/views/sessions/new.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
           ensure
@@ -10671,7 +10671,7 @@ Sesión" class:'button-hover');@output_buffer.safe_append='
 /Users/sofi/P_IDSW/innombrable/app/views/sessions/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
           end
              ^):
-  
+
 app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_class, expecting ')'
 app/views/sessions/new.html.erb:22: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
 app/views/sessions/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
@@ -10732,11 +10732,11 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/sofi/P_IDSW/innombrable/app/views/sessions/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
 .submit "Iniciar Sesión" clas:'button-hover');@output_buffe
                               ^):
-  
+
 app/views/sessions/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
 Started GET "/login" for 127.0.0.1 at 2018-06-21 22:03:28 -0400
 Processing by SessionsController#new as HTML
@@ -11452,9 +11452,9 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 136ms (Views: 131.5ms | ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/bfondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -11487,9 +11487,9 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/bfondo.jpg"):
-  
+
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -11548,7 +11548,7 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( clientes_internos.css )` to `config/initializers/assets.rb` and restart your server):
     1: <html class="no-js" lang="en">
@@ -11557,8 +11557,8 @@ Add `Rails.application.config.assets.precompile += %w( clientes_internos.css )` 
     4: <%= stylesheet_link_tag 'clientes_internos' %>
     5: <meta name="viewport" content="width=device-width, initial-scale=1.0">
     6: <% provide(:title, "Sistema GPI") %>
-    7: 
-  
+    7:
+
 app/views/clientes_internos/index.html.erb:4:in `_app_views_clientes_internos_index_html_erb___4325540862902805198_70254367028800'
 app/controllers/usuarios_controller.rb:6:in `show'
 Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-22 22:41:50 -0400
@@ -11571,7 +11571,7 @@ Processing by UsuariosController#show as HTML
 Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( clientes_internos.css )` to `config/initializers/assets.rb` and restart your server):
     1: <html class="no-js" lang="en">
@@ -11580,8 +11580,8 @@ Add `Rails.application.config.assets.precompile += %w( clientes_internos.css )` 
     4: <%= stylesheet_link_tag 'clientes_internos' %>
     5: <meta name="viewport" content="width=device-width, initial-scale=1.0">
     6: <% provide(:title, "Sistema GPI") %>
-    7: 
-  
+    7:
+
 app/views/clientes_internos/index.html.erb:4:in `_app_views_clientes_internos_index_html_erb___4325540862902805198_70254380253460'
 app/controllers/usuarios_controller.rb:6:in `show'
 Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-22 22:42:31 -0400
@@ -11639,9 +11639,9 @@ Processing by ClientesInternosController#ver_solicitudes as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 10.9ms)
 
 
-  
+
 NoMethodError (undefined method `id' for nil:NilClass):
-  
+
 app/controllers/clientes_internos_controller.rb:20:in `ver_solicitudes'
 Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-22 22:53:15 -0400
 Processing by UsuariosController#show as HTML
@@ -11950,5 +11950,3 @@ Processing by UsuariosController#show as HTML
   Rendering clientes_internos/index.html.erb within layouts/application
   Rendered clientes_internos/index.html.erb within layouts/application (2.8ms)
 Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.9ms)
-
-
