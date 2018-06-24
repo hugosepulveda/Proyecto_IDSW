@@ -1,0 +1,16 @@
+<h1>Enviar cotizaciones/órdenes</h1>
+
+<%= form_for(:ordene) do |s| %>
+
+<%= s.label :"Materiales solicitados" %>
+<%= s.text_field :material, class: 'form-control' %>
+
+<%= s.label :Cantidad %>
+<%= s.number_field :cantidad, class: 'form-control' %>
+
+<%= s.label :Prioridad %>
+<%= s.number_field :prioridad, class: 'form-control' %>
+
+<%= s.submit "Crear orden", class: "button" %>
+
+<% end %>

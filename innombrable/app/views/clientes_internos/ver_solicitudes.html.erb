@@ -14,7 +14,11 @@
     <td style="text-align:center;"><%= s.material %></td>
     <td style="text-align:center;"><%= s.cantidad %></td>
     <td style="text-align:center;"><%= @usuario_bo.nombres + " " + @usuario_bo.apellidos %></td>
-    <td style="text-align:center;"><%= s.encargado_id %></td>
+    <% if s.encargado_id.nil?%>
+      <td style="text-align:center;">No asignado</td>
+    <% else %>
+      <td style="text-align:center;"><%= s.encargado_id %></td>
+    <% end %>
     <td style="text-align:center;"><%= s.prioridad %></td>
     <td style="text-align:center;"><%= s.estado %></td>
   </tr>
