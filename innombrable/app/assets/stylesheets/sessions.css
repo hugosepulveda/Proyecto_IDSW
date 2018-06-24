@@ -1,5 +1,5 @@
 body {
-    background: url('fondo.jpg');
+    background: url('bfondo.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
@@ -128,18 +128,12 @@ input{
   padding-bottom: 2rem;
   width: 500px;
   position: fixed;
-  border: 2px solid #1779ba;
+  border: 2px solid white;
   border-radius: 8px;
   margin: 150px 470px;
   background-color: #ffffff;
-  opacity: 0.8;
+  opacity: 1;
 
-}
-
-.login-box-social-section {
-  background: url("https://images.pexels.com/photos/179124/pexels-photo-179124.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
-  background-size: cover;
-  background-position: center;
 }
 
 .login-box-input {

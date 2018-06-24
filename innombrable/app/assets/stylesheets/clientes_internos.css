@@ -1,0 +1,125 @@
+
+.holy-grail-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-rows: 1fr 8fr 1fr;
+      grid-template-rows: 1fr 8fr 1fr;
+  grid-gap: 20px;
+  height: 100vh;
+}
+
+@media screen and (max-width: 60em) {
+  .holy-grail-grid {
+    -ms-grid-rows: 2fr 1fr 5fr 1fr;
+        grid-template-rows: 2fr 1fr 5fr 1fr;
+  }
+}
+
+.holy-grail-header,
+.holy-grail-left,
+.holy-grail-middle,
+.holy-grail-right,
+.holy-grail-footer {
+  padding: 1rem;
+  border: 1px solid #ededed;
+  background-color: #ededed;
+}
+
+.holy-grail-header {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+}
+
+@media screen and (max-width: 60em) {
+  .holy-grail-left {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .holy-grail-middle {
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .right-nav {
+    -ms-grid-row: 4;
+        grid-row-start: 4;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+.holy-grail-footer {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+
+
+
+.portfolio-resume-spacing {
+  margin-bottom: 2rem;
+}
+
+.portfolio-resume-wrapper {
+  padding: 2rem 4rem;
+}
+
+.portfolio-resume-headshot {
+  margin-bottom: 2rem;
+  border-radius: 50%;
+}
+
+.portfolio-resume-header {
+  text-transform: uppercase;
+  color: #1779ba;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.portfolio-resume-contact-info {
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-resume-contact-info a {
+  color: #0a0a0a;
+}
+
+.portfolio-resume-contact-info .fa {
+  font-size: 1.4rem;
+  padding-right: 0.8rem;
+  vertical-align: middle;
+  color: #0a0a0a;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
