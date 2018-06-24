@@ -2,7 +2,9 @@
     <div class="grid-x grid-padding-x">
       <div class="medium-6 large-auto column">
         <h1 align="center">Crear solicitud</h1>
-          <%= form_for(:solicitude, url:{:action=>'create'}) do |s| %>
+          <%= form_for(@solicitude, url:{:action=>'create'}) do |s| %>
+
+          <%= render 'shared/error_messages' %>
 
           <%= s.label :Material %>
           <%= s.text_field :material, class: 'form-control', placeholder: 'Material' %>
@@ -17,7 +19,6 @@
 
           <% end %>
        </div>
+       <%= button_to "Descargar planilla", { controller: 'archivos', action: 'descarga_planilla'}, class: "button" %>
     </div>
 </div>
-
-<%= button_to "jaja", { controller: 'archivos', action: 'descarga_planilla'}, class: "button" %>
