@@ -6,6 +6,10 @@
 
           <%= render 'shared/error_messages' %>
 
+          <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>"><%= value %></div><br>
+          <% end %>
+
           <%= s.label :Material %>
           <%= s.text_field :material, class: 'form-control', placeholder: 'Material' %>
 
@@ -18,7 +22,7 @@
           <%= s.submit "Crear solicitud", class: 'button' %>
 
           <% end %>
+          <%= button_to "Descargar planilla", { controller: 'archivos', action: 'descarga_planilla'}, class: "button" %>
        </div>
-       <%= button_to "Descargar planilla", { controller: 'archivos', action: 'descarga_planilla'}, class: "button" %>
     </div>
 </div>

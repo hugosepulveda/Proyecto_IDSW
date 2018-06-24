@@ -14,7 +14,8 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
 
   create_table "bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "horario"
-    t.string "direccion"
+    t.integer "numero"
+    t.string "calle"
     t.string "comuna"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -68,6 +69,13 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
   create_table "ordenes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "encargado_id"
     t.integer "proveedor_id"
+    t.string "forma_pago"
+    t.string "direccion_entrega"
+    t.datetime "fecha_entrega"
+    t.integer "costo"
+    t.boolean "archivado"
+    t.boolean "bloqueado"
+    t.string "comentarios"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -76,15 +84,6 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
     t.integer "telefono"
     t.string "email"
     t.string "tipo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "retiro_bodegas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "bodeguero_id"
-    t.integer "solicitud_id"
-    t.datetime "fecha_retiro"
-    t.integer "cantidad"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,10 +99,10 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
 
   create_table "solicitudes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "material"
-    t.integer "cant_material"
+    t.integer "cantidad"
     t.integer "prioridad"
-    t.integer "usuario_id"
-    t.integer "estado"
+    t.integer "cliente_id"
+    t.string "estado"
     t.integer "encargado_id"
     t.integer "bodeguero_id"
     t.datetime "created_at", null: false
@@ -114,8 +113,8 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
     t.string "nombres"
     t.string "apellidos"
     t.string "tipo"
-    t.integer "obra_id"
     t.integer "rut"
+    t.string "email"
     t.string "contrasena"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

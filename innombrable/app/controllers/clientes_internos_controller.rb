@@ -13,10 +13,12 @@ class ClientesInternosController < ApplicationController
 
   def create
     @formu = params[:solicitude]
-    @solicitude = Solicitude.new(usuario_id: current_user.id, material: @formu[:material], cantidad: @formu[:cantidad], prioridad: @formu[:prioridad], estado: "En revisión")
+    @cliente = ClientesInterno.find_by(usuario_id: current_user.id)
+    @solicitude = Solicitude.new(cliente_id: @cliente.id, material: @formu[:material], cantidad: @formu[:cantidad], prioridad: @formu[:prioridad], estado: "En revisión")
 
     if @solicitude.save
-      redirect_to @solicitude
+      flash[:success] = "¡Solicitud ingresada correctamente!"
+      redirect_to :action => "crear_solicitudes"
     else
       render "crear_solicitudes"
     end
