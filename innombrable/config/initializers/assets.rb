@@ -10,6 +10,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 ###
 Rails.application.config.assets.precompile += %w( sessions.css )
 Rails.application.config.assets.precompile += %w( clientes_internos.css )
+Rails.application.config.assets.precompile += %w( crear_solicitudes.css )
+Rails.application.config.assets.precompile += %w( ver_solicitudes.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

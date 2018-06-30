@@ -1,0 +1,42 @@
+<ol class="progress-indicator">
+<% if s.estado == "Rechazado"%>
+  <li class="is-complete" data-step="1">
+  <span>Rechazado</span>
+  </li>
+  <li data-step="">
+  <span>Espera de cotización</span>
+  </li>
+  <li data-step="">
+  <span>Pendiente</span>
+  </li>
+  <li data-step="">
+  <span>Finalizado</span>
+  </li>
+<% elsif s.estado == "Aprobado"%>
+  <li class="is-complete" data-step="1">
+  <span>Aprobado</span>
+  </li>
+  <li class="is-current" data-step="2">
+  <span>Espera de cotización</span>
+  </li>
+  <li class="is-current" data-step="3">
+  <span>Pendiente</span>
+  </li>
+  <li class="is-current" data-step="4">
+  <span>Finalizado</span>
+  </li>
+<% elsif s.estado ==  "Espera de cotización"%>
+  <li class="is-complete" data-step="1">
+  <span>Aprobado</span>
+  </li>
+  <li class="is-complete" data-step="2">
+  <span>Espera de cotización</span>
+  </li>
+  <li class="is-complete" data-step="3">
+  <span>Pendiente</span>
+  </li>
+  <li class="is-complete" data-step="4">
+  <span>Finalizado</span>
+  </li>
+<% end %>
+</ol>

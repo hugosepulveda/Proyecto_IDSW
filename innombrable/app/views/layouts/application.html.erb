@@ -7,7 +7,6 @@
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= favicon_link_tag asset_path('GPI-logo.ico'), :rel => 'icon', :type => "image/x-icon" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
