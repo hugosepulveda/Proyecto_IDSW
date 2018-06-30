@@ -1490,3 +1490,52 @@ ActionView::Template::Error (undefined method `button' for #<Solicitude:0x007fce
   
 app/views/bodegueros/mod_solicitudes.html.erb:19:in `block in _app_views_bodegueros_mod_solicitudes_html_erb___2729032194012942299_70261771513340'
 app/views/bodegueros/mod_solicitudes.html.erb:11:in `_app_views_bodegueros_mod_solicitudes_html_erb___2729032194012942299_70261771513340'
+Started GET "/" for 127.0.0.1 at 2018-06-29 22:08:42 -0400
+  [1m[35m (287.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (61.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hugo/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1730.6ms)
+Completed 200 OK in 2380ms (Views: 2213.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-29 22:09:10 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kyp1sVEtUmZYzMqDnG3p85jrpb0Jl2Pe19Zr1R6nc3qp5WWrN40zYgByfh1xXKfOfAl9fzvmMh7DaUJVodfheg==", "session"=>{"rut"=>"1234567", "contrasena"=>"1234567"}, "commit"=>"Iniciar Sesión"}
+  [1m[36mUsuario Load (32.1ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`rut` = 1234567 LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 200ms (ActiveRecord: 133.0ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-06-29 22:09:10 -0400
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (12.2ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/usuarios_controller.rb:3
+  Rendering clientes_internos/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  Rendered clientes_internos/index.html.erb within layouts/application (88.9ms)
+Completed 200 OK in 483ms (Views: 464.0ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/clientes-internos/ver_solicitudes" for 127.0.0.1 at 2018-06-29 22:09:13 -0400
+Processing by ClientesInternosController#ver_solicitudes as HTML
+  [1m[36mUsuario Load (1.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:7
+  [1m[36mClientesInterno Load (0.7ms)[0m  [1m[34mSELECT  `clientes_internos`.* FROM `clientes_internos` WHERE `clientes_internos`.`usuario_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/clientes_internos_controller.rb:38
+  [1m[36mBodeguero Load (0.7ms)[0m  [1m[34mSELECT  `bodegueros`.* FROM `bodegueros` WHERE `bodegueros`.`bodega_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/clientes_internos_controller.rb:40
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/clientes_internos_controller.rb:41
+  Rendering clientes_internos/ver_solicitudes.html.erb within layouts/application
+  [1m[36mSolicitude Load (1.0ms)[0m  [1m[34mSELECT `solicitudes`.* FROM `solicitudes` WHERE `solicitudes`.`cliente_id` = 1[0m
+  ↳ app/views/clientes_internos/ver_solicitudes.html.erb:12
+  Rendered clientes_internos/ver_solicitudes.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 279ms (Views: 130.7ms | ActiveRecord: 66.2ms)
+
+
