@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'ver_solicitudes' %>
 
-<h1 class="center">Ver Solicitudes</h1>
+<h1 align="center">Ver Solicitudes</h1>
 
 <table style="width:90%">
   <tr>
@@ -13,6 +13,7 @@
   </tr>
   <% @solicitudes.each do |s| %>
   <tr>
+    <div>
     <td class="center"><%= s.material %></td>
     <td class="center"><%= s.cantidad %></td>
     <td class="center"><%= @usuario_bo.nombres + " " + @usuario_bo.apellidos %></td>
@@ -23,50 +24,14 @@
     <% end %>
     <td class="center"><%= s.prioridad %></td>
     <td class="center">
-      <ol class="progress-indicator">
-      <% if s.estado == "Rechazado"%>
-        <li class="is-complete" data-step="1">
-        <span>Rechazado</span>
-        </li>
-        <li data-step="">
-        <span>Espera de cotización</span>
-        </li>
-        <li data-step="">
-        <span>Pendiente</span>
-        </li>
-        <li data-step="">
-        <span>Finalizado</span>
-        </li>
-      <% elsif s.estado == "En revisión"%>
-        <li class="is-complete" data-step="1">
-        <span>Aprobado</span>
-        </li>
-        <li class="is-current" data-step="2">
-        <span>Espera de cotización</span>
-        </li>
-        <li class="is-current" data-step="3">
-        <span>Pendiente</span>
-        </li>
-        <li class="is-current" data-step="4">
-        <span>Finalizado</span>
-        </li>
-      <% elsif s.estado ==  "Espera de cotización"%>
-        <li class="is-complete" data-step="1">
-        <span>Aprobado</span>
-        </li>
-        <li class="is-complete" data-step="2">
-        <span>Espera de cotización</span>
-        </li>
-        <li class="is-complete" data-step="3">
-        <span>Pendiente</span>
-        </li>
-        <li class="is-complete" data-step="4">
-        <span>Finalizado</span>
-        </li>
-      <% end %>
-      </ol>
-
+      <%= s.estado%>
     </td>
   </tr>
+  </div>
   <% end %>
 </table>
+
+<!--script src="assets/foundation_m/js/jquery.js"></script>
+<script src="assets/foundation_m/js/what-input.js"></script>
+<script src="assets/foundation_m/js/foundation.js"></script>
+<script src="assets/javascripts/application.js"></script-->
