@@ -1,5 +1,46 @@
-<% provide(:title, "Bienvenido" + " " + current_user.nombres + " " + current_user.apellidos) %>
-<h1 align="center">Encargado Compras</h1>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<%= stylesheet_link_tag 'perfiles' %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<% provide(:title, "Encargado Compras - Bienvenido" + " " + current_user.nombres + " " + current_user.apellidos) %>
 
-<%= link_to "Crear cotización/orden de compra",  controller: "ordenes", action: "create" %><br>
-<%= link_to "Enviar cotización/orden de compra",  controller: "ordenes", action: "enviar" %>
+</head>
+
+<body>
+  <div class="holy-grail-grid">
+  <div class="holy-grail-header">
+    <h3>Logo GPI</h3>
+  </div>
+
+  <div class="holy-grail-left">
+    <div class="portfolio-resume row">
+
+      <div class="large-4 columns">
+        <div class="portfolio-resume-wrapper">
+          <img class="portfolio-resume-headshot" src="https://placehold.it/175" alt="headshot">
+          <h3 class="portfolio-resume-header"><%= current_user.nombres + " " + current_user.apellidos %></h3>
+          <ul>
+            <li><%= current_user.email %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="holy-grail-middle">
+    <ul class="vertical menu align-center">
+    <h3 align="center">¿Qué quieres hacer?</h3>
+    <li><%= link_to "Crear cotización/orden de compra",  controller: "ordenes", action: "create" %></li>
+    <li><%= link_to "Enviar cotización/orden de compra",  controller: "ordenes", action: "enviar" %></li>
+  </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3"> <h3>Content</h3> </div> <!-- 25% -->
+  <div class="col-9"> <h3>Content</h3> </div> <!-- 75% -->
+</div>
+
+</body>
