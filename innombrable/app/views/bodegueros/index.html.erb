@@ -11,6 +11,7 @@
   <div class="holy-grail-grid">
   <div class="holy-grail-header">
     <h3>Logo GPI</h3>
+    <%= link_to "Log out", logout_path, method: :delete, class: "clear button alert" %>  
   </div>
 
   <div class="holy-grail-left">
@@ -34,7 +35,6 @@
     <h3 align="center">¿Qué quieres hacer?</h3>
     <li><%= link_to "Ver/modificar/aprobar solicitudes",  controller: "bodegueros", action: "mod_solicitudes" %></li>
     <li><%= link_to "Ver/modificar inventario",  controller: "bodegueros", action: "mod_inventario" %></li>
-    <li><%= link_to "Aprobar solicitudes",  controller: "bodegueros", action: "aprobar_sol" %></li>
   </ul>
   </div>
 </div>

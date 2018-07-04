@@ -30,6 +30,6 @@ ClientesInterno.create(usuario_id: 1, bodega_id: 1)
 
 #SOLICITUDES#########
 
-Solicitude.create(material: "material 1", cantidad: 2, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión")
+Solicitude.create(material: "material 1", cantidad: 2, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión", aprobado: false)
 
-Solicitude.create(material: "material 2", cantidad: 3, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión")
+Solicitude.create(material: "material 2", cantidad: 3, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión", aprobado: false)

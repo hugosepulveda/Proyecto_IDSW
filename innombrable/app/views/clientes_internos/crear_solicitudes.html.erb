@@ -20,9 +20,11 @@
           <%= s.number_field :prioridad, class: 'form-control' %>
 
           <%= s.submit "Crear solicitud", class: 'button' %>
-
           <% end %>
           <%= button_to "Descargar planilla", { controller: 'archivos', action: 'descarga_planilla'}, class: "button" %>
+          <%= button_to "Subir planilla", { controller: 'archivos', action: 'subir_planilla'}, class: "button" %>
+          <!--label for="exampleFileUpload" class="button">Subir planilla</label>
+          <input type="file" id="exampleFileUpload" class="show-for-sr"-->
        </div>
     </div>
 </div>

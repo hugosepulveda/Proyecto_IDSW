@@ -1,22 +1,39 @@
+<h1>Solicitudes</h1>
+
+<%= button_to "Guardar solicitudes modificadas", { action: 'guardar_solicitudes'}, class: "button" %>
+
 <table style="width:90%">
   <tr>
     <th>Material</th>
     <th>Encargado</th>
     <th>Cantidad</th>
     <th>Prioridad</th>
-    <th>Estado</th>
-    <th>Modificar</th>
     <th>Aprobar</th>
   </tr>
   <% @solicitudes.each do |s| %>
-  <tr>
+  <tr id="<%= s.id %>" >
     <td><%= s.material %></td>
     <td><%= s.encargado_id %></td>
     <td><%= s.cantidad %></td>
     <td><%= s.prioridad %></td>
-    <td><%= s.estado %></td>
-    <td></td>
-    <td></td>
+    <td><%= form_for(s, url:{:action=>'update'}) do |s| %>
+      <%= s.check_box :aprobado, class: "check" %>
+    <% end %>
+    </td>
   </tr>
   <% end %>
 </table>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<!-- javascript_include_tag "foundation_m/js/vendor/foundation" %-->
+
+<script>
+$(".check").on('click', function() {
+  var checked = jQuery('input:checkbox:checked').map(function () {
+    return this.value;
+}).get();
+
+jQuery('input:checkbox:checked').parents("tr").remove();
+
+});
+</script>

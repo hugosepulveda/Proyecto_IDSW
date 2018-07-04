@@ -1,5 +1,7 @@
 <h1>Ver/modificar inventario</h1>
 
+<%= button_to "Guardar materiales modificados", { action: 'guardar_materiales'}, class: "button" %>
+
 <table style="width:90%">
   <tr>
     <th>Material</th>
@@ -7,10 +9,9 @@
     <th>Tipo</th>
     <th>Disponibilidad</th>
     <th>Comentarios</th>
-    <th>Modificar</th>
   </tr>
   <% @materiales.each do |s| %>
-  <tr>
+  <tr id="<%= s.id %>">
     <td><%= s.nombre %></td>
     <td><%= s.cantidad %></td>
     <td><%= s.tipo %></td>
@@ -23,3 +24,6 @@
   </tr>
   <% end %>
 </table>
+
+<script src="app/assets/foundation_m/js/vendor/jquery.js"></script>
+<script src="app/assets/foundation_m/js/vendor/foundation.js"></script>

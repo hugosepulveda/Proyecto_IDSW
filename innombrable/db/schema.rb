@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 2018_06_17_190742) do
     t.string "estado"
     t.integer "encargado_id"
     t.integer "bodeguero_id"
+    t.boolean "aprobado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -44,5 +44,4 @@ class ClientesInternosController < ApplicationController
         render root_url
     end
   end
-
 end
