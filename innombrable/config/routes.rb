@@ -50,6 +50,9 @@ Rails.application.routes.draw do
 
   get 'archivos/descarga_planilla', to: 'archivos#descarga_planilla'
   post 'archivos/descarga_planilla', to: 'archivos#descarga_planilla'
+  
+  post 'archivos/subir_planilla', to: 'archivos#subir_planilla'
+
 
   get 'bodegueros/update', to: 'bodegueros#update'
   post 'bodegueros/update', to: 'bodegueros#update'

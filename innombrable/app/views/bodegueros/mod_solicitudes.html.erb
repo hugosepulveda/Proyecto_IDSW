@@ -4,19 +4,19 @@
 
 <table style="width:90%">
   <tr>
-    <th>Material</th>
-    <th>Encargado</th>
-    <th>Cantidad</th>
-    <th>Prioridad</th>
-    <th>Aprobar</th>
+    <th class="center">Material</th>
+    <th class="center">Encargado</th>
+    <th class="center">Cantidad</th>
+    <th class="center">Prioridad</th>
+    <th class="center">Aprobar</th>
   </tr>
   <% @solicitudes.each do |s| %>
   <tr id="<%= s.id %>" >
-    <td><%= s.material %></td>
-    <td><%= s.encargado_id %></td>
-    <td><%= s.cantidad %></td>
-    <td><%= s.prioridad %></td>
-    <td><%= form_for(s, url:{:action=>'update'}) do |s| %>
+    <td class="center"><%= s.material %></td>
+    <td class="center"><%= s.encargado_id %></td>
+    <td class="center"><%= s.cantidad %></td>
+    <td class="center"><%= s.prioridad %></td>
+    <td class="center"><%= form_for(s, url:{:action=>'update'}) do |s| %>
       <%= s.check_box :aprobado, class: "check" %>
     <% end %>
     </td>
