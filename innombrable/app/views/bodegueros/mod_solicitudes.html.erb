@@ -26,14 +26,3 @@
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <!-- javascript_include_tag "foundation_m/js/vendor/foundation" %-->
-
-<script>
-$(".check").on('click', function() {
-  var checked = jQuery('input:checkbox:checked').map(function () {
-    return this.value;
-}).get();
-
-jQuery('input:checkbox:checked').parents("tr").remove();
-
-});
-</script>
