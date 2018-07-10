@@ -1,9 +1,12 @@
+<% provide(:title, "Inventario") %>
+<%= stylesheet_link_tag 'bodegueros_tablas' %>
+
 <h1>Ver/modificar inventario</h1>
 
 <%= button_to "Guardar materiales modificados", { action: 'guardar_materiales'}, class: "button" %>
 
 <table style="width:90%">
-  <tr>
+  <tr class="center">
     <th class="center">Material</th>
     <th class="center">Cantidad</th>
     <th class="center">Tipo</th>
@@ -11,19 +14,19 @@
     <th class="center">Comentarios</th>
   </tr>
   <% @materiales.each do |s| %>
-  <tr id="<%= s.id %>">
+  <tr class="center" id="<%= s.id %>">
     <td class="center"><%= s.nombre %></td>
     <td class="center"><%= s.cantidad %></td>
     <td class="center"><%= s.tipo %></td>
-    <% if s.disponible == true%>
-    <td class="center" bgcolor="4D65E2">Sí</td>
+    <% if s.disponible == true %>
+    <td class="center"> <span class="success label">Sí</span> </td>
     <% else %>
-    <td class="center" bgcolor="FF5C60">No</td>
+    <td class="center"> <span class="alert label">No</span> </td>
     <% end %>
     <td><%= s.comentario %></td>
   </tr>
   <% end %>
 </table>
 
-<script src="app/assets/foundation_m/js/vendor/jquery.js"></script>
-<script src="app/assets/foundation_m/js/vendor/foundation.js"></script>
+<script src="../foundation_m/js/vendor/jquery.js"></script>
+<script src="../foundation_m/js/vendor/foundation.js"></script>

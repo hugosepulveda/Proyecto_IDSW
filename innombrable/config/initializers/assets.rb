@@ -12,6 +12,7 @@ Rails.application.config.assets.precompile += %w( sessions.css )
 Rails.application.config.assets.precompile += %w( perfiles.css )
 Rails.application.config.assets.precompile += %w( crear_solicitudes.css )
 Rails.application.config.assets.precompile += %w( ver_solicitudes.css )
+Rails.application.config.assets.precompile += %w( bodegueros_tablas.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

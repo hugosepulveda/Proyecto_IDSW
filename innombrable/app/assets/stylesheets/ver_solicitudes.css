@@ -1,4 +1,4 @@
-.center th, .center td {
+.center table, td, th {
     text-align: center;
 }
 
