@@ -1,3 +1,4 @@
+<% provide(:title, "Modificar inventario") %>
 <h1>Modificar inventarios</h1>
 
   <table style="width:90%">
@@ -11,15 +12,15 @@
     </tr>
     <% @materiales.each do |s| %>
     <tr>
-      <td><%= s.nombre %></td>
-      <td><%= s.cantidad %></td>
-      <td><%= s.tipo %></td>
+      <td class="center"><%= s.nombre %></td>
+      <td class="center"><%= s.cantidad %></td>
+      <td class="center"><%= s.tipo %></td>
       <% if s.disponible == true%>
-      <td bgcolor="4D65E2">Sí</td>
+      <td class="center" bgcolor="4D65E2">Sí</td>
       <% else %>
-      <td bgcolor="FF5C60">No</td>
+      <td class="center" bgcolor="FF5C60">No</td>
       <% end %>
-      <td><%= s.comentario %></td>
+      <td class="center"><%= s.comentario %></td>
     </tr>
     <% end %>
   </table>

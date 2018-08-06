@@ -1,9 +1,9 @@
 <html class="no-js" lang="en">
 <head>
 <meta charset="utf-8">
-<%= stylesheet_link_tag 'clientes_internos' %>
+<%= stylesheet_link_tag 'perfiles' %>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<% provide(:title, "Sistema GPI") %>
+<% provide(:title, "Cliente Interno - Bienvenido" + " " + current_user.nombres + current_user.apellidos) %>
 
 </head>
 
@@ -11,6 +11,7 @@
   <div class="holy-grail-grid">
   <div class="holy-grail-header">
     <h3>Logo GPI</h3>
+     <%= link_to "Log out", logout_path, method: :delete, class: "clear button alert" %>
   </div>
 
   <div class="holy-grail-left">
@@ -21,11 +22,7 @@
           <img class="portfolio-resume-headshot" src="https://placehold.it/175" alt="headshot">
           <h3 class="portfolio-resume-header"><%= current_user.nombres + " " + current_user.apellidos %></h3>
           <ul>
-            <li>Playing Cornhole</li>
-            <li>Balancing on my head</li>
-            <li>Drinking milk</li>
-            <li>Going to sleep</li>
-            <li>Not updating my phone apps</li>
+            <li><%= current_user.email %></li>
           </ul>
         </div>
       </div>
@@ -34,9 +31,11 @@
   </div>
 
   <div class="holy-grail-middle">
-    <h3>Content</h3>
-    <%= link_to "Crear solicitudes",  controller: "clientes_internos", action: "crear_solicitudes" %><br>
-    <%= link_to "ver solicitudes",  controller: "clientes_internos", action: "ver_solicitudes" %>
+    <ul class="vertical menu align-center">
+    <h3 align="center">¿Qué quieres hacer?</h3>
+    <li><%= link_to "Crear solicitudes",  controller: "clientes_internos", action: "crear_solicitudes" %></li>
+    <li><%= link_to "Ver solicitudes",  controller: "clientes_internos", action: "ver_solicitudes" %></li>
+  </ul>
   </div>
 </div>
 

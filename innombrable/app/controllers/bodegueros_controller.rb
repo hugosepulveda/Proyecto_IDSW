@@ -17,8 +17,11 @@ class BodeguerosController < ApplicationController
     @materiales = Materiale.where(bodega_id: @bodeguero.bodega_id)
   end
 
-  def aprobar_sol
+  def update
 
   end
-
+  def guardar_materiales
+  end
+  def guardar_solicitudes
+  end
 end

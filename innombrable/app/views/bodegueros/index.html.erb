@@ -1,7 +1,47 @@
-<% provide(:title, "Bienvenido" + " " + current_user.nombres) %>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<%= stylesheet_link_tag 'perfiles' %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<% provide(:title, "Bodeguero - Bienvenido " + current_user.nombres) %>
 
-<h1>Perfil Bodeguero</h1>
+</head>
 
-<%= link_to "Ver/modificar/aprobar solicitudes",  controller: "bodegueros", action: "mod_solicitudes" %><br>
-<%= link_to "Ver/modificar inventario",  controller: "bodegueros", action: "mod_inventario" %><br>
-<%= link_to "Aprobar solicitudes",  controller: "bodegueros", action: "aprobar_sol" %><br>
+<body>
+  <div class="holy-grail-grid">
+  <div class="holy-grail-header">
+    <h3>Logo GPI</h3>
+    <%= link_to "Log out", logout_path, method: :delete, class: "clear button alert" %>  
+  </div>
+
+  <div class="holy-grail-left">
+    <div class="portfolio-resume row">
+
+      <div class="large-4 columns">
+        <div class="portfolio-resume-wrapper">
+          <img class="portfolio-resume-headshot" src="https://placehold.it/175" alt="headshot">
+          <h3 class="portfolio-resume-header"><%= current_user.nombres + " " + current_user.apellidos %></h3>
+          <ul>
+            <li><%= current_user.email %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="holy-grail-middle">
+    <ul class="vertical menu align-center">
+    <h3 align="center">¿Qué quieres hacer?</h3>
+    <li><%= link_to "Ver/modificar/aprobar solicitudes",  controller: "bodegueros", action: "mod_solicitudes" %></li>
+    <li><%= link_to "Ver/modificar inventario",  controller: "bodegueros", action: "mod_inventario" %></li>
+  </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3"> <h3>Content</h3> </div> <!-- 25% -->
+  <div class="col-9"> <h3>Content</h3> </div> <!-- 75% -->
+</div>
+
+</body>

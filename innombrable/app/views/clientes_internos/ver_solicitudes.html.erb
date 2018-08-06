@@ -1,26 +1,54 @@
-<h1>Ver Solicitudes</h1>
+<% provide(:title, "Ver solicitudes") %>
+<%= stylesheet_link_tag 'ver_solicitudes' %>
+
+<h1 align="center">Ver Solicitudes</h1>
 
 <table style="width:90%">
   <tr>
-    <th style="text-align:center;">Material</th>
-    <th style="text-align:center;">Cantidad</th>
-    <th style="text-align:center;" >Bodeguero</th>
-    <th style="text-align:center;" >Encargado</th>
-    <th style="text-align:center;">Prioridad</th>
-    <th style="text-align:center;">Estado</th>
+    <th class="center">Material</th>
+    <th class="center">Cantidad</th>
+    <th class="center">Bodeguero</th>
+    <th class="center">Encargado</th>
+    <th class="center">Prioridad</th>
+    <th class="center">Estado</th>
   </tr>
   <% @solicitudes.each do |s| %>
   <tr>
-    <td style="text-align:center;"><%= s.material %></td>
-    <td style="text-align:center;"><%= s.cantidad %></td>
-    <td style="text-align:center;"><%= @usuario_bo.nombres + " " + @usuario_bo.apellidos %></td>
+    <div>
+    <td class="center"><%= s.material %></td>
+    <td class="center"><%= s.cantidad %></td>
+    <td class="center"><%= @usuario_bo.nombres + " " + @usuario_bo.apellidos %></td>
     <% if s.encargado_id.nil?%>
-      <td style="text-align:center;">No asignado</td>
+      <td class="center">No asignado</td>
     <% else %>
-      <td style="text-align:center;"><%= s.encargado_id %></td>
+      <td class="center"><%= s.encargado_id %></td>
     <% end %>
-    <td style="text-align:center;"><%= s.prioridad %></td>
-    <td style="text-align:center;"><%= s.estado %></td>
+    <td class="center"><%= s.prioridad %></td>
+    <td class="center">
+      <%= s.estado%>
+    </td>
   </tr>
+  </div>
   <% end %>
 </table>
+
+<ul class="accordion" data-accordion data-allow-all-closed="true">
+  <li class="accordion-item" data-accordion-item>
+    <!-- Accordion tab title -->
+    <a href="#" class="accordion-title">Accordion 1</a>
+
+    <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+    <div class="accordion-content" data-tab-content>
+      <p>Panel 1. Lorem ipsum dolor</p>
+      <a href="#">Nowhere to Go</a>
+    </div>
+  </li>
+  <!-- ... -->
+</ul>
+
+<%= javascript_include_tag 'foundation_m/js/vendor/jquery' %>
+<%= javascript_include_tag 'foundation_m/js/vendor/foundation' %>
+<!--script src="assets/foundation_m/js/jquery.js"></script>
+<script src="assets/foundation_m/js/what-input.js"></script>
+<script src="assets/foundation_m/js/foundation.js"></script>
+<script src="assets/javascripts/application.js"></script-->

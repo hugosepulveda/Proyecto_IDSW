@@ -8,6 +8,7 @@ class CreateSolicitudes < ActiveRecord::Migration[5.2]
       t.string :estado
       t.integer :encargado_id
       t.integer :bodeguero_id
+      t.boolean :aprobado
       t.timestamps
     end
   end

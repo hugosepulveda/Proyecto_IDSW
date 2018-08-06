@@ -7,13 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #USUARIOS############
-Usuario.create(nombres:"nombre 1", apellidos:"apellido 1", tipo:"cliente interno", contrasena: 1234567, rut: 1234567)
+Usuario.create(nombres:"Dennis", apellidos:"Ritchie", tipo:"cliente interno", email: "dennis@gpi.cl", contrasena: 1234567, rut: 1234567)
 
-Usuario.create(nombres:"nombre 2", apellidos:"apellido 2", tipo:"bodeguero", contrasena: 7654321, rut: 7654321)
+Usuario.create(nombres:"John", apellidos:"Backus", tipo:"bodeguero", email: "john@gpi.cl", contrasena: 7654321, rut: 7654321)
 
-Usuario.create(nombres:"nombre 3", apellidos:"apellido 3", tipo:"bodeguero central", contrasena: 1111111, rut: 1111111) #bodeguero central
+Usuario.create(nombres:"Ligia", apellidos:"Gargallo", tipo:"bodeguero central", email: "ligia@gpi.cl", contrasena: 1111111, rut: 1111111) #bodeguero central
 
-Usuario.create(nombres:"nombre 4", apellidos:"apellido 4", tipo:"encargado compra", contrasena: 2222222, rut: 2222222)
+Usuario.create(nombres:"Cynthia", apellidos: "Dwork", tipo:"encargado compra", email: "cynthia@gpi.cl", contrasena: 2222222, rut: 2222222)
 
 #BODEGAS#############
 Bodega.create(numero: 742, calle: "Avenida siempreviva", comuna: "Springfield")
@@ -30,6 +30,6 @@ ClientesInterno.create(usuario_id: 1, bodega_id: 1)
 
 #SOLICITUDES#########
 
-Solicitude.create(material: "material 1", cantidad: 2, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión")
+Solicitude.create(material: "material 1", cantidad: 2, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión", aprobado: false)
 
-Solicitude.create(material: "material 2", cantidad: 3, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión")
+Solicitude.create(material: "material 2", cantidad: 3, cliente_id: 1, bodeguero_id: 1, prioridad: 1, estado: "En revisión", aprobado: false)

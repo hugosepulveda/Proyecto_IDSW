@@ -1,10 +1,11 @@
+<% provide(:title, "Crear solicitudes") %>
 <div class="grid-container">
     <div class="grid-x grid-padding-x">
       <div class="medium-6 large-auto column">
         <h1 align="center">Crear solicitud</h1>
           <%= form_for(@solicitude, url:{:action=>'create'}) do |s| %>
 
-          <%= render 'shared/error_messages' %>
+          <%= render 'shared/error_solicitud' %>
 
           <% flash.each do |key, value| %>
               <div class="alert alert-<%= key %>"><%= value %></div><br>
@@ -20,9 +21,14 @@
           <%= s.number_field :prioridad, class: 'form-control' %>
 
           <%= s.submit "Crear solicitud", class: 'button' %>
-
           <% end %>
           <%= button_to "Descargar planilla", { controller: 'archivos', action: 'descarga_planilla'}, class: "button" %>
+          <%= button_to "Subir planilla", { controller: 'archivos', action: 'subir_planilla'}, class: "button" %>
+          <!--label for="exampleFileUpload" class="button">Subir planilla</label>
+          <input type="file" id="exampleFileUpload" class="show-for-sr"-->
        </div>
     </div>
 </div>
+
+<%= javascript_include_tag 'foundation_m/js/vendor/jquery' %>
+<%= javascript_include_tag 'foundation_m/js/vendor/foundation' %>
