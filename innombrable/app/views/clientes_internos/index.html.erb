@@ -8,15 +8,22 @@
 </head>
 
 <body>
-  <div class="holy-grail-grid">
-  <div class="holy-grail-header">
-    <h3>Logo GPI</h3>
-     <%= link_to "Log out", logout_path, method: :delete, class: "clear button alert" %>
+
+  <div class="top-bar" style="margin-bottom: 1rem; color: #1779ba;">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <h3 class="menu-text">GPI</h3>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><%= link_to "Log out", logout_path, method: :delete, class: "clear button alert" %></li>
+      </ul>
+    </div>
   </div>
 
+  <div class="holy-grail-grid">
   <div class="holy-grail-left">
-    <div class="portfolio-resume row">
-
       <div class="large-4 columns">
         <div class="portfolio-resume-wrapper">
           <img class="portfolio-resume-headshot" src="https://placehold.it/175" alt="headshot">
@@ -26,7 +33,6 @@
           </ul>
         </div>
       </div>
-    </div>
 
   </div>
 
@@ -39,9 +45,9 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-3"> <h3>Content</h3> </div> <!-- 25% -->
-  <div class="col-9"> <h3>Content</h3> </div> <!-- 75% -->
-</div>
+<!--<div class="row">
+  <div class="col-3"> <h3>Content</h3> </div> 25%
+  <div class="col-9"> <h3>Content</h3> </div> 75%
+</div> -->
 
 </body>
