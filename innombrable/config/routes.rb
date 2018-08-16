@@ -50,7 +50,7 @@ Rails.application.routes.draw do
 
   get 'archivos/descarga_planilla', to: 'archivos#descarga_planilla'
   post 'archivos/descarga_planilla', to: 'archivos#descarga_planilla'
-  
+
   post 'archivos/subir_planilla', to: 'archivos#subir_planilla'
 
 
@@ -62,6 +62,17 @@ Rails.application.routes.draw do
 
   get 'bodegueros/guardar_materiales', to: 'bodegueros#guardar_materiales'
   post 'bodegueros/guardar_materiales', to: 'bodegueros#guardar_materiales'
+
+  get 'bodegueros/crear_solicitud', to: 'bodegueros#crear_solicitud'
+  post 'bodegueros/crear_solicitud', to: 'bodegueros#crear_solicitud'
+
+  get 'bodegueros/crear_despacho', to: 'bodegueros#crear_despacho'
+  post 'bodegueros/crear_despacho', to: 'bodegueros#crear_despacho'
+
+  get 'bodegueros/cerrar_despacho', to: 'bodegueros#cerrar_despacho'
+  post 'bodegueros/cerrar_despacho', to: 'bodegueros#cerrar_despacho'
+
+  post 'bodegueros/crear_d', to: 'bodegueros#crear_d'
 
   root 'sessions#new'
   #post 'usuarios/new' => 'usuarios#new'

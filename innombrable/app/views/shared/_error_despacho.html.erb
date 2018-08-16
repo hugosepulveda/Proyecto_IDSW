@@ -1,0 +1,15 @@
+<% if @despacho_nuevo.errors.any? %>
+  <div id="error_explanation" class="callout alert" data-closable>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true">&times;</span>
+    </button>
+    <!--div class="alert alert-danger"-->
+      <h5>El formulario contiene <%= pluralize(@despacho_nuevo.errors.count, "errores") %>.</h5>
+    <!--/div-->
+    <ul>
+    <% @despacho_nuevo.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
