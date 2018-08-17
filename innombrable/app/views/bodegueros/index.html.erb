@@ -31,6 +31,7 @@
           <img class="portfolio-resume-headshot" src="https://placehold.it/175" alt="headshot">
           <h3 class="portfolio-resume-header"><%= current_user.nombres + " " + current_user.apellidos %></h3>
           <ul>
+            <li><%= current_user.tipo %></li>
             <li><%= current_user.email %></li>
           </ul>
         </div>
@@ -42,8 +43,11 @@
   <div class="holy-grail-middle">
     <ul class="vertical menu align-center">
     <h3 align="center">¿Qué quieres hacer?</h3>
-    <li><%= link_to "Ver/modificar/aprobar solicitudes",  controller: "bodegueros", action: "mod_solicitudes" %></li>
+    <li><%= link_to "Ver/modificar solicitudes",  controller: "bodegueros", action: "mod_solicitudes" %></li>
+    <li><%= link_to "Crear solicitudes",  controller: "bodegueros", action: "crear_solicitud" %></li>
     <li><%= link_to "Ver/modificar inventario",  controller: "bodegueros", action: "mod_inventario" %></li>
+    <li><%= link_to "Crear despacho",  controller: "bodegueros", action: "crear_despacho" %></li>
+    <li><%= link_to "Recepción despacho",  controller: "bodegueros", action: "cerrar_despacho" %></li>
   </ul>
   </div>
 </div>

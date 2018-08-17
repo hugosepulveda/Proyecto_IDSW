@@ -1,5 +1,5 @@
 <% provide(:title, "Bienvenido" + " " + current_user.nombres + " " + current_user.apellidos) %>
 <h1 align="center">Encargado Compras</h1>
 
-<%= link_to "Crear cotización/orden de compra",  controller: "ordenes", action: "create" %><br>
-<%= link_to "Enviar cotización/orden de compra",  controller: "ordenes", action: "enviar" %>
+<%= link_to "Crear despacho",  controller: "encargados_compra", action: "crear_despacho" %><br>
+<%= link_to "Crear cotización/orden de compra",  controller: "encargados_compra", action: "crear_orden" %>
