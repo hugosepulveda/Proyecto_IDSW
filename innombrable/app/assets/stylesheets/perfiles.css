@@ -1,4 +1,3 @@
-
 .holy-grail-grid {
   display: -ms-grid;
   display: grid;
@@ -71,7 +70,12 @@
   grid-column-end: 4;
 }
 
-
+.logo_topbar {
+  display: block;
+  margin-left: 0.5rem;
+  margin-right: auto;
+  width: 100%;
+}
 
 
 .portfolio-resume-spacing {
