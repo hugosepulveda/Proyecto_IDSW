@@ -15,10 +15,10 @@
           <%= s.text_field :material, class: 'form-control', placeholder: 'Material' %>
 
           <%= s.label :Cantidad %>
-          <%= s.number_field :cantidad, class: 'form-control', placeholder: 'Cantidad' %>
+          <%= s.number_field :cantidad, min: 0, class: 'form-control', placeholder: 'Cantidad' %>
 
           <%= s.label :Prioridad %>
-          <%= s.number_field :prioridad, class: 'form-control', placeholder: 'Prioridad' %>
+          <%= s.number_field :prioridad, min: 0, class: 'form-control', placeholder: 'Prioridad' %>
 
           <%= s.submit "Crear solicitud", class: 'button' %>
           <% end %>

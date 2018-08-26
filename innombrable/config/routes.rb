@@ -45,6 +45,9 @@ Rails.application.routes.draw do
   get 'bodegueros_centrales/mod_inventarios', to: 'bodegueros_centrales#mod_inventarios'
   post 'bodegueros_centrales/mod_inventarios', to: 'bodegueros_centrales#mod_inventarios'
 
+  get 'bodegueros_centrales/crear_bodega', to: 'bodegueros_centrales#crear_bodega'
+  post 'bodegueros_centrales/crear_bodega', to: 'bodegueros_centrales#crear_bodega'
+
   get 'cotizaciones/create', to: 'cotizaciones#create'
   post 'cotizaciones/create', to: 'cotizaciones#create'
 
