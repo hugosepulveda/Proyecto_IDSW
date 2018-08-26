@@ -15,7 +15,7 @@
   </tr>
   <% @materiales.each do |s| %>
   <tr class="center" id="<%= s.id %>">
-    <td class="center"><%= best_in_place s, :nombre, :type => :textarea, :ok_button => 'Save', :cancel_button => 'Cancel' %></td>
+    <td class="center"><%= s.nombre %></td>
     <td class="center"><%= s.cantidad %></td>
     <td class="center"><%= s.tipo %></td>
     <% if s.disponible == true %>

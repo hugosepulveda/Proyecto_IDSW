@@ -5,6 +5,7 @@ class BodeguerosController < ApplicationController
   def new
     @despacho_nuevo = Despacho.new
   end
+
   def crear_despacho
     @formu_despacho = params[:despacho_nuevo]
     @bodeguero = Bodeguero.find_by(usuario_id: current_user.id)
@@ -14,8 +15,7 @@ class BodeguerosController < ApplicationController
       flash[:success] = "¡Despacho creado correctamente!"
       redirect_to :action => "crear_despacho"
     else
-      flash[:success] = "No"
-      #render "crear_despacho"
+      render "crear_despacho"
     end
   end
 
@@ -63,6 +63,7 @@ class BodeguerosController < ApplicationController
         render root_url
     end
   end
+
   def cerrar_despacho
     if current_user.tipo == "bodeguero"
         #render "crear_solicitudes"
@@ -71,8 +72,10 @@ class BodeguerosController < ApplicationController
         render root_url
     end
   end
+
   def guardar_materiales
   end
+
   def guardar_solicitudes
   end
 end

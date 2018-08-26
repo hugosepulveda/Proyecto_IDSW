@@ -1,6 +1,7 @@
 <% provide(:title, "Modificar inventario") %>
-<h1>Modificar inventarios</h1>
-
+<br>
+<h1 align="center">Modificar inventarios</h1>
+<br>
   <table style="width:90%">
     <tr>
       <th>Material</th>
@@ -16,11 +17,11 @@
       <td class="center"><%= s.cantidad %></td>
       <td class="center"><%= s.tipo %></td>
       <% if s.disponible == true%>
-      <td class="center" bgcolor="4D65E2">Sí</td>
+      <td align="center" class="center" bgcolor="4D65E2">Sí</td>
       <% else %>
-      <td class="center" bgcolor="FF5C60">No</td>
+      <td align="center" class="center" bgcolor="FF5C60">No</td>
       <% end %>
-      <td class="center"><%= s.comentario %></td>
+      <td align="center" class="center"><%= s.comentario %></td>
     </tr>
     <% end %>
   </table>
