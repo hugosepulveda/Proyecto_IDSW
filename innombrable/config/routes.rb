@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   get 'sessions/new'
-
+  resources :materiales
   resources :usuarios do
     resources :clientes_internos, :bodegueros, :bodegueros_centrales, :encargados_compras, :solicitudes
   end
@@ -76,6 +76,9 @@ Rails.application.routes.draw do
   post 'bodegueros/cerrar_despacho', to: 'bodegueros#cerrar_despacho'
 
   post 'bodegueros/crear_d', to: 'bodegueros#crear_d'
+
+  get 'bodegueros/update_inventario', to: 'bodegueros#update_inventario'
+  post 'bodegueros/update_inventario', to: 'bodegueros#update_inventario'
 
   root 'sessions#new'
   #post 'usuarios/new' => 'usuarios#new'

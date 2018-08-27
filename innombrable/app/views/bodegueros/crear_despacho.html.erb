@@ -2,7 +2,7 @@
 <div class="grid-container">
     <div class="grid-x grid-padding-x">
       <div class="medium-6 large-auto column">
-        <h1 align="center">Crear solicitud</h1>
+        <br><h1 align="center">Crear despacho</h1><br>
           <%= form_for(@despacho_nuevo, url:{:action=>'crear_despacho'}) do |s| %>
 
           <%= render 'shared/error_despacho' %>
@@ -12,10 +12,10 @@
           <% end %>
 
           <%= s.label :fecha %>
-          <%= s.datetime_field :fecha, class: 'form-control', placeholder: 'Fecha' %>
+          <%= s.datetime_local_field :fecha, class: 'form-control', placeholder: 'Fecha' %>
 
           <%= s.label :orden_id %>
-          <%= s.number_field :orden_id, class: 'form-control', placeholder: 'Orden ID' %>
+          <%= s.number_field :orden_id, min: 0, class: 'form-control', placeholder: 'Orden ID' %>
 
           <%= s.label :comentario %>
           <%= s.text_field :comentario, class: 'form-control', placeholder: 'Comentario' %>

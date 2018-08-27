@@ -1,10 +1,12 @@
 class BodeguerosController < ApplicationController
+  #include ActionController::MimeResponds
   def index
   end
 
   def new
     @despacho_nuevo = Despacho.new
   end
+
   def crear_despacho
     @formu_despacho = params[:despacho_nuevo]
     @bodeguero = Bodeguero.find_by(usuario_id: current_user.id)
@@ -14,8 +16,7 @@ class BodeguerosController < ApplicationController
       flash[:success] = "¡Despacho creado correctamente!"
       redirect_to :action => "crear_despacho"
     else
-      flash[:success] = "No"
-      #render "crear_despacho"
+      render "crear_despacho"
     end
   end
 
@@ -44,9 +45,19 @@ class BodeguerosController < ApplicationController
     @materiales = Materiale.where(bodega_id: @bodeguero.bodega_id)
   end
 
-  def update
+  def update_inventario
 
+    respond_to do |format|
+      if s.update_attributes(params[:nombre])
+        format.html { redirect_to(s, :notice => 'Cambio exitoso.') }
+        format.json { respond_with_bip(s) }
+      else
+        format.html { render :action => "mod_inventario" }
+        format.json { respond_with_bip(s) }
+      end
+    end
   end
+
   def crear_solicitud
     if current_user.tipo == "bodeguero"
         #render "crear_solicitudes"
@@ -63,6 +74,7 @@ class BodeguerosController < ApplicationController
         render root_url
     end
   end
+
   def cerrar_despacho
     if current_user.tipo == "bodeguero"
         #render "crear_solicitudes"
@@ -71,8 +83,10 @@ class BodeguerosController < ApplicationController
         render root_url
     end
   end
+
   def guardar_materiales
   end
+
   def guardar_solicitudes
   end
 end
