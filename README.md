@@ -1,6 +1,6 @@
 # Proyecto_IDSW
 
-# BD quedó configurada para Linux.
+### BD quedó configurada para Linux.
 
 ## Stack:
 
