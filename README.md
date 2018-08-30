@@ -1,8 +1,8 @@
 # Proyecto_IDSW
 
-## Stack:
-
 # BD quedó configurada para Linux.
+
+## Stack:
 
 * Ruby on Rails
 * MySQL
