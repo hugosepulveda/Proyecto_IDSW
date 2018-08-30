@@ -2,6 +2,8 @@
 
 ## Stack:
 
+# BD quedó configurada para Linux.
+
 * Ruby on Rails
 * MySQL
 * Foundation
